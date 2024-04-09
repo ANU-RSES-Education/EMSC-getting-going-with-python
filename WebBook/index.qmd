@@ -1,0 +1,22 @@
+---
+title: EMSC e-Course template
+author: Prof Louis Moresi 
+date: 2024-03-17
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.1
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
+
+This is a template repository for Lecture notes that include a computational component. It builds a website from the notes and includes live-links to source code that will run on [binder](https://www.mybinder.org). This template is pre-configured for courses at Research School of Earth Sciences, but is freely available for adoption elsewhere.
+
+I use the [Quarto](https://quarto.org/docs/books) publication system which converts simple markdown formatted documents to webpages, pdf and slides. Quarto is designed to develop reusable content and is based around [pandoc](https://pandoc.org): you should be able to quickly import and convert content to the quarto version of markdown (especially if you have been using jupyter-book or myst-md - the concepts are very similar).
+
+To use this repository, you will need make a fork for yourself and replace this content with your own. You will also need set a few configuration options to match the course metadata. I'm going to explain how this works.

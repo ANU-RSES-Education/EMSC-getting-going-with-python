@@ -1,0 +1,13 @@
+/.quarto/
+**/.ipynb_checkpoints
+
+_build
+
+WebBook/_book/
+WebLectures/_slides/
+
+**/.quarto/
+WebBook/.quarto/_freeze/*
+WebBook/.quarto/*
+
+WebSlides/.quarto/*
