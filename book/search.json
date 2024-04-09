@@ -1,0 +1,90 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "EMSC Quarto",
+    "section": "",
+    "text": "This is a template repository for Lecture notes that include a computational component. It builds a website from the notes and includes live-links to source code that will run on binder. This template is pre-configured for courses at Research School of Earth Sciences, but is freely available for adoption elsewhere.\nI use the Quarto publication system which converts simple markdown formatted documents to webpages, pdf and slides. Quarto is designed to develop reusable content and is based around pandoc: you should be able to quickly import and convert content to the quarto version of markdown (especially if you have been using jupyter-book or myst-md - the concepts are very similar).\nTo use this repository, you will need make a fork for yourself and replace this content with your own. You will also need set a few configuration options to match the course metadata. I’m going to explain how this works.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>EMSC e-Course template</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "Details",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "Details",
+      "References"
+    ]
+  },
+  {
+    "objectID": "LectureSlides/Lecture1.html",
+    "href": "LectureSlides/Lecture1.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Link to index of presentations",
+    "crumbs": [
+      "Slides",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "Notebooks/BinderLandingPage.html",
+    "href": "Notebooks/BinderLandingPage.html",
+    "title": "Index of notebooks:",
+    "section": "",
+    "text": "TestNB1 (ipynb)\nTestQMD (qmd)",
+    "crumbs": [
+      "Appendices",
+      "Index of notebooks:"
+    ]
+  },
+  {
+    "objectID": "Notebooks/TestNB1.html",
+    "href": "Notebooks/TestNB1.html",
+    "title": "Appendix A — Test Notebook",
+    "section": "",
+    "text": "for i in range(0,10):\n    print(i)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Test Notebook</span>"
+    ]
+  },
+  {
+    "objectID": "Notebooks/TestQMD_NB1.html",
+    "href": "Notebooks/TestQMD_NB1.html",
+    "title": "Appendix B — Quarto MD notebook",
+    "section": "",
+    "text": "for i in range(0,10):\n    print(i+1)\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Quarto MD notebook</span>"
+    ]
+  }
+]
