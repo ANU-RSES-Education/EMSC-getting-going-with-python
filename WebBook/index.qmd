@@ -1,7 +1,7 @@
 ---
 title: EMSC e-Course template
-author: Prof Louis Moresi 
-date: 2024-03-17
+author: Prof Louis Moresi
+date: '2024-03-17'
 jupyter:
   jupytext:
     text_representation:

@@ -1,4 +1,5 @@
 ---
+title: 'Index of notebooks:'
 jupyter:
   jupytext:
     text_representation:
@@ -12,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-# Index of notebooks: {.unnumbered .unlisted}
 
   - [TestNB1 (ipynb)](TestNB1.ipynb)
   - [TestQMD (qmd)](TestQMD_NB1.qmd)
+

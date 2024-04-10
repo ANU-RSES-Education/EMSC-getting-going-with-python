@@ -2,29 +2,46 @@ project:
   type: book
   output-dir: ../_build/book
 
+
 book:
-  title: "EMSC Quarto"
-  author: "Louis Moresi"
+  title: "EMSC - Get Going with Python "
+  author: 
+    - "Louis Moresi"
+    - "Andrew Valentine"
   date: "06/03/2024"
-  bread-crumbs: false
+  bread-crumbs: True
   chapters:
     - part: "Introduction"
       chapters:
         - index.qmd
         - intro.qmd
-    - part: "Details"
+    - part: "Basic Language Skills"
       chapters:
-      - summary.qmd
-      - references.qmd
+        - Basics/Intro.qmd
+        - Basics/Ex1-GettingStartedWithPython.qmd
+        - Basics/Ex2-VariablesAndFunctions.qmd
 
-    - part: "Slides"
+    - part: "Advanced Language Skills"
       chapters:
-        - LectureSlides/Lecture1.qmd
+        - Advanced/Intro.qmd
 
-  appendices:
-    - Notebooks/BinderLandingPage.qmd
-    - Notebooks/TestNB1.ipynb
-    - Notebooks/TestQMD_NB1.qmd
+    - part: "Next steps: Becoming a Code Developer"
+      chapters:
+        - DevSkills/Intro.qmd
+    
+    # - part: "Notebooks"
+    #   chapters:
+    #   - Notebooks/Introduction.qmd
+    #   - Notebooks/Ex01/Ex1-GettingStartedWithJupyter.qmd
+
+    # - part: "Slides"
+    #   chapters:
+    #     - LectureSlides/Lecture1.qmd
+
+  # appendices:
+  #   - Notebooks/BinderLandingPage.qmd
+  #   - Notebooks/TestNB1.ipynb
+  #   - Notebooks/TestQMD_NB1.qmd
 
   navbar:
     search: true
@@ -41,22 +58,29 @@ book:
 
 bibliography: references.bib
 
+execute: 
+  enabled: false
+  
 format:
   html:
     theme: flatly # united / simplex
     linkcolor: "#C58812"
+    number-depth: 0
+    filters:
+      - pyodide
+
 
     code-links:
       - text: Open in Binder
         icon: rocket-takeoff
-        href: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-QuartoBook/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
+        href: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
     other-links:
       - text: Github Repository
         icon: github
-        href: https://github.com/ANU-RSES-Education/EMSC-QuartoBook
+        href: https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python
   
-  pdf:
-    documentclass: scrreprt
+  # pdf:
+  #   documentclass: scrreprt
 
 
 

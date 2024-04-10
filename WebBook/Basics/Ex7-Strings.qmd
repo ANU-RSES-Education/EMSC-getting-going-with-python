@@ -1,0 +1,295 @@
+---
+title: Exercise 7 - Strings
+jupyter: python3
+---
+
+*Andrew Valentine, Louis Moresi, louis.moresi@anu.edu.au*
+
+Until now, we have mainly been dealing with numeric data (numbers). However, it is often necessary to process text sequences, referred to as 'character strings'. In this exercise, we will see some of the mechanisms Python provides for text processing.
+
+As we have already seen, any literal text sequence can be entered between a pair of inverted commas (" " or ' '), and stored to a variable. Python allows both single and double quotes to be used (not all languages do, so be careful if translating this sort of thinking to another language in the future). 
+```python
+name = "Hamlet"
+quote = 'To be or not to be: that is the question.'
+```
+If we look at `type(name)`, we see that Python has a `str` type to represent strings.
+
+To join two strings together, we can simply combine them using the `+` operator:
+```python
+x = name+" says "+quote
+print(x)
+```
+We can enter quotation marks in a string literal by using the *other* kind of quotation mark as the string delimiter: either
+```python
+x = name+" says '"+quote+"'"
+y = name+' says "'+quote+'"'
+print(x)
+print(y)
+```
+We can also 'escape' the quotation mark, by placing a `\` in front of it. This forces Python to treat it as a literal character, without any special meaning:
+```python
+x = name+" says \""+quote+"\""
+print(x)
+```
+Finally, we can use triple-quotes (""" """) to mark the beginning and end of the string, which allows ' and " to appear within the string without difficulties:
+```python
+difficult = """ Apparently "we can't just use single quotes" around this string """
+```
+We already encountered triple-quoted strings, in the context of docstrings at the start of a function.
+
+We can also use the multiplication operator to repeat a string multiple times:
+```python
+y = 3*name
+print(y)
+```
+However, most other 'mathematical' operators (such as subtraction and division) have no meaning with strings.
+
+**&#10148; Try it out!**
+
+
+```{python}
+# Try it here!
+```
+
+Note that string variables containing numbers are not the same as integer or float variables containing the same numbers:
+```python
+x = '6'
+y = '3'
+print(x + y) # prints '63'
+```
+However, we can obtain an integer or float variable by using the `int` and `float` functions:
+```python
+print(int(x) + int(y)) # prints '9'
+print(float(x) + float(y)) # prints '9.0'
+```
+This does not work for strings containing two or more numbers separated by whitespace: `int('3 6')` is assumed to correspond to two distinct numbers, and so they cannot be converted to a single integer. Similarly, while numbers containing a decimal point can be converted to floating-point form, they cannot be interpreted as an integer. 
+
+**&#10148; Try it out!**
+
+```{python}
+# Try it here!
+```
+
+If we want to extract a 'substring' - a letter, or sequence of letters, from the middle of the string - we can use syntax similar to that for extracting a subset of a list:
+```python
+quote = 'To be or not to be: that is the question.'
+print(quote[2:35:3])
+```
+This will print every 3rd character, starting from the character at position 2. Remember, Python counts from 0:
+```text
+0123456789...
+To be or n...
+```
+We therefore see that the character at position 2 is a space, ' '. In general, a substring specification takes the form
+```python
+variable[istart:istop:istep]
+```
+Omitting `istart` means the substring should begin from the start of `variable`; omitting `istep` means it should go to the end of `variable`; and omitting `istep` implies that all intervening characters should be printed:
+```python
+print(quote[:35:3])
+print(quote[2::3])
+print(quote[2:35])
+```
+If we wish to extract only a single character, we simply provide its index:
+```python
+print(quote[4])
+```
+We can also iterate over the letters in a string:
+```python
+for letter in quote:
+    print(letter)
+```
+**&#10148; Try it out!**
+
+```{python}
+# Try it here!
+```
+
+A new-line (carriage return) can be represented within a string by entering `'\n'`, for example:
+```python
+multiline = 'This\nstring\noccupies\nfive\nlines.'
+print(multiline)
+```
+Similarly, `\t` can be used to enter a Tab character. Spaces and tab characters are collectively known as 'whitespace'.
+
+**&#10148; Try it out!**
+
+```{python}
+# Try it here!
+```
+
+As with other data types, Python provides a number of functions to work with a string, `s`. Some of the more important ones are:
+- `len(s)` - Return the number of characters in `s`.
+- `s.count(x)` - Count the number of occurrences of string `x` within string `s`. Again, this is case-sensitive.
+
+- `s.join(x)` - Here, `x` is assumed to be an iterable (typically a list or tuple) of strings. This function returns a single string, containing all the strings from `x` with a copy of `s` between each. For example, `':'.join(['a','b','c'])` will return `'a:b:c'`.
+- `s.split()` - Return a list of all of the 'words' (substrings separated by whitespace) within `s`. Optionally, provide a character to be regarded as the word separator. For example, `'a,b,c'.split(',')` will return `['a','b','c']`. It is also possible to specify the maximum number of words to be returned; once this limit is reached, no further splitting is performed. A variant `s.rsplit()` works backwards from the end of the string.
+- `s.replace(x,y)` - Return a version of `s` where every occurrence of string `x` is replaced by string `y`.
+
+- `s.find(x)` - Return the index of the start of the *first* occurrence of string `x` in string `s`. Note that this is case-sensitive: compare `quote.find('to')` with `quote.find('To')`. A variant `s.rfind(x)` finds the *last* occurrence of `x`. Variants `s.index()` and `s.rindex()` are almost identical, except that they have different behaviour if `x` cannot be found within `s`: whereas `s.find()` raises an error, `s.index()` returns `-1`.
+
+- `s.upper()`, `s.lower()` and `s.title()` - Return a copy of the string `s` converted to be entirely in UPPER CASE/lower case/Title Case respectively.
+- `s.isupper()`, `s.islower()`, `s.istitle()` - Return `True` if `s` is entirely in UPPER CASE/lower case/Title Case respectively, otherwise `False`.
+- `s.capitalize()` - Return a version of `s` where the first character is in UPPER CASE and the remainder in lower case.
+- `s.swapcase()` - Return a version of `s` where all UPPER CASE characters are converted to lower case and vice versa.
+
+- `s.center(n)` - Create a string of length `n` containing a copy of `s` centered within this. By default, this is achived by padding with spaces (' ') before and after `s`; optionally, you can specify a different charater. For example, `'hello'.center(11, '_')` returns `'___hello___'`.
+- `s.ljust(n)` - Create a string of length `n` containing a copy of `s` at its left. Optionally, specify a character to use for padding. Similarly, `s.rjust(n)` places `s` at the right of the `n`-character string.
+- `s.strip()` - Return a copy of `s` with all whitespace removed. `s.lstrip()` and `s.rstrip()` are variants removing whitespace only at the start or end of the string, respectively. For example, `'elephant'.strip('e')` returns `'lephant'`. 
+
+**&#10148; Try out all of these functions, and satisfy yourself that you understand how they work.**
+
+```{python}
+# Try it here!
+```
+
+**&#10148;Write a function which takes in strings like `'apples:3; pears:17; bananas:21'` and produces a nicely-formatted table:**
+```text
++-----------+-----+
+| Apples    |   3 |
+| Pears     |  17 |
+| Bananas   |  21 |
++-----------+-----+
+|     TOTAL |  41 |
++-----------+-----+
+```
+Here are some additional input strings it should be able to cope with:
+```text
+cheese:0; BREAD:5; milk:1; Bacon:2
+Ham:15000;     salami:36030;  corned beef:1836;
+triangles:3;squares:4;pentagons:5;hexagons:6;heptagons:7;octagons:8;nonagons:9
+```
+
+```{python}
+# Try it here!
+```
+
+As you may have noticed, Python's `print` function often displays information to a large number of decimal places, and it does not generally produce nicely-formatted output. To achieve this, we must make use of Python's string-formatting facilities. These provide a mechanism for converting numbers into strings, and controlling the exact form this takes.
+
+Python 3 provides two different frameworks for string formatting. In each, you create a string containing placeholders for the contents of each variable you want to output, then insert the data into these.
+
+This is best illustrated by an example, using the first (older) formatting framework:
+```python
+x = 1/11
+print(x)
+s = "One eleventh is approximately %.3f"
+print(s)
+print(s%x)
+```
+Here, the string `s` contains the text we wish to produce, and the entry `%.3f` is a placeholder representing a floating point number with three decimal places. `x` is a floating point variable, calculated to many decimal places. The code `s%x` combines the two, resulting in the contents of `x` being inserted into the string `s`, formatted as required.
+
+All placeholders begin with the '%' symbol. Integer placeholders end with the letter 'i', floating-point placeholders end with the letter 'f', and string placeholders end with the letter 's'. Between the '%' and the letter, one can specify various options controlling the exact form of output:
+
+| Placeholder | Description | Example | Output |
+|---|---|---|---|
+| `%i` | General integer (no further formatting specified) | `'%i'%3` | '3' |
+| `%3i` | Integer, at least 3 characters wide | `'%3i'%3` | `'  3'` |
+| `%03i` | Integer, at least 3 characters wide, zero-padded | `'%03i'%3` | `'003'` |
+| `%f` | General floating-point number (no format specified) | `'%f'%2.9` | '2.900000' |
+| `%12f` | Floating-point number, occupying at least 12 characters | `'%12f'%2.9` | `'    2.900000'`|
+| `%012f` | Floating-point number, occupying at least 12 characters, zero-padded | `'%012f'%2.9` | `'00002.900000'`|
+| `%8.2f` | Floating-point number, occupying at least 8 characters, rounded to two decimal places | `'%8.2f'%2.9` | `'    2.90'` |
+| `%s` | General string (no format specified) | `'%s'%'test'` | `'test'` |
+| `%10s` | String, occupying at least 10 characters | `'%10s'%'test'` | `'      test'`|
+| `%%` | Literal '%' character | `'%6.2f%%'%2.9` | `'  2.90%'` |
+
+Where a string contains more than one placeholder, we can pass the required information as a tuple:
+```python
+phrase = '%i litres of %s at $%.2f/L costs a total of $%.2f'
+print(phrase%(2, 'milk', 1.29, 2*1.29))
+print(phrase%(40, 'petrol', 1.53, 40*1.53))
+print(phrase%(7.5, 'water', 0.17, 7.5*0.17))
+```
+**&#10148; Try it out!**
+
+```{python}
+# Try it here!
+```
+
+Sometimes, it may be necessary to use string formatting to write the placeholders, allowing the style of output to be set at runtime:
+```python
+def print_result(result,number_of_decimal_places):
+    fmt = "The result is %%.%if"
+    print((fmt%number_of_decimal_places)%result)
+```
+However, this is best avoided if possible.
+
+The second, newer approach to formatting uses braces `{}` instead of `%...` to represent a placeholder, and a `.format()` function that can act on any string. The syntax of the format specifiers is also different. Our example would become:
+```python
+x = 1/11
+print(x)
+s = "One eleventh is approximately {:.2f}"
+print(s)
+print(s.format(x))
+```
+Similarly, 
+```python
+phrase = '{} litres of {} at ${:.2f}/L costs a total of ${:.2f}'
+print(phrase.format(2, 'milk', 1.29, 2*1.29))
+print(phrase,format(40, 'petrol', 1.53, 40*1.53))
+print(phrase.format(7.5, 'water', 0.17, 7.5*0.17))
+```
+The new approach provides a much richer set of formatting options, described in full [in the online documentation](https://docs.python.org/3.4/library/string.html#format-string-syntax). One benefit of the new style is that it is no longer necessary to pass information to format in the same order as it is used: we can number the placeholders. For example,
+```python
+phrase = '{3} litres of {0} at ${1:.2f}/L costs a total of ${2:.2f}'
+print(phrase.format('milk', 1.29, 2*1.29, 2))
+print(phrase,format('petrol', 1.53, 40*1.53, 40))
+print(phrase.format('water', 0.17, 7.5*0.17, 7.5))
+```
+This is particularly useful if you need to repeat the same information several times in a string:
+```python
+phrase = "This sentence has the word {0} {0} {0} repeated three times and the word {1} {1} repeated twice."
+print(phrase.format('cat', 'dog'))
+```
+**&#10148; Try it out!**
+
+```{python}
+# Try it here!
+```
+
+**&#10148; Repeat the table-formatting example, making use of the string formatting capabilities**
+
+```{python}
+# Try it here!
+```
+
+We will encounter many more text-formatting examples in later exercises.
+
+## The 'Caesar' cipher
+
+As we have already discussed, every piece of information within a computer must be organised and represented in binary form. This implies that the sequence of letters in the alphabet can be mapped onto the set of integers, and this is usually done via the 'ASCII' code sequence. 
+
+Python provides the function `chr(integer)` to convert integers into their ASCII alphanumeric equivalent.
+
+**&#10148; Write a loop to print the integers from 33 up to 128, and their ASCII equivalents.** (The first 32 ASCII codes are special control characters, and do not have alphanumeric equivalents).
+
+```{python}
+# Try it here!
+```
+
+A 'Caesar cipher' is a very simple way to hide a message making it difficult for someone to read. To encode a piece of text with a Caesar cipher, we simply shift each letter $N$ places up (or down) the alphabet. For example, choosing $N=1$, the message
+```text
+I like Python
+```
+would become
+```text
+J mjlf Qzuipm
+```
+because 'J' is one letter after 'I', 'm' is one after 'l', and so on.
+
+**&#10148; Write a function to encode messages using Caesar ciphers (for any choice of $N$).** Note that the 'decoder' is simply the 'encoder', but instead using $-N$.
+
+```{python}
+# Try it here!
+```
+
+Here is a message encoded using a Caesar cipher:
+```text
+Pfl yrmv wzezjyvu kyzj vovitzjv
+```
+**&#10148; By looping through all possible values of $N$, find the $N$ used to encode this message and decode it.**
+
+```{python}
+# Try it here!
+```
+
