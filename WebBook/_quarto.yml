@@ -17,9 +17,14 @@ book:
         - intro.qmd
     - part: "Basic Language Skills"
       chapters:
-        - Basics/Intro.qmd
-        - Basics/Ex1-GettingStartedWithPython.qmd
-        - Basics/Ex2-VariablesAndFunctions.qmd
+        - Basics/Ex1-IntroWebPython.qmd
+        - Basics/Ex2-Variables.qmd
+        - Basics/Ex2a-Functions.qmd
+        - Basics/Ex3-LoopsAndConditionals.qmd
+        - Basics/Ex4-GuessingGames.qmd
+        - Basics/Ex5-ListsEtc.qmd
+        - Basics/Ex6-MoreLoops.qmd
+        - Basics/Ex7-Strings.qmd
         - Basics/Ex8-ReadWriteFiles.qmd
 
     - part: "Advanced Language Skills"
@@ -50,13 +55,13 @@ book:
 
   navbar:
     search: true
-    logo: Images/ANU-logo.jpg
+    logo: assets/ANU-logo.jpg
     background: "white"
     foreground: "#C58812" # ANU honey colour
 
   sidebar:
     # logo: Images/COS-EarthSciences-800.jpg
-    # logo: Images/ANU-logo.jpg
+    logo: assets/AuWorldEQ.jpg
     background: "white"
     # foreground: "#C58812" # ANU honey colour
 
@@ -68,7 +73,10 @@ execute:
   
 format:
   html:
-    theme: flatly # united / simplex
+    theme:  [united, "assets/theme.scss"] # united / simplex / flatly
+    mainfont: "Jost"
+    fontsize: 0.9em
+    linestretch: 1.7
     linkcolor: "#C58812"
     number-sections: false
     number-depth: 1

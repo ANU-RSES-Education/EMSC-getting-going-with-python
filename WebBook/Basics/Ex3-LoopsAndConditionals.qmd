@@ -1,10 +1,16 @@
 ---
-title: Exercise 3 - Loops and conditionals
+title: Loops and conditionals
+author: 
+    - Louis Moresi
+    - Andrew Valentine
 jupyter: python3
+format:
+  html:
+    code-links: false
+#       - text: Run it here !
+#         icon: rocket-takeoff
+#         ref: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
 ---
-
-*Andrew Valentine, Louis Moresi, louis.moresi@anu.edu.au*
-
 
 Much of the power in programming comes from being able to repeat calculations, and/or change how our program works depending on the values of certain variables. To achieve this, we need to employ 'loop expressions' and 'conditional expressions'.
 

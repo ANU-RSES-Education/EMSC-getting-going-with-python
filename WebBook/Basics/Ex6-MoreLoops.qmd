@@ -1,9 +1,16 @@
 ---
-title: Exercise 6 - More loops
+title: More about loops
+author:
+    - Louis Moresi
+    - Andrew Valentine
 jupyter: python3
+format:
+  html:
+    code-links: false
+#       - text: Run it here !
+#         icon: rocket-takeoff
+#         ref: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
 ---
-
-*Andrew Valentine, Louis Moresi, louis.moresi@anu.edu.au*
 
 We have already encountered one way of repeating calculations - the `while` loop. Python also provides a second kind of loop, the `for` loop. This allows us to do a calculation for each of the entries in a list, tuple or dictionary.
 
