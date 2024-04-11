@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Louis Moresi">
 
 <title>EMSC - Get Going with Python - Introduction</title>
 <style>
@@ -50,7 +51,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Basics/Intro.html" rel="next">
+<link href="./Basics/Ex1-IntroWebPython.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -100,7 +101,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Images/ANU-logo.jpg" alt="" class="navbar-logo">
+    <img src="./assets/ANU-logo.jpg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">EMSC - Get Going with Python</span>
@@ -126,6 +127,11 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -160,17 +166,42 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Intro.html</span></a>
+  <a href="./Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex1-GettingStartedWithPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1 - Getting started with Python</span></a>
+  <a href="./Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex2-VariablesAndFunctions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 2 - Variables and functions</span></a>
+  <a href="./Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops and conditionals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Basics/Ex4-GuessingGames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 4 - Guessing Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -234,8 +265,14 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -248,6 +285,12 @@ div.csl-indent {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Louis Moresi </p>
+          </div>
+  </div>
     
   
     
@@ -258,6 +301,8 @@ div.csl-indent {
 </header>
 
 
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <p>This is a book created from markdown and executable code.</p>
 <p>See <span class="citation" data-cites="knuth84">Knuth (<a href="#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
 
@@ -267,6 +312,7 @@ div.csl-indent {
 Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -663,8 +709,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Basics/Intro.html" class="pagination-link" aria-label="Intro.html">
-        <span class="nav-page-text"><span class="chapter-title">Intro.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Basics/Ex1-IntroWebPython.html" class="pagination-link" aria-label="Python on the web">
+        <span class="nav-page-text"><span class="chapter-title">Python on the web</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

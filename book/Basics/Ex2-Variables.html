@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andrew Valentine">
+<meta name="author" content="Louis Moresi">
 
-<title>EMSC - Get Going with Python - Exercise 2 - Variables and functions</title>
+<title>EMSC - Get Going with Python - Variables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +66,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Basics/Ex8-ReadWriteFiles.html" rel="next">
-<link href="../Basics/Ex1-GettingStartedWithPython.html" rel="prev">
+<link href="../Basics/Ex2a-Functions.html" rel="next">
+<link href="../Basics/Ex1-IntroWebPython.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -264,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"options":{"output":"true","autorun":"","label":"","warning":"true","out-width":"700px","results":"markup","dpi":72,"comment":"","message":"true","read-only":"false","fig-height":5,"classes":"","context":"interactive","fig-cap":"","out-height":"","fig-width":7},"id":1,"code":"nameForThisQuantity = 3 + 5"}];
+globalThis.qpyodideCellDetails = [{"options":{"label":"","read-only":"false","classes":"","context":"interactive","out-height":"","out-width":"700px","comment":"","autorun":"","warning":"true","fig-width":7,"fig-cap":"","dpi":72,"results":"markup","fig-height":5,"output":"true","message":"true"},"id":1,"code":"nameForThisQuantity = 3 + 5\nnameForThisQuantity"},{"options":{"label":"","read-only":"false","classes":"","context":"interactive","out-height":"","out-width":"700px","comment":"","autorun":"","warning":"true","fig-width":7,"fig-cap":"","dpi":72,"results":"markup","fig-height":5,"output":"true","message":"true"},"id":2,"code":"# All yours ...\n\n\n"},{"options":{"label":"","read-only":"false","classes":"","context":"interactive","out-height":"","out-width":"700px","comment":"","autorun":"","warning":"true","fig-width":7,"fig-cap":"","dpi":72,"results":"markup","fig-height":5,"output":"true","message":"true"},"id":3,"code":"# Try it out ...\n\n\n"},{"options":{"label":"","read-only":"false","classes":"","context":"interactive","out-height":"","out-width":"700px","comment":"","autorun":"","warning":"true","fig-width":7,"fig-cap":"","dpi":72,"results":"markup","fig-height":5,"output":"true","message":"true"},"id":4,"code":"# Accounting 101 here ...\n\n\n"}];
 
 
 </script>
@@ -495,7 +497,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../Images/ANU-logo.jpg" alt="" class="navbar-logo">
+    <img src="../assets/ANU-logo.jpg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">EMSC - Get Going with Python</span>
@@ -511,7 +513,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Intro.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex2-VariablesAndFunctions.html"><span class="chapter-title">Exercise 2 - Variables and functions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex2-Variables.html"><span class="chapter-title">Variables</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -521,6 +523,11 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -555,17 +562,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex1-GettingStartedWithPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1 - Getting started with Python</span></a>
+  <a href="../Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex2-VariablesAndFunctions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Exercise 2 - Variables and functions</span></a>
+  <a href="../Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops and conditionals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex4-GuessingGames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 4 - Guessing Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -638,8 +670,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#types" id="toc-types" class="nav-link" data-scroll-target="#types">Types</a></li>
   </ul></li>
-  <li><a href="#salary-calculations" id="toc-salary-calculations" class="nav-link" data-scroll-target="#salary-calculations">Salary calculations</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#application-salary-calculations" id="toc-application-salary-calculations" class="nav-link" data-scroll-target="#application-salary-calculations">Application: Salary calculations</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
     </div>
@@ -656,15 +687,22 @@ window.Quarto = {
   });
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Intro.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex2-VariablesAndFunctions.html"><span class="chapter-title">Exercise 2 - Variables and functions</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex2-Variables.html"><span class="chapter-title">Variables</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Exercise 2 - Variables and functions</span></h1>
+<h1 class="title"><span class="chapter-title">Variables</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andrew Valentine </p>
+             <p>Louis Moresi </p>
+          </div>
+  </div>
     
   
     
@@ -675,9 +713,21 @@ window.Quarto = {
 </header>
 
 
-<p><em>Andrew Valentine, Louis Moresi, louis.moresi@anu.edu.au</em></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this section we will use <strong>variables</strong> to hold the results of calculations so that we can reuse them. This not only save computing things again and again but allows us to simplify expressions so that we make fewer mistakes. We will learn a number of tricks that make code more easy to read and, consequently, less likely to contain errors.</p>
+</div>
+</div>
 <p>We saw in the last exercise that Python can do simple calculations, such as</p>
-<div id="bdf98277" class="cell">
+<div id="05295713" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">+</span> <span class="dv">5</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="op">*</span> <span class="fl">2.1</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span> <span class="op">/</span> <span class="dv">3</span></span>
@@ -692,7 +742,7 @@ window.Quarto = {
 <li>Starts with a letter, and</li>
 <li>Contains only the alphanumeric characters (a-z, A-Z, 0-9) and (if you wish) the underscore character, ‘_’. <strong><em>Note that variable names are case-sensitive, so <code>variablename</code>, <code>variableName</code> and <code>VariableName</code> are all treated as being distinct!</em></strong></li>
 </ul>
-<p>Strictly, your variable names can also <em>begin</em> with an underscore. However, there is a convention among Python programmers that this is only done in special circumstances, which we won’t encounter in this course.</p>
+<p>Strictly, your variable names can also <em>begin</em> with an underscore. However, there is a convention among Python programmers that this is done to signal to other programmers (and code editors) that the variable is ‘private’ or intended to be hidden in some way.</p>
 <p>The computer doesn’t care what name you use. However, humans who have to look at your program will be much happier if you use names that describe what the quantity ‘means’. The computer will treat these two examples identically:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>azqg <span class="op">=</span> <span class="fl">17.3</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>bppe <span class="op">=</span> <span class="fl">12.5</span></span>
@@ -700,8 +750,8 @@ window.Quarto = {
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cost_before_tax <span class="op">=</span> <span class="fl">17.3</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tax_rate <span class="op">=</span> <span class="fl">12.5</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>cost_after_tax <span class="op">=</span> cost_before_tax <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> tax_rate <span class="op">/</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Which one do you find easier to understand?</p>
-<p>You may encounter code that looks more like (1) than (2). This is because early programming languages placed strict limits on the length of variable names. However, there is no longer any need for this!</p>
+<p>Which one do you find easier to understand ?</p>
+<p>You may encounter code that looks more like (1) than (2). This is because early programming languages placed strict limits on the length of variable names (see this <a href="https://en.wikipedia.org/wiki/Hungarian_notation">wikipedia article</a>). However, there is no longer any need for this and (we think) you should avoid it at all costs !</p>
 <section id="using-variables" class="level2">
 <h2 class="anchored" data-anchor-id="using-variables">Using variables</h2>
 <p>As you may have noticed from the above example, once we have set the value of a variable, we can use it in calculations. Thus,</p>
@@ -717,228 +767,124 @@ window.Quarto = {
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> x <span class="op">+</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice that <code>x</code> appears on both sides of the equals sign here. This should be read as ‘do the calculation <code>x + y</code> and then store the result in <code>x</code> (over-writing whatever was there before)’. We end up with <code>x</code> containing the value <span class="math inline">\(3 + 2 = 5\)</span>.</p>
-<p><strong>➤ Try creating some variables, and using them in simple calculations.</strong> Check that the results match what you expect.</p>
-<div id="c079dcb9" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<p>In fact, constructs such as <code>x = x + y</code> are so common that Python has a special shorthand notation for this. We can express the same equation by entering <code>x += y</code>. There are similar versions for other operators: <code>-=</code>, <code>*=</code> and <code>/=</code>.</p>
-<p><strong>➤ Try out these shorthand operators.</strong> Is <code>x += 3</code> the same as <code>3 += x</code>? Why?</p>
-<div id="7e897f98" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+Exercise 1 - Setting, resetting and viewing variables
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Try creating some variables, and using them in simple calculations. Start with the examples above. Be sure to check that the results match what you expect.</p>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Constructs such as <code>x = x + y</code> are so common that Python has a special shorthand notation for this. We can express the same equation by entering <code>x += y</code>. There are similar versions for other operators: <code>-=</code>, <code>*=</code> and <code>/=</code>.</p>
+<p>Try out these shorthand operators. Is <code>x += 3</code> the same as <code>3 += x</code>? Why / why not ?</p>
 <p>There is no particular advantage to using these short forms, except convenience and readibility.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="naming-conventions" class="level2">
 <h2 class="anchored" data-anchor-id="naming-conventions">Naming Conventions</h2>
 <p>You can call your variables anything you like. However, following a few conventions will improve the clarity of your code:</p>
 <ul>
-<li>If your variable name is made up of multiple words, either:
+<li><p>If your variable name is made up of multiple words, either:</p>
 <ul>
 <li>Join them using underscores (e.g.&nbsp;<code>a_long_variable_name = 17</code>), or</li>
-<li>Capitalize the first letter of each word (e.g.&nbsp;<code>AnotherLongVariableName = 23.6</code>). This is sometimes referred to as ‘camel case’ (since it is lower case with extra humps!).</li>
+<li>Capitalize the first letter of each word (e.g.&nbsp;<code>AnotherLongVariableName = 23.6</code>). This is sometimes referred to as ‘camel case’ or ‘CamelCase’(since it is lower case with extra humps!).</li>
 </ul></li>
-<li>It is common to use UPPER CASE for constants that should never need to be changed within the program, e.g.&nbsp;<code>GRAVITATIONAL_ACCELERATION = 9.81</code>.</li>
-<li>Traditionally, variables that contain integers have names beginning with the letters i, j, k, l, m, or n; variables containing real numbers start with any other letter. This comes from early programming languages (especially Fortran) where it was a requirement, and follows a similar convention in mathematics. Nowadays, this convention is often ignored for long variable names. However, if your name only contains one or two characters (e.g.&nbsp;<code>a</code> or <code>ix</code>), it is usual to choose the first letter appropriately. In particular, a bare <code>i</code>, <code>j</code>, <code>k</code>, <code>m</code> or <code>n</code> should only be used for a counting index (more on that later). If you ignore this rule, the program will work fine, but you can expect anyone who has to decipher your code in future to get very, very angry with you.</li>
+<li><p>It is common but not compulsory to use UPPER CASE for constants that should never need to be changed within the program, e.g.&nbsp;<code>GRAVITATIONAL_ACCELERATION = 9.81</code>.</p></li>
+<li><p>Traditionally, variables that contain integers have names beginning with the letters i, j, k, l, m, or n; variables containing real numbers start with any other letter. This comes from early programming languages (especially Fortran) where it was a requirement, and follows a similar convention in mathematics. Nowadays, this convention is often ignored for long variable names. However, if your name only contains one or two characters (e.g.&nbsp;<code>a</code> or <code>ix</code>), it is usual to choose the first letter appropriately. In particular, a bare <code>i</code>, <code>j</code>, <code>k</code>, <code>m</code> or <code>n</code> should only be used for a counting index (more on that later). If you ignore this rule, the program will work fine, but you can expect anyone who has to decipher your code in future to get more than a little bit frustrated with your choices.</p></li>
 </ul>
 <p>Some other tips:</p>
 <ul>
 <li>If your code is connected to another document (e.g.&nbsp;you are trying to plot some equation from a paper) then use clearly-related names in both. For example, if your paper has the equation <span class="math inline">\(y = \alpha x +3\gamma\)</span>, then use the variable names <code>x</code>, <code>y</code>, <code>alpha</code> and <code>gamma</code> in your code. You can even use unicode.</li>
 <li>Make your variable names long enough to be clearly understood, but not <em>too</em> long. At most, you probably want it to be based on two or three words.</li>
-<li>Do not give your variable a name that has a special meaning in Python (e.g.&nbsp;<code>int</code> or <code>sum</code>). Doing so will not <em>always</em> cause problems, but it is a common source of grief. Fortunately, most text editors (including the one that is part of Jupyter) will highlight these ‘reserved words’ in a different colour, so you can avoid using them. For example:</li>
+<li>Do not give your variable a name that has a special meaning in Python (e.g.&nbsp;<code>int</code> or <code>sum</code>). Doing so will not <em>always</em> cause problems, but it is a common source of grief.</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">3</span>   <span class="co"># x is in black; I can use it for a variable name.</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span> <span class="op">=</span> <span class="dv">5</span> <span class="co"># sum is in green: it has a special meaning and would be a bad choice for a variable name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Above all, try and develop a consistent style, and name similar quantities in similar ways. For example, the following are individually all reasonable choices for variable names:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mass_of_helium <span class="op">=</span> <span class="fl">4.003</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>neon_mass <span class="op">=</span> <span class="fl">20.180</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>massArgon <span class="op">=</span> <span class="fl">39.948</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>mKrypton <span class="op">=</span> <span class="fl">83.798</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>mXe <span class="op">=</span> <span class="fl">131.293</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mass_of_helium <span class="op">=</span> <span class="fl">4.003</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>neon_mass <span class="op">=</span> <span class="fl">20.180</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>massArgon <span class="op">=</span> <span class="fl">39.948</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>mKrypton <span class="op">=</span> <span class="fl">83.798</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>mXe <span class="op">=</span> <span class="fl">131.293</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>However, mixing the different styles within one program is guaranteed to cause you confusion and lead to errors. Pick one format that makes sense to you, and stick with it.</p>
 <section id="types" class="level3">
 <h3 class="anchored" data-anchor-id="types">Types</h3>
-<p>As we have discussed, any variable has a <strong>type</strong>. We can ask Python to report on the type of a given variable by using the command <code>type(variable_name)</code>. For example,</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Any and every variable has a <strong>type</strong>. We can ask Python to report on the type of a given variable by using the command <code>type(variable_name)</code>. For example,</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>will print <code>int</code> (shorthand for ‘integer’), while</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">3.0</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">3.0</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>will print <code>float</code> (i.e., floating-point). We will encounter other types in due course.</p>
-<div id="d85ed871" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2 - Variables and their types
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Try creating some variables, and using them in simple calculations. Start with the examples above. Be sure to check that the results match what you expect.</p>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>What happens if you mix different types, ?</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">3.0</span> <span class="op">*</span> i</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(i), <span class="bu">type</span>(a))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i <span class="op">/</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
-<section id="salary-calculations" class="level2">
-<h2 class="anchored" data-anchor-id="salary-calculations">Salary calculations</h2>
-<p>Let’s try doing a realistic calculation. Suppose your annual salary is $87,232, and the annual tax rate is 35%. How much money should be paid into your bank account every two weeks?</p>
-<p><strong>➤ Calculate your fortnightly pay.</strong> Remember, break the problem down into individual steps, and create variables for each of the quantities involved! You should find the answer is $2,180.80.</p>
-<div id="55bc568f" class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="application-salary-calculations" class="level2">
+<h2 class="anchored" data-anchor-id="application-salary-calculations">Application: Salary calculations</h2>
+<p>Let’s try doing a real-world calculation. Suppose your annual salary is $ 164,402, and the annual tax rate is 35%. How much money should be paid into your bank account every two weeks?</p>
+<p>What if you happened to be a famous musician in 1960s London, where the tax rates were more progressive. Suppose you earn $1,987,232 and the tax rate is just 20% on the first $50,000 that you earn, and 95% on the remainder.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<p>Let’s do something a bit more complicated. Suppose the tax rate is only 20% on the first $30,000 that you earn, and 35% on the remainder.</p>
-<p><strong>➤ Copy your earlier code and adapt it for this case.</strong></p>
-<div id="c3fff1f0" class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+Exercise 3 - Taxman
 </div>
-</section>
-<section id="functions" class="level2">
-<h2 class="anchored" data-anchor-id="functions">Functions</h2>
-<p>A <strong>function</strong> provides a convenient way to ‘wrap up’ code to accomplish a particular task. Once a function is written, it can (generally) be used without us needing to know anything about <em>how</em> it works. This is a very powerful concept, and complex programs are often made by chaining many functions together.</p>
-<p>In general, a function has a well-defined set of <strong>inputs</strong> (sometimes known as the function’s ‘arguments’) and <strong>outputs</strong> (sometimes called the ‘return value’). In Python, and most other modern programming languages, a ‘function call’ looks like</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>output1, output2 <span class="op">=</span> function_name(input1, input2, input3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We have already encountered a couple of functions: we have used <code>print()</code> and <code>type()</code>. These are known as ‘built-in functions’, as they are a core piece of the Python programming language. For a full list of built-ins, see <a href="https://docs.python.org/3.4/library/functions.html">this page</a> of the official Python documentation. Other functions can be accessed by ‘importing’ them from ‘modules’ - we will learn more about this shortly.</p>
-<p>It is easy to write your own functions. This is done by using the <code>def</code> command, and writing something like:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_name(input1, input2, input3):</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    [code to compute outputs...]</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> output1,output2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that <code>function_name</code>, <code>input1</code>, <code>output1</code> etc can be any name you wish to use. In general, a function definition comprises: - The keyword <code>def</code>, followed by - The function name, followed by - An opening parenthesis <code>(</code>, followed by - Zero or more input variables, followed by - A closing parenthesis <code>)</code>, followed by - A colon, <code>:</code></p>
-<p>This is all followed by an indented block of code containing zero or more lines of the form - The keyword <code>return</code>, followed by - Zero or more variable names (or valid expressions)</p>
-<p>For example</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> addThreeNumbers(first, second, third):</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> first <span class="op">+</span> second <span class="op">+</span> third</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We can then ‘call’ this function:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> addThreeNumbers(a, b, <span class="op">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The variable <code>result</code> should now contain the value <code>7</code> (= 3 + 5 - 1).</p>
-<p><strong>➤ Create the <code>addThreeNumbers</code> function and try it out.</strong></p>
-<div id="064b894e" class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<p>A few things to notice from this example: - When we ‘call’ (use) a function, we can give it both named variables (<code>a</code> and <code>b</code>), and values (<code>-1</code>). - The variable names we pass to the function don’t need to match the variable names used when ‘declaring’ (defining) the function - so we can use <code>a</code> and <code>b</code> instead of <code>first</code> and <code>second</code>. - The <code>return</code> keyword specifies what the function result will be.</p>
-<p>Here’s a slightly more complicated example, which calculates the sign and absolute value of the input (unless it is zero):</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> signAndValue(x):</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Unable to handle zero input"</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> x <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">+</span><span class="dv">1</span>, x</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span>x</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hope that helps!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>➤ Try creating this function and see how it behaves.</strong> Some things to think about: - When is the message “Hope that helps!” printed? Why? - What form does the function result have? What is its type? What about if <code>x</code>=0? - What is the role of <code>if/elif/else</code>?</p>
-<div id="9538c0f6" class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Calculate your fortnightly pay as a non-musical academic</strong> Remember, break the problem down into individual steps, and create variables for each of the quantities involved! You should find the answer is $ 4110.06.</p>
+<div id="qpyodide-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Now repeat the calculation for the higher-income scenario. Wait, isn’t that the same ?</p>
+<hr>
+<div class="line-block">&nbsp;&nbsp;Let me tell you how it will be<br>
+&nbsp;&nbsp;There’s one for you, nineteen for me<br>
+&nbsp;&nbsp;’Cause I’m the taxman<br>
+&nbsp;&nbsp;Yeah, I’m the taxman<br>
+&nbsp;&nbsp;Should five percent appear too small<br>
+&nbsp;&nbsp;Be thankful I don’t take it all<br>
+&nbsp;&nbsp;’Cause I’m the taxman<br>
+&nbsp;&nbsp;Yeah, I’m the taxman<br>
+<br>
+&nbsp;&nbsp;<a href="https://en.wikipedia.org/wiki/Taxman">Taxman</a> George Harrison, Revolver</div>
 </div>
-<p>You can call this function in two slightly different ways. The first is to write (for example)</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> signAndValue(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>and the second is to write</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sgn, val <span class="op">=</span> signAndValue(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>➤ Try both forms.</strong> What type does each result have? What happens if <code>x</code>=0? Look again at the function declaration: can you explain this behaviour?</p>
-<div id="b0ff506d" class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The following function calculates the sum of the integers from <code>n0</code> to <code>N</code>, inclusive: <span class="math inline">\(\sum_{n=n_0}^N n\)</span>.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sumIntegers(N, n0):</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n0, N<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">+=</span> i</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that the function definition has the upper-limit, <code>N</code>, as the first input argument, contrary to what one might expect - the reason for this will soon become clear.</p>
-<p><strong>➤ Create the function and test it.</strong></p>
-<div id="a1a50493" class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>It might usually be the case that we want to start our sum at <span class="math inline">\(n_0 = 1\)</span>. Python allows us to provide this as a ‘default’ value for the <code>n0</code> variable, by simply changing the function declaration:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sumIntegers(N, n0<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n0, N<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">+=</span> i</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now, if we call <code>sumIntegers</code> with only <em>one</em> argument, it is assumed that this is <code>N</code>, and <code>n0</code> receives its default value. However, if we provide <em>two</em> arguments, these are interpreted as <code>N</code> and <code>n0</code> respectively.</p>
-<p><strong>➤ Try it out!</strong> Can you understand how the function works?</p>
-<div id="7bdf96c3" class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>We can have multiple arguments with default values. For example, we can extend our function to compute <span class="math inline">\(\sum_{n=n_0}^N n^{\,p}\)</span> for some power <span class="math inline">\(p\)</span>:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sumIntegers(N, n0<span class="op">=</span><span class="dv">1</span>, p<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n0, N<span class="op">+</span><span class="dv">1</span>):</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">+=</span> i<span class="op">**</span>p</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If we call this specifying one, two, or three arguments, they are assumed to occur in the same order as in the function declaration (i.e.&nbsp;<code>N</code>, <code>n0</code>, <code>p</code>). However, we can also explicitly specify which arguments we wish to set. For example</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> sumIntegers(<span class="dv">10</span>, p<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>would calculate the sum of squares, leaving <code>n0</code> set to its default value.</p>
-<p><strong>➤ Try it out!</strong></p>
-<div id="dd6b723c" class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>If inputs are not labelled, they are assumed to be provided in the same order as in the function definition. The following function displays the value of each argument: you can use it to check you understand the different ways to call a function.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> printArgs(a, b, c<span class="op">=</span><span class="dv">17</span>, d<span class="op">=</span><span class="fl">4.3</span>):</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"a is: "</span><span class="op">+</span><span class="bu">str</span>(a))</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"b is: "</span><span class="op">+</span><span class="bu">str</span>(b))</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"c is: "</span><span class="op">+</span><span class="bu">str</span>(c))</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"d is: "</span><span class="op">+</span><span class="bu">str</span>(d))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>➤ Check that you understand how arguments are passed to functions.</strong></p>
-<div id="b77d8f35" class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Note that the <code>printArgs()</code> function above does not contain an explicit <code>return</code> statement. It is an example of a function that has ‘side-effects’: it does something that isn’t apparent from knowledge of its outputs. Sometimes, it is necessary to write code with side-effects, especially for data input or output. However, they are a common source of problems, and they should be avoided where possible.</p>
-<p>When you pass a variable to a function, you effectively create a copy of the information it contains (unless it is a ‘list’ or ‘array’ - more on those in a later exercise!). Changing the variable within the function does <em>not</em> change the value outside the function, <em>unless</em> you pass it back via an output. For example:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span><span class="op">+</span><span class="bu">str</span>(x))</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>increment(x) <span class="co"># Notice that we don't do anything with the return value here</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)      <span class="co"># x will therefore still be zero</span></span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> increment(x) <span class="co"># This time we are updating the value of x</span></span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)      <span class="co"># x will be one.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>➤ Try this out, and check you understand what’s going on.</strong></p>
-<div id="b7e34b78" class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Earlier in this exercise, you wrote code to calculate someone’s fortnightly salary after tax.</p>
-<p><strong>➤ Adapt your code to be a function and test it out.</strong> The function should take the annual salary as a (required) argument, and the tax rate as an optional argument.</p>
-<div id="db4783c1" class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To allow one to use your function without knowing it, you need to document it. This is usually done just after the definition of the function. This step may seem unimportant at first, but is critical for re-using your code and distributing it to other people! In Jupyter notebooks, you can press shift+tab to bring the function help.</p>
-<p><strong>➤ Try this for the type() and print() functions.</strong></p>
-<div id="adfe8523" class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Another way is to just call <code>help(&lt;functionname&gt;)</code>.</p>
-<p><strong>➤ Try this below.</strong></p>
-<div id="9d5b4c4f" class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Documentation is provided by writing ‘docstrings’ at the start of any function you create. These consist of blocks of text enclosed in triple inverted commas:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""[Documentation goes here...]"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In scientific Python, docstrings usually follow a certain style, e.g.:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""increment x.</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co">    x : integer</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">        the number you want to increament</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co">    x : integer</span></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="co">        incremented x</span></span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span><span class="op">+</span><span class="bu">str</span>(x))</span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Writing this example will thus output</p>
-<div id="a16a2161" class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>➤ Document your function to calculate someone’s fortnightly salary after tax and test it out.</strong></p>
-<div id="92a28825" class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>As we saw earlier, each variable we create has a type. Most variables come with certain functions and attributes ‘attached’ to them, to perform various operations that are commonly-required for that data type. These can be accessed using a ‘dot’:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="op">&lt;</span>variablename<span class="op">&gt;</span>.<span class="op">&lt;</span>attributename<span class="op">&gt;</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="op">&lt;</span>variablename<span class="op">&gt;</span>.<span class="op">&lt;</span>functionname<span class="op">&gt;</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For example, if we create a complex number <span class="math inline">\(z = 1+3i\)</span> (where <span class="math inline">\(i = \sqrt{-1}\)</span>)</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="ot">3j</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>we can then access two attributes and a function, - <code>z.real</code> - The ‘real part’ of the complex number - <code>z.imag</code> - The ‘imaginary part’ of the complex number - <code>z.conjugate()</code> - Function returning the ‘complex conjugate’ of z</p>
-<p>Similarly, any floating-point number, <code>v</code>, comes with a <code>v.as_integer_ratio()</code> function that reports <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(v = a/b\)</span>. To see the full list of functions associated with any variable <code>v</code>, type <code>help(v)</code>. You can also type <code>v.</code> and then hit the <kbd>Tab</kbd> key.</p>
-<p>You may notice that some variables have a lot of attached functions that are named with double-underscores, such as <code>x.__add__()</code>. These are used by Python internally, and are not intended to be called directly in programs. In fact, the <code>__add__()</code> function is called whenever you use <code>+</code>: internally, <code>x+y</code> gets translated to <code>x.__add__(y)</code>. We will discuss this in more detail later in the course, when we talk about ‘object-oriented programming’.</p>
 
 
 </section>
@@ -1333,13 +1279,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Basics/Ex1-GettingStartedWithPython.html" class="pagination-link" aria-label="Exercise 1 - Getting started with Python">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Exercise 1 - Getting started with Python</span></span>
+      <a href="../Basics/Ex1-IntroWebPython.html" class="pagination-link" aria-label="Python on the web">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Python on the web</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Basics/Ex8-ReadWriteFiles.html" class="pagination-link" aria-label="Reading and writing files">
-        <span class="nav-page-text"><span class="chapter-title">Reading and writing files</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Basics/Ex2a-Functions.html" class="pagination-link" aria-label="Functions">
+        <span class="nav-page-text"><span class="chapter-title">Functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

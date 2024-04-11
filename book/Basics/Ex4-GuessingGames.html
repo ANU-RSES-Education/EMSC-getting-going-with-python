@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Andrew Valentine">
+<meta name="author" content="Louis Moresi">
 
-<title>EMSC - Get Going with Python</title>
+<title>EMSC - Get Going with Python - Exercise 4 - Guessing Games</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Basics/Ex1-GettingStartedWithPython.html" rel="next">
-<link href="../intro.html" rel="prev">
+<link href="../Basics/Ex5-ListsEtc.html" rel="next">
+<link href="../Basics/Ex3-LoopsAndConditionals.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../Images/ANU-logo.jpg" alt="" class="navbar-logo">
+    <img src="../assets/ANU-logo.jpg" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">EMSC - Get Going with Python</span>
@@ -96,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Intro.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Intro.html"><span class="chapter-title">Intro.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex4-GuessingGames.html"><span class="chapter-title">Exercise 4 - Guessing Games</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -106,6 +142,11 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
@@ -140,17 +181,42 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex1-GettingStartedWithPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 1 - Getting started with Python</span></a>
+  <a href="../Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex2-VariablesAndFunctions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 2 - Variables and functions</span></a>
+  <a href="../Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops and conditionals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex4-GuessingGames.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Exercise 4 - Guessing Games</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -219,11 +285,73 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex4-GuessingGames.html"><span class="chapter-title">Exercise 4 - Guessing Games</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Exercise 4 - Guessing Games</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andrew Valentine </p>
+             <p>Louis Moresi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p><strong>➤ Try playing this simple game.</strong></p>
+<div id="a8b6f3f2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sys.path.append(os.getcwd()<span class="op">+</span><span class="st">'/.hidden/'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> guessingGames <span class="im">as</span> gg</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>gg.guessingGame(nmax<span class="op">=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>➤ Can you write your own version?</strong></p>
+<p>A couple of hints to help you: - To read input from the keyboard, you can use</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="bu">input</span>(message)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <code>message</code> is the prompt shown to the user (e.g.&nbsp;‘Make a guess:’ in <code>gg.guessingGame</code>). Whatever the user types in gets stored in the variable <code>x</code>. Note that <code>x</code> contains a string of characters, even if the user types in a number. You can use <code>int(x)</code> to convert the input to an integer (and <code>float(x)</code> if you want to convert it to a floating-point number).</p>
+<ul>
+<li>To generate a random integer, you can call the function <code>np.random.randint(lo,hi)</code> where <code>lo</code> is the smallest integer you want to generate, and <code>hi</code> is <strong>one greater than</strong> the largest integer.</li>
+</ul>
+<div id="b13ccb23" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="what-happens-if-the-user-types-something-in-that-isnt-an-integer-can-you-make-your-version-robust" class="level6">
+<h6 class="anchored" data-anchor-id="what-happens-if-the-user-types-something-in-that-isnt-an-integer-can-you-make-your-version-robust">What happens if the user types something in that isn’t an integer? Can you make your version robust?</h6>
+<p><strong>➤ Here’s another one to play:</strong></p>
+<div id="06da8731" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gg.higherOrLower(nmax<span class="op">=</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>➤ Try writing your own version.</strong></p>
+<p>You should be able to use the code you wrote for <code>guessingGame</code> as a starting point.</p>
+<div id="97d2764c" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>➤ Here’s a final one to try.</strong></p>
+<div id="4373e111" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>gg.montyHall(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>➤ Can you make your own version?</strong></p>
+<div id="939989b2" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -615,13 +743,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Introduction</span></span>
+      <a href="../Basics/Ex3-LoopsAndConditionals.html" class="pagination-link" aria-label="Loops and conditionals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Loops and conditionals</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Basics/Ex1-GettingStartedWithPython.html" class="pagination-link" aria-label="Exercise 1 - Getting started with Python">
-        <span class="nav-page-text"><span class="chapter-title">Exercise 1 - Getting started with Python</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Basics/Ex5-ListsEtc.html" class="pagination-link" aria-label="Lists, tuples and dictionaries">
+        <span class="nav-page-text"><span class="chapter-title">Lists, tuples and dictionaries</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Louis Moresi">
+<meta name="author" content="Andrew Valentine">
 
-<title>EMSC - Get Going with Python</title>
+<title>EMSC - Get Going with Python - Loops and conditionals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../DevSkills/Intro.html" rel="next">
-<link href="../Basics/Ex8-ReadWriteFiles.html" rel="prev">
+<link href="../Basics/Ex4-GuessingGames.html" rel="next">
+<link href="../Basics/Ex2a-Functions.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -96,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Advanced/Intro.html">Advanced Language Skills</a></li><li class="breadcrumb-item"><a href="../Advanced/Intro.html"><span class="chapter-title">Intro.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex3-LoopsAndConditionals.html"><span class="chapter-title">Loops and conditionals</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -160,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops and conditionals</span></a>
+  <a href="../Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Loops and conditionals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -201,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Intro.html</span></a>
   </div>
 </li>
       </ul>
@@ -244,16 +280,189 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#conditionals" id="toc-conditionals" class="nav-link active" data-scroll-target="#conditionals">Conditionals</a>
+  <ul class="collapse">
+  <li><a href="#logical-expressions" id="toc-logical-expressions" class="nav-link" data-scroll-target="#logical-expressions">Logical expressions</a></li>
+  </ul></li>
+  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops">Loops</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex3-LoopsAndConditionals.html"><span class="chapter-title">Loops and conditionals</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Loops and conditionals</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Louis Moresi </p>
+             <p>Andrew Valentine </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>Much of the power in programming comes from being able to repeat calculations, and/or change how our program works depending on the values of certain variables. To achieve this, we need to employ ‘loop expressions’ and ‘conditional expressions’.</p>
+<section id="conditionals" class="level2">
+<h2 class="anchored" data-anchor-id="conditionals">Conditionals</h2>
+<p>Conditional expressions allow us to alter the behaviour of our program depending on the circumstances. To do this, we employ an <code>if...elif...else</code> construct, which takes the form:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">&lt;</span>condition<span class="op">&gt;</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    [...]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="op">&lt;</span>another condition<span class="op">&gt;</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    [...]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    [...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, each <code>&lt;condition&gt;</code> is a ‘logical’ expression - something which is either ‘true’ or ‘false’. Each <code>[...]</code> denotes a block of code that is only executed if the condition is met. We can have as many <code>elif</code> (‘else if’) blocks as we wish, and we can omit the <code>elif</code> and/or <code>else</code> blocks entirely. At most, one block will be executed: each is tried in the order they appear in the program, until one is found for which <code>&lt;condition&gt;</code> is <code>True</code>. Notice that the <code>else</code> block does not have a condition - this is executed if none of the other conditions are met.</p>
+<p>To make this clearer, here’s a real example, inside a function:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> condExample(x):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x<span class="op">&lt;</span><span class="dv">0</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"x is negative"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> x<span class="op">&lt;=</span><span class="dv">1</span>:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"x is between 0 and 1 (inclusive)"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"x is greater than 1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>➤ Try it out!</strong> Does everything behave as you would expect? Try deleting the <code>elif</code> and/or <code>else</code> clauses; how does this affect the output?</p>
+<div id="dc3cebc6" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="logical-expressions" class="level3">
+<h3 class="anchored" data-anchor-id="logical-expressions">Logical expressions</h3>
+<p>Logical expressions are calculations that result in either <code>True</code> or <code>False</code>. As we have already seen, they often arise by comparing the value of two variables (or a variable and a constant), such as <code>x &gt; 0</code>. The comparison operators are:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+</tr>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+</tr>
+</tbody>
+</table>
+<p>You can check you understand how these work by testing expressions in a Python cell: for example, entering</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">&gt;</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>should evaluate to <code>False</code>.</p>
+<p><strong>➤ Try all the operators above.</strong></p>
+<div id="fc4e531c" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note: an important point is that the constants <code>True</code> or <code>False</code> are Booleans, and not text. So <code>"True"</code> (string) is very different of <code>True</code> (Boolean). A possible mistake is to confound them and use <code>"True"</code> instead of <code>True</code>. In general, as soon as you want to use something based on a true/false behavior, use Boolean constants in your program.</p>
+<p>To build more complicated expressions, you can use the Boolean operators <code>and</code>, <code>or</code> and <code>not</code>. An expression of the form <code>A and B</code> is only <code>True</code> if both <code>A</code> and <code>B</code> are separately <code>True</code>. On the other hand, <code>A or B</code> is <code>True</code> if either (or both) of <code>A</code> and <code>B</code> are themselves <code>True</code>. The <code>not</code> operator flips <code>True</code> to <code>False</code>, and vice versa. You can use parentheses to group expressions if necessary.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> (y <span class="op">==</span> <span class="dv">2</span> <span class="kw">or</span> <span class="kw">not</span> (y <span class="op">&gt;</span> <span class="dv">3</span> <span class="kw">and</span> x<span class="op">+</span>y <span class="op">==</span><span class="dv">4</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Many logical conditions can be expressed in multiple forms, for example <code>x &gt; 3</code> is identical to <code>not x &lt;= 3</code>. In general, you should use the simplest form that is appropriate to your circumstances.</p>
+<p>N.B. In some other languages, the symbols <code>&amp;</code> and <code>|</code> are used for <code>and</code> and <code>or</code>. In Python, these symbols are ‘bitwise’ operators, and they will not give the results you expect. We will avoid using them in this course.</p>
+<p><strong>➤ Try using the <code>and</code>, <code>or</code> and <code>not</code> operators.</strong></p>
+<div id="42e7f8b4" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Another logical operator you may encounter is <code>is</code>. This is used to test whether two variable names refer to the same entity. This is stronger than simply testing for equality. For example:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">300</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">300</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>a <span class="kw">is</span> b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>will return <code>False</code>, whereas <code>a is a</code> returns <code>True</code>. This may seem rather pointless, but it turns out to be useful when writing more advanced programs. It is also commonly encountered in conjunction with a null default value within a function:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> printHello(name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hello, what is your name?"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hello "</span><span class="op">+</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To some extent, this is a matter of idiom, rather than necessity.</p>
+<p><strong>➤ In the previous exercise, you wrote a function to calculate someone’s fortnightly pay, given an annual salary. Extend this to allow the user to choose to have weekly or monthly figures, instead.</strong></p>
+<div id="8c656055" class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="loops" class="level2">
+<h2 class="anchored" data-anchor-id="loops">Loops</h2>
+<p>Loops allow you to repeat a series of calculations a number of times, or until certain conditions are met. In Python, there are two main loop formats. The first is a <code>while</code> loop:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">&lt;</span>condition<span class="op">&gt;</span>:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    [...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, <code>&lt;condition&gt;</code> is a logical expression (just like those discussed above). If this evaluates to <code>True</code>, the block of code (<code>[...]</code>) is executed in its entirety. The condition is then evaluated again, and the entire process repeats until it becomes <code>False</code>. For example, here is a loop that keeps doubling a number until it exceeds some threshold:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x<span class="op">&lt;</span><span class="dv">100</span>:</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">+=</span>x</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Normally, the entire indented block of code below the <code>while</code> statement is executed before the condition is checked again. However, two commands can be used to alter this: - The <code>break</code> keyword terminates the loop, jumping to the first statement <em>after</em> the indented block - The <code>continue</code> keyword skips over any remaining code within the indented block, but returns to re-evaluate the <code>&lt;condition&gt;</code>, and if this is True will execute the indented block as before. These two commands are almost invariably used in conjunction with an <code>if</code> statement.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">100</span>:</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">+=</span><span class="dv">5</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x <span class="op">==</span> <span class="dv">71</span>: <span class="cf">break</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> x<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>: <span class="cf">continue</span> <span class="co"># Skip even x</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"In loop: x="</span>, x)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"After loop: x="</span>, x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you run this code, you will see that it never prints an even number (since the print statement is after the <code>continue</code> in this case, and so doesn’t get executed); moreover, the loop terminates at <code>x=71</code>, due to the <code>break</code> statement.</p>
+<div id="b62172ab" class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Sometimes, it may be appropriate to use the following style:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    [...]</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">&lt;</span>condition<span class="op">&gt;</span>: <span class="cf">break</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    [...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, the loop condition is <em>always</em> <code>True</code>, creating an infinite loop. However, the use of a <code>break</code> allows us to escape from the loop.</p>
+<p>There is another form of loop, the <code>for</code> loop. We will meet this in a later practical.</p>
+<div id="fd29fe2c" class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>➤ Caution: <a href="https://en.wikipedia.org/wiki/Infinite_loop">infinite loops</a>…</strong> if you have no <code>break</code> statement, the program will execute the loop until you provide an explicit “stop” signal. In Jupyter notebooks, this is the stop button, and in a terminal the ctrl+c command (for all operating systems). Infinite loops will run endlessly if not manually stopped (by sending a termination signal), and are a well known problem since the dawn of computer programming. Nowaday, it is not such a big deal but old systems used to froze when running such loops… So be careful and always check that your loop is not infinite!</p>
+<p>Suppose you start with an empty basket and you want to pick apples on a tree. You will make 100 picking moves.</p>
+<p>You start by picking 2 apples at a time, but after doing this 50 times you get bored. You then pick 5 apples each time, and after doing this a further 25 times, you start picking 10 apples.</p>
+<p><strong>➤ Write a function containing a loop to return the number of apples in your basket.</strong></p>
+<div id="0c463ac2" class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Suppose you take out a $$$500,000 mortgage to buy a house. You make a repayment of $2,000 each month. However, each month the bank charges interest at a rate of 0.3% of the outstanding balance. How many months will it take you to pay off the debt? How much does it cost you?</p>
+<p><strong>➤ Write a function to calculate this information for any loan amount, interest rate and monthly repayment.</strong></p>
+<div id="518ef338" class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -645,13 +854,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Basics/Ex8-ReadWriteFiles.html" class="pagination-link" aria-label="Reading and writing files">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Reading and writing files</span></span>
+      <a href="../Basics/Ex2a-Functions.html" class="pagination-link" aria-label="Functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../DevSkills/Intro.html" class="pagination-link" aria-label="Intro.html">
-        <span class="nav-page-text"><span class="chapter-title">Intro.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Basics/Ex4-GuessingGames.html" class="pagination-link" aria-label="Exercise 4 - Guessing Games">
+        <span class="nav-page-text"><span class="chapter-title">Exercise 4 - Guessing Games</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
