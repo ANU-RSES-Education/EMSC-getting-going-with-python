@@ -3,7 +3,7 @@
  * @param {Object} cellData - JSON object containing code, id, and options.
  * @returns {BaseCell} Instance of the appropriate cell class.
  */
-globalThis.qpyodideCreateCell = function(cellData) {
+globalThis.qpyodideCreateCell = function (cellData) {
     switch (cellData.options.context) {
         case 'interactive':
             return new InteractiveCell(cellData);
@@ -13,9 +13,9 @@ globalThis.qpyodideCreateCell = function(cellData) {
             return new SetupCell(cellData);
         default:
             return new InteractiveCell(cellData);
-            // throw new Error('Invalid cell type specified in options.');
+        // throw new Error('Invalid cell type specified in options.');
     }
-}  
+}
 
 /**
  * CellContainer class for managing a collection of cells.
@@ -57,7 +57,7 @@ class CellContainer {
         }
     }
 }
-  
+
 
 /**
  * BaseCell class for handling code execution using Pyodide.
@@ -229,7 +229,7 @@ class InteractiveCell extends BaseCell {
         this.editorDiv = document.getElementById(`qpyodide-editor-${this.id}`);
         this.outputCodeDiv = document.getElementById(`qpyodide-output-code-area-${this.id}`);
         this.outputGraphDiv = document.getElementById(`qpyodide-output-graph-area-${this.id}`);
-        
+
         // Store reference to the object
         var thiz = this;
 
@@ -237,75 +237,75 @@ class InteractiveCell extends BaseCell {
         require(['vs/editor/editor.main'], function () {
             thiz.editor = monaco.editor.create(
                 thiz.editorDiv, {
-                    value: thiz.code,
-                    language: 'python',
-                    theme: 'vs-light',
-                    automaticLayout: true,           // Works wonderfully with RevealJS
-                    scrollBeyondLastLine: false,
-                    minimap: {
-                        enabled: false
-                    },
-                    fontSize: '17.5pt',              // Bootstrap is 1 rem
-                    renderLineHighlight: "none",     // Disable current line highlighting
-                    hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
-                    readOnly: thiz.options['read-only'] ?? false
-                }
+                value: thiz.code,
+                language: 'python',
+                theme: 'vs-light',
+                automaticLayout: true,           // Works wonderfully with RevealJS
+                scrollBeyondLastLine: false,
+                minimap: {
+                    enabled: false
+                },
+                fontSize: '12.5pt',              // Bootstrap is 1 rem
+                renderLineHighlight: "none",     // Disable current line highlighting
+                hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
+                readOnly: thiz.options['read-only'] ?? false
+            }
             );
-        
+
             // Store the official counter ID to be used in keyboard shortcuts
             thiz.editor.__qpyodideCounter = thiz.id;
-        
+
             // Store the official div container ID
             thiz.editor.__qpyodideEditorId = `qpyodide-editor-${thiz.id}`;
-        
+
             // Store the initial code value and options
             thiz.editor.__qpyodideinitialCode = thiz.code;
             thiz.editor.__qpyodideOptions = thiz.options;
-        
+
             // Set at the model level the preferred end of line (EOL) character to LF.
             // This prevent `\r\n` from being given to the Pyodide engine if the user is on Windows.
             // See details in: https://github.com/coatless/quarto-Pyodide/issues/94
             // Associated error text: 
             // Error: <text>:1:7 unexpected input
-        
+
             // Retrieve the underlying model
             const model = thiz.editor.getModel();
             // Set EOL for the model
             model.setEOL(monaco.editor.EndOfLineSequence.LF);
-        
+
             // Dynamically modify the height of the editor window if new lines are added.
             let ignoreEvent = false;
             const updateHeight = () => {
-            const contentHeight = thiz.editor.getContentHeight();
-            // We're avoiding a width change
-            //editorDiv.style.width = `${width}px`;
-            thiz.editorDiv.style.height = `${contentHeight}px`;
+                const contentHeight = thiz.editor.getContentHeight();
+                // We're avoiding a width change
+                //editorDiv.style.width = `${width}px`;
+                thiz.editorDiv.style.height = `${contentHeight}px`;
                 try {
                     ignoreEvent = true;
-            
+
                     // The key to resizing is this call
                     thiz.editor.layout();
                 } finally {
                     ignoreEvent = false;
                 }
             };
-        
+
             // Helper function to check if selected text is empty
             function isEmptyCodeText(selectedCodeText) {
                 return (selectedCodeText === null || selectedCodeText === undefined || selectedCodeText === "");
             }
-        
+
             // Registry of keyboard shortcuts that should be re-added to each editor window
             // when focus changes.
             const addPyodideKeyboardShortCutCommands = () => {
-            // Add a keydown event listener for Shift+Enter to run all code in cell
-            thiz.editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
-                // Retrieve all text inside the editor
-                thiz.runCode(thiz.editor.getValue());
-            });
-        
-            // Add a keydown event listener for CMD/Ctrl+Enter to run selected code
-            thiz.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
+                // Add a keydown event listener for Shift+Enter to run all code in cell
+                thiz.editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
+                    // Retrieve all text inside the editor
+                    thiz.runCode(thiz.editor.getValue());
+                });
+
+                // Add a keydown event listener for CMD/Ctrl+Enter to run selected code
+                thiz.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
                     // Get the selected text from the editor
                     const selectedText = thiz.editor.getModel().getValueInRange(thiz.editor.getSelection());
                     // Check if no code is selected
@@ -314,23 +314,23 @@ class InteractiveCell extends BaseCell {
                         let currentPosition = thiz.editor.getPosition();
                         // Retrieve the current line content
                         let currentLine = thiz.editor.getModel().getLineContent(currentPosition.lineNumber);
-                
+
                         // Propose a new position to move the cursor to
                         let newPosition = new monaco.Position(currentPosition.lineNumber + 1, 1);
-                
+
                         // Check if the new position is beyond the last line of the editor
                         if (newPosition.lineNumber > thiz.editor.getModel().getLineCount()) {
                             // Add a new line at the end of the editor
                             thiz.editor.executeEdits("addNewLine", [{
-                            range: new monaco.Range(newPosition.lineNumber, 1, newPosition.lineNumber, 1),
-                            text: "\n", 
-                            forceMoveMarkers: true,
+                                range: new monaco.Range(newPosition.lineNumber, 1, newPosition.lineNumber, 1),
+                                text: "\n",
+                                forceMoveMarkers: true,
                             }]);
                         }
-                        
+
                         // Run the entire line of code.
                         thiz.runCode(currentLine);
-                
+
                         // Move cursor to new position
                         thiz.editor.setPosition(newPosition);
                     } else {
@@ -339,39 +339,39 @@ class InteractiveCell extends BaseCell {
                     }
                 });
             }
-        
+
             // Register an on focus event handler for when a code cell is selected to update
             // what keyboard shortcut commands should work.
             // This is a workaround to fix a regression that happened with multiple
             // editor windows since Monaco 0.32.0 
             // https://github.com/microsoft/monaco-editor/issues/2947
             thiz.editor.onDidFocusEditorText(addPyodideKeyboardShortCutCommands);
-        
+
             // Register an on change event for when new code is added to the editor window
             thiz.editor.onDidContentSizeChange(updateHeight);
-        
+
             // Manually re-update height to account for the content we inserted into the call
             updateHeight();
-                
+
         });
 
-        
+
         // Add a click event listener to the run button
         thiz.runButton.onclick = function () {
             thiz.runCode(
                 thiz.editor.getValue()
             );
         };
-        
+
         // Add a click event listener to the reset button
         thiz.copyButton.onclick = function () {
             // Retrieve current code data
             const data = thiz.editor.getValue();
-            
+
             // Write code data onto the clipboard.
             navigator.clipboard.writeText(data || "");
         };
-        
+
         // Add a click event listener to the copy button
         thiz.resetButton.onclick = function () {
             thiz.editor.setValue(thiz.editor.__qpyodideinitialCode);
@@ -402,10 +402,10 @@ class InteractiveCell extends BaseCell {
      * Execute the Python code inside the editor.
      */
     async runCode(code) {
-        
+
         // Check if we have an execution lock
-        if (this.executeLock) return; 
-        
+        if (this.executeLock) return;
+
         this.disableInteractiveCells();
 
         // Force wait procedure
@@ -439,7 +439,7 @@ class InteractiveCell extends BaseCell {
 
         // Nullify the output area of content
         this.outputCodeDiv.innerHTML = "";
-        this.outputGraphDiv.innerHTML = "";        
+        this.outputGraphDiv.innerHTML = "";
 
         // Design an output object for messages
         const pre = document.createElement("pre");
@@ -464,7 +464,7 @@ class InteractiveCell extends BaseCell {
                 const figcaptionElement = document.createElement('figcaption');
                 figcaptionElement.innerText = this.options['fig-cap'];
                 // Append figcaption to figure
-                graphFigure.appendChild(figcaptionElement);    
+                graphFigure.appendChild(figcaptionElement);
             }
 
             this.outputGraphDiv.appendChild(graphFigure);
@@ -487,9 +487,9 @@ class OutputCell extends BaseCell {
      * @param {Object} cellData - JSON object containing code, id, and options.
      */
     constructor(cellData) {
-      super(cellData);
+        super(cellData);
     }
-  
+
     /**
      * Display customized output on the page.
      * @param {*} output - Result to be displayed.
@@ -498,7 +498,7 @@ class OutputCell extends BaseCell {
         const results = this.executeCode();
         return results;
     }
-  }
+}
 
 /**
  * SetupCell class for suppressed output.
