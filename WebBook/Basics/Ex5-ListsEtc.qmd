@@ -95,7 +95,7 @@ print(a) # Still prints '[1, 2, 3]'
 ```
 
 ::: {.callout-tip collapse="true" icon="false"}
-## Exercise 1 - Do you understand lists
+## Exercise 1 - Do you understand lists ?
 
 **Check the examples given above**
 
@@ -192,19 +192,30 @@ Python provides a number of standard functions for working with lists. A few of 
    - `a.pop(i)` removes *and return* the element at index `i` in the list (or if no argument is provided, the last element in the list).
 
 
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 3 - functions that work on lists
 
+**Try these out!** Explore how each of the functions works. Remember, you can get information about any function by typing `help(function_name)`
 
-**&#10148; Try these out!** Explore how each of the functions works. Remember, you can get information about any function by typing `<function-name>?` and hitting shift-enter, e.g. `a.pop?`.
+```{pyodide-python}
 
-```{python}
-# Try it here!
+l = ["you", "are", "my", "sunshine", "!"]
+
+l.reverse()
+
 ```
 
-**&#10148; In the previous exercise, you wrote code for a guessing game. Adapt this to keep a record of all the user's past guesses, and detect when the user repeats a previous (incorrect) guess. **
+Use this block to get help on the list methods
 
-```{python}
-# Try it here!
+```{pyodide-python}
+
+help(list.append)
+
+
+
 ```
+
+:::
 
 ## Tuples
 
@@ -213,26 +224,48 @@ A **tuple** is rather similar to a list, but is defined using *round* brackets, 
 a = (3, 'x', (1, 2, 3))
 ```
 Again, tuples can contain multiple elements, and the elements may not all share the same type. The key difference is that tuples are *immutable*, so that once a tuple is created it cannot subsequently be changed. (It can be extended -- but this is effectively the creation of a new, larger tuple!) As with lists, the individual elements of a tuple can be accessed using `[index]` after the tuple name, e.g.
+
 ```python
 a = (3, 4, 5)
 print(a[1]) # Prints `4`
 ```
+
 Again, Python provides a number of functions for working with a tuple ('`a`'), including:
-- `len(a)`
-- `min(a)`
-- `max(a)`
-- `a.index(x)`
-- `a.count(x)`
+
+  - `len(a)`
+  - `min(a)`
+  - `max(a)`
+  - `a.index(x)`
+  - `a.count(x)`
 
 all of which are similar to their counterparts for lists.
 
-**&#10148; Try it out!**
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 4 - functions that work on tuples
 
-```{python}
-# Try it here!
+**Try these out!** Explore how each of the tuple functions and methods works. Remember, you can get information about any function by typing `help(function_name)`
+
+```{pyodide-python}
+
+t = ("you", "are", "my, "sunshine", "!"")
+
+len(t)
+
 ```
 
+Use this block to get help on the tuple methods
+
+```{pyodide-python}
+
+help(tuple.index)
+
+
+```
+
+:::
+
 A tuple can be converted into a list, and vice versa:
+
 ```python
 a = [3, 4, 5]
 b = (6, 7, 8)
@@ -242,9 +275,12 @@ lb = list(b)
 
 When should you use a tuple, and when should you use a list? To some extent, this is a matter of style and preference. In general, the advice is that all the entries in a list should be 'the same kind of data', whereas the entries in a tuple are likely to represent different entitites. For example, if we have an experimental dataset that consists of observations of pressure and temperature at a sequence of time points, it might be appropriate to represent each observation as a tuple of `(pressure, temperature)`, and then the sequence of observations as a list of these tuples `[(p1, T1), (p2, T2), (p3, T3),...]`.
 
+There is a **key** difference between tuples and lists, though. An *immutable* data type can be used as a key in a dictionary. So we can use a tuple as a tag for other kinds of data. We haven't explored what a key for a dictionary means, so let's do that now.
+
 ## Dictionaries
 
 Dictionaries provide a mechanism for storing data labelled with a keyword or other information. To create a dictionary, we use curly brackets, and associate each piece of data with a label:
+
 ```python
 a = {<label1>: <data1>, <label2>: <data2>}
 ```
@@ -265,19 +301,23 @@ a = dict(mass=17.3, length=0.7, location=(3, 1, 8))
 Note that in this example, the `location` key is storing a tuple. This illustrates that you can store many things in dictionaries, including arrays, list, tuples or objects for instance.
 
 Now, we can use the keywords as an index:
+
 ```python
 print(a['mass'])
 print(a['length'])
 inertia = 0.5 * a['mass'] * a['length']**2
 print(inertia)
 ```
+
 Often keywords will be text strings, but they do not need to be:
+
 ```python
 y = (3, 4, 5)
 a = {2: '13.5', y: [6, 7, 8]}
 print(a[2])
 print(a[y])
 ```
+
 You can add new entries to a dictionary by simply assigning to the indexed entry you wish to create:
 ```python
 a = {'name': 'Bob'}
@@ -285,12 +325,6 @@ print(a['name']) # Prints 'Bob'
 # print(a['age']) would not work at this point
 a['age'] = 28
 print(a) # Now contains both 'name' and 'age'.
-```
-
-**&#10148; Try it out!**
-
-```{python}
-# Try it here!
 ```
 
 Again, Python provides a number of functions that work with dictionaries, many of which we have already encountered, including:
@@ -305,11 +339,52 @@ Some methods particular to dictionaries are:
 - `a.values()` - returns a list-like object containing all the 'values' within the dictionary `a`, and
 - `a.items()` - returns a list-like object containing `(label, data)` tuples for each of the entries in the dictionary.
 
-**&#10148; Try them all out!**
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 5 - functions that work on dictionaries
 
-```{python}
-# Try it here!
+**Try these out!** Explore how each of the dictionary functions and methods works. Remember, you can get information about any function by typing `help(function_name)`
+
+**Try making a dictionary with keys that are not strings.** In particular, try a tuple, try a list, try a floating point number. 
+
+```{pyodide-python}
+
+d = {
+    "dogs": [
+        "Wolfhound",
+        "Greyhound",
+        "Bloodhound",
+        "Snoop",
+    ],
+    "cats": [
+        "Tabby",
+        "Shabby",
+        "Crabby",
+        "Flabby",
+    ],
+    "myth": [
+        "Dragon",
+        "Griffin",
+        "Bunyip",
+        "Phoenix",
+    ],
+}
+
+print(len(d))
+print(d.keys())
+
 ```
+
+Use this block to get help on the dictionary methods
+
+```{pyodide-python}
+
+## let's see what all the options are
+help(dict)
+
+
+```
+
+:::
 
 Dictionaries provide a useful mechanism for storing miscellaneous, unstructured information, such as metadata. The use of human-readable labels makes it easy to remember what each entry represents. 
 
@@ -328,11 +403,33 @@ Some properties of the first few elements in the periodic table are given below.
 | Fluorine | F | 9 | 53 | 85
 | Neon | Ne| 10 | 25 | 27
 
-**&#10148; Create a dictionary to store this information, indexed by the symbol. Then write a function which allows the user to specify an element (via its symbol) and a temperature, and which reports whether the element is solid, liquid or gas at that point.**
 
-```{python}
-# Try it here!
+
+
+
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 6 - Dictionary as data frame (i)
+
+**Create a dictionary to store this information, indexed by the symbol. Then write a function which allows the user to specify an element (via its symbol) and a temperature, and which reports whether the element is solid, liquid or gas at that point.**
+
+
+```{pyodide-python}
+
+data = {
+    "Hydrogen": [
+        "H",
+        "1",
+        "14",
+        "20",
+    ], 
+    ...
+}
+
+
+
 ```
+
+:::
 
 In a previous exercise, you wrote code to calculate mortgage repayments. Different banks are offering different interest rates, with special introductory rates for the first two years of the mortgage:
 
@@ -343,33 +440,56 @@ In a previous exercise, you wrote code to calculate mortgage repayments. Differe
 |Commonwealth Bank |3.5% | 3.8%|
 |Westpac | 3.7% | 3.7% |
 
-**&#10148; Use a dictionary to store this information, and modify your function so that the user can specify which bank provides their mortgage.** You can assume that the monthly interest rate is simply one-twelfth of these annual rates.
 
-```{python}
-# Try it here!
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 7 - Dictionary as data frame (ii)
+
+**&#10148; Use a dictionary to store this information, and modify your function so that the user can specify which bank provides their mortgage.** You can assume that the monthly payment rate is simply one-twelfth of these annual total payment (i.e. the repayments do not account for the reduced principal over the year).
+
+
+```{pyodide-python}
+
+rates = {
+    "ANZ": [
+        "2.3",
+        "4.1",
+    ], 
+    ...
+}
+
 ```
+
+:::
+
 
 ## Sets
 
 Finally, we briefly mention the **set** data type. This is not commonly encountered, but can be very useful. It implements the [mathematical concept of a set]( https://en.wikipedia.org/wiki/Set_%28mathematics%29 ), an unordered collection of unique objects. A set can be created from a tuple or list:
+
 ```python
 a = [3, 4, 5]
 s = set(a)
 print(s) # prints {3, 4, 5}
 ```
+
 Duplicates are ignored:
+
 ```python
 a = [3, 3, 5]
 s = set(a)
 print(s) # prints {3, 5}
 ```
+
 We can test whether one set is a subset of another set (that is, whether every element of the first set is also in the second) using the `<`,`>`, `<=` and `>=` operators:
+
 ```python
 set([3, 4]) < set([3, 4, 5]) # True
 set([3, 4, 5]) < set([3, 4, 5]) # False
 set([3, 4, 5]) <= set([3, 4, 5]) # True
 ```
+
 We can find the union of two sets - the set of all elements in either set - using the `|` operator, and the intersection - all elements shared between the sets - using the `&` operator:
+
 ```python
 a = set([3, 4]) 
 b = set([4, 5, 6])
@@ -377,7 +497,9 @@ b = set([4, 5, 6])
 print(a | b) # prints {3, 4, 5, 6}
 print(a & b) # prints {4}
 ```
+
 We can also use the operator `-` to remove the elements of one set from another set.
+
 ```python
 a = set([3, 4]) 
 b = set([4, 5, 6])
@@ -387,7 +509,33 @@ print(b^a) # prints {3, 5, 6}
 ```
 There is also a `^` operator, which is defined such that `a^b` is equivalent to `(a|b) - (a&b)`.
 
-```{python}
-# Try it here!
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 8 - Do you understand sets ?
+
+**Check the examples given above** to make sure you have some experience of what the `set` construct is within python.
+
+```{pyodide-python}
+
+
+
+
+
 ```
 
+
+
+---
+
+### Sandbox
+
+::: {.callout-warning collapse="true" icon="false"}
+
+## Coding scratch space
+
+
+```{pyodide-python}
+## Scratch space / notepad
+
+
+```
+:::
