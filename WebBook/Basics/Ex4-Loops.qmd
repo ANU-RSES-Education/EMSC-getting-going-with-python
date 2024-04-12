@@ -1,0 +1,167 @@
+---
+title: Loops 
+author: 
+    - Louis Moresi
+    - Andrew Valentine
+jupyter: python3
+format:
+  html:
+    code-links: false
+#       - text: Run it here !
+#         icon: rocket-takeoff
+#         ref: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
+---
+
+::: {.callout-note icon="false"}
+# Summary
+
+In this section we introduce loops that allow repeated execution of an algorithm with a defined series of input values. 
+:::
+
+
+Much of the power in programming comes from being able to repeat calculations, and change how our program works depending on the values of certain variables along the way. To achieve this, we need to employ 'loop expressions' and build on our use of 'conditional expressions'.
+
+
+Loops allow you to repeat a series of calculations a number of times, or until certain conditions are met. In Python, there are two main loop formats. 
+
+### The `while` loop
+
+The first is a `while` loop:
+```python
+while <condition>:
+    [...]
+```
+Here, `<condition>` is a logical expression (just like those discussed above). If this evaluates to `True`, the block of code (`[...]`) is executed in its entirety. The condition is then evaluated again, and the entire process repeats until it becomes `False`. For example, here is a loop that keeps doubling a number until it exceeds some threshold:
+
+```python
+x = 1
+while x<100:
+    x += x
+print(x)
+```
+
+Normally, the entire indented block of code below the `while` statement is executed before the condition is checked again. However, two commands can be used to alter this:
+
+  - The `break` keyword terminates the loop, jumping to the first statement *after* the indented block
+
+  - The `continue` keyword skips over any remaining code within the indented block, but returns to re-evaluate the `<condition>`, and if this is True will execute the indented block as before.
+
+These two commands are almost invariably used in conjunction with an `if` statement.
+
+For example:
+```python
+x = 1
+while x < 100:
+    x+=5
+    if x == 71: 
+        break
+    if x%2 == 0: 
+        continue # Skip even values of x
+    print("In loop: x=", x)
+
+print("After loop: x=", x)
+```
+If you run this code, you will see that it never prints an even number (since the print statement is after the `continue` in this case, and so doesn't get executed); moreover, the loop terminates at `x=71`, due to the `break` statement.
+
+
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 1 - While loop 
+
+**Try the while loop example above and modify to see how it works**
+
+```{pyodide-python}
+
+x = 1
+...
+
+
+
+```
+
+When you run the while loop code above, you will see that it never prints an even number (since the print statement is after the `continue` in this case, and so doesn't get executed); moreover, the loop terminates at `x=71`, due to the `break` statement.
+:::
+
+
+
+::: {.callout-important  collapse=none icon="false"}
+
+## Infinite loops
+
+[Infinite loops](https://en.wikipedia.org/wiki/Infinite_loop) can occur if you have no `break` statement or explicity exit condition.
+
+Infinite loops will run endlessly if not manually stopped (by sending a termination signal), and are a well known problem since the dawn of computer programming. You will waste a lot of energy if you let the computer spin its wheels this way.
+:::
+
+### Breaking to exit a loop
+
+Sometimes, it may be appropriate to use the following style:
+
+```python
+while True:
+    [...]
+    if <condition>: break
+    [...]
+```
+Here, the loop condition is *always* `True`, creating an infinite loop. However, the use of a `break` allows us to escape from the loop.
+
+
+
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 2 - problem solving (i)
+
+Suppose you start with an empty basket and you want to pick apples on a tree. You will make 100 picking moves.
+
+You start by picking 2 apples at a time, but after doing this 50 times you get bored. You then pick 5 apples each time, and after doing this a further 25 times, you start picking 10 apples.
+
+**Write a function containing a loop to return the number of apples in your basket after each pick**
+
+```{pyodide-python}
+
+number_of_apples = 0
+
+...
+
+
+```
+
+:::
+
+
+
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 3 - problem solving (ii)
+
+Suppose you take out a $\$$500,000 mortgage to buy a house. You make a repayment of \$2,000 each month. However, each month the bank charges interest at a rate of 0.3% of the outstanding balance. How many months will it take you to pay off the debt? How much does it cost you?
+
+**Write a function to calculate this information for any loan amount, interest rate and monthly repayment. Print the amount outstanding each month** 
+
+```{pyodide-python}
+
+i_owe_the_bank = 500000.00
+
+...
+
+
+```
+
+:::
+
+
+Note: there are other loops that we can use in python (e.g. the `for` loop) and we will see these later. 
+
+
+---
+
+### Sandbox
+
+::: {.callout-warning collapse="true" icon="false"}
+
+## Coding scratch space
+
+
+```{pyodide-python}
+## Scratch space / notepad
+
+
+```
+:::

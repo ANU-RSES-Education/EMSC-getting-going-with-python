@@ -1,5 +1,5 @@
 ---
-title: Exercise 4 - Guessing Games
+title: Guessing Games
 author: 
     - Andrew Valentine
     - Louis Moresi

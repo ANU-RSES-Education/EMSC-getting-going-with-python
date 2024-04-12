@@ -10,32 +10,12 @@ format:
 #       - text: Run it here !
 #         icon: rocket-takeoff
 #         ref: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
-
 ---
 
-::: {.callout-tip collapse=true icon="false"}
+::: {.callout-note icon="false"}
+# Summary
 
-## Exercise 1 - Setting, resetting and viewing variables
-
-Try creating some variables, and using them in simple calculations. Start with the examples above.
-Be sure to check that the results match what you expect.
-
-```{pyodide-python}
-# All yours ...
-
-
-
-
-```
-
-
-Constructs such as `x = x + y` are so common that Python has a special shorthand notation for this. 
-We can express the same equation by entering `x += y`. There are similar versions for other operators: `-=`, `*=` and `/=`.
-
-Try out these shorthand operators. Is `x += 3` the same as `3 += x`? 
-Why / why not ?
-
-There is no particular advantage to using these short forms, except convenience and readibility.
+In this section we'll discover how to write functions which allow us to store *an algorithm for later use* in a similar way to using variables to store values for later use.
 :::
 
 ## Functions
@@ -48,7 +28,7 @@ In general, a function has a well-defined set of **inputs** (sometimes known as 
 output1, output2 = function_name(input1, input2, input3)
 ```
 
-We have already encountered a couple of functions: we have used `print()` and `type()`. These are known as 'built-in functions', as they are a core piece of the Python programming language. For a full list of built-ins, see [this page](https://docs.python.org/3.4/library/functions.html) of the official Python documentation. Other functions can be accessed by 'importing' them from 'modules' - we will learn more about this shortly.
+We have already encountered a couple of functions: we have used `print()` and `type()`. These are known as 'built-in functions', as they are a core piece of the Python programming language. For a full list of built-ins, see [this page](https://docs.python.org/3.4/library/functions.html) of the official Python documentation. Other functions can be accessed by 'importing' them from 'modules' - we will learn more about this later.
 
 It is easy to write your own functions. This is done by using the `def` command, and writing something like:
 
@@ -79,11 +59,18 @@ result = addThreeNumbers(a, b, -1)
 
 The variable `result` should now contain the value `7` (= 3 + 5 - 1).
 
-**➤ Create the `addThreeNumbers` function and try it out.**
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 1 - Create a python function
 
-```{python}
-# Try it here!
+Create the `addThreeNumbers` function and try it out
+
+```{pyodide-python}
+# A function to add three numbers
+
+
+print("Results: ", ...)
 ```
+:::
 
 A few things to notice from this example: - When we 'call' (use) a function, we can give it both named variables (`a` and `b`), and values (`-1`). - The variable names we pass to the function don't need to match the variable names used when 'declaring' (defining) the function - so we can use `a` and `b` instead of `first` and `second`. - The `return` keyword specifies what the function result will be.
 
@@ -92,18 +79,26 @@ Here's a slightly more complicated example, which calculates the sign and absolu
 ``` python
 def signAndValue(x):
     if x == 0:
-        print("Unable to handle zero input")
+        print("Unable to handle zero")
     elif x > 0:
         return +1, x
     else:
         return -1, -x
-    print("Hope that helps!")
+
+    print("Hope that helps !")
 ```
 
-**➤ Try creating this function and see how it behaves.** Some things to think about: - When is the message "Hope that helps!" printed? Why? - What form does the function result have? What is its type? What about if `x`=0? - What is the role of `if/elif/else`?
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 2 - Exploring how functions work
 
-```{python}
-# Try it here!
+**Try creating this function and see how it behaves.** Some things to think about: - When is the message "Hope that helps !" printed? Why? -
+
+What form does the function result have? What is its type? What about if `x` has the value 0 ? - What is the role of `if/elif/else`? (We'll deal with that question in the next section, but it should be clear enough)
+
+```{pyodide-python}
+# What does signAndValue() do ?
+
+
 ```
 
 You can call this function in two slightly different ways. The first is to write (for example)
@@ -118,11 +113,10 @@ and the second is to write
 sgn, val = signAndValue(x)
 ```
 
-**➤ Try both forms.** What type does each result have? What happens if `x`=0? Look again at the function declaration: can you explain this behaviour?
+**Try both forms.** What type does each result have? What happens if `x` is 0 ? Look again at the function declaration: can you explain this behaviour?
+:::
 
-```{python}
-# Try it here!
-```
+### Function arguments
 
 The following function calculates the sum of the integers from `n0` to `N`, inclusive: $\sum_{n=n_0}^N n$.
 
@@ -136,12 +130,6 @@ def sumIntegers(N, n0):
 
 Note that the function definition has the upper-limit, `N`, as the first input argument, contrary to what one might expect - the reason for this will soon become clear.
 
-**➤ Create the function and test it.**
-
-```{python}
-# Try it here!
-```
-
 It might usually be the case that we want to start our sum at $n_0 = 1$. Python allows us to provide this as a 'default' value for the `n0` variable, by simply changing the function declaration:
 
 ``` python
@@ -153,12 +141,6 @@ def sumIntegers(N, n0=1):
 ```
 
 Now, if we call `sumIntegers` with only *one* argument, it is assumed that this is `N`, and `n0` receives its default value. However, if we provide *two* arguments, these are interpreted as `N` and `n0` respectively.
-
-**➤ Try it out!** Can you understand how the function works?
-
-```{python}
-# Try it here!
-```
 
 We can have multiple arguments with default values. For example, we can extend our function to compute $\sum_{n=n_0}^N n^{\,p}$ for some power $p$:
 
@@ -178,12 +160,6 @@ result = sumIntegers(10, p=2)
 
 would calculate the sum of squares, leaving `n0` set to its default value.
 
-**➤ Try it out!**
-
-```{python}
-# Try it here!
-```
-
 If inputs are not labelled, they are assumed to be provided in the same order as in the function definition. The following function displays the value of each argument: you can use it to check you understand the different ways to call a function.
 
 ``` python
@@ -194,13 +170,42 @@ def printArgs(a, b, c=17, d=4.3):
     print("d is: "+str(d))
 ```
 
-**➤ Check that you understand how arguments are passed to functions.**
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 3 - Optional Arguments / defaults
 
-```{python}
-# Try it here!
+Here is the original form of `sumIntegers` which you can now **validate to see if it works** as you expected.
+
+```{pyodide-python}
+def sumIntegers(N, n0):
+    result = 0
+    for i in range(n0, N + 1):
+        result += i
+    return result
+
 ```
 
+Now **modify the function to have n0 be an optional argument with a default value**. Does this work as you expected ? When would this behaviour be useful ?
+
+**Run the `printArgs` function for these cases**:
+
+-   `printArgs(1, 2, 3, 4)`
+-   `printArgs(1, 2, 'a', (1,2,3) )`
+-   `printArgs(2, 1, d=4, c=3 )`
+
+```{pyodide-python}
+def printArgs(a, b, c=17, d=4.3):
+    print("a is: "+str(a))
+    print("b is: "+str(b))
+    print("c is: "+str(c))
+    print("d is: "+str(d))
+```
+
+\*\*Modify the `printArgs` function to return the `type` as well as the value of each argument. Does the default definition set the `type` ?
+:::
+
 Note that the `printArgs()` function above does not contain an explicit `return` statement. It is an example of a function that has 'side-effects': it does something that isn't apparent from knowledge of its outputs. Sometimes, it is necessary to write code with side-effects, especially for data input or output. However, they are a common source of problems, and they should be avoided where possible.
+
+### Scope of variables in functions
 
 When you pass a variable to a function, you effectively create a copy of the information it contains (unless it is a 'list' or 'array' - more on those in a later exercise!). Changing the variable within the function does *not* change the value outside the function, *unless* you pass it back via an output. For example:
 
@@ -211,41 +216,87 @@ def increment(x):
     return x
 
 x = 0
+
 increment(x) # Notice that we don't do anything with the return value here
 print(x)      # x will therefore still be zero
 x = increment(x) # This time we are updating the value of x
 print(x)      # x will be one.
 ```
 
-**➤ Try this out, and check you understand what's going on.**
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 4 - Variables within functions
 
-```{python}
-# Try it here!
+**Try this out, and check you understand what's going on.**
+
+```{pyodide-python}
+def increment(x):
+    x += 1
+    print("Inside increment, x is now " + str(x))
+    return x
+
+
+x = 0
+increment(x)  # Notice that we don't do anything with the return value here
+print(x)
+...
+
+Try this version of the `increment` function
+
+def increment():
+    global x
+    x += 1
+    print("Inside increment, x is now " + str(x))
+    return x
 ```
 
-Earlier in this exercise, you wrote code to calculate someone's fortnightly salary after tax.
+If you leave out the `global x` then `x` will be undefined in the function as it does not have access to outside variables.
+:::
 
-**➤ Adapt your code to be a function and test it out.** The function should take the annual salary as a (required) argument, and the tax rate as an optional argument.
-
-```{python}
-# Try it here!
-```
-
-To allow one to use your function without knowing it, you need to document it. This is usually done just after the definition of the function. This step may seem unimportant at first, but is critical for re-using your code and distributing it to other people! In Jupyter notebooks, you can press shift+tab to bring the function help.
-
-**➤ Try this for the type() and print() functions.**
+There is a way to access external (`global`) variables from within functions. They might be used in this situation:
 
 ```{python}
-# Try it here!
+
+system_is_setup = False
+
+
+def setup():
+    global system_is_setup
+    if system_is_setup == False:
+        # Do system setup tasks
+        ...
+    else:
+        # check system is ok    
+        ...
+    
+    return 
 ```
 
-Another way is to just call `help(<functionname>)`.
+Generally speaking, functions using `global` variables in this way is a poor choice of implementation because some hidden code is modifying the global state without us, as users, being in control or even aware. We do often define variables of this nature when we use python objects that have a special internal (private) state. We will learn about this later.
 
-**➤ Try this below.**
+### Function documentation
+
+To allow anyone to use your function without knowing the details, you need to document it. This appears in the code just after the definition of the function (and other python entities too). This step may seem unimportant at first, but is critical for re-using your code and distributing it to other people ! Another way is to just call `help(<functionname>)` and it will output the documentation.
 
 ```{python}
-# Try it here!
+help(print)
 ```
+
+```{text}
+    Help on built-in function print in module builtins:
+
+    print(\*args, sep=' ', end='\n', file=None, flush=False) 
+        Prints the values to a stream, or to sys.stdout by default.
+        
+    sep
+        string inserted between values, default a space.
+    end
+        string appended after the last value, default a newline.
+    file
+        a file-like object (stream); defaults to the current sys.stdout.
+    flush
+        whether to forcibly flush the stream.
+```
+
 
 Documentation is provided by writing 'docstrings' at the start of any function you create. These consist of blocks of text enclosed in triple inverted commas:
 
@@ -274,33 +325,33 @@ def increment(x):
     return x
 ```
 
-Writing this example will thus output
 
-```{python}
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 4 - Documentation of a function
+
+**Check how the documentation string for the increment function works:** try changing the documentation to see what happens. Do spaces matter ? Does it matter if the docstring is positioned exactly by the `def increment(x):` line ?
+
+```{pyodide-python}
 def increment(x):
+    """..."""
+    ...
+
+
+help(increment)
+
 ```
 
-**➤ Document your function to calculate someone's fortnightly salary after tax and test it out.**
+**Now do the same for the `sumIntegers` function** taking care to indicate default values and what they mean.
 
-```{python}
-# Try it here!
+:::
+
+---
+
+### Sandbox
+
+```{pyodide-python}
+## Free play ...
+
+help(increment)
+
 ```
-
-As we saw earlier, each variable we create has a type. Most variables come with certain functions and attributes 'attached' to them, to perform various operations that are commonly-required for that data type. These can be accessed using a 'dot':
-
-``` python
-a = <variablename>.<attributename>
-b = <variablename>.<functionname>()
-```
-
-For example, if we create a complex number $z = 1+3i$ (where $i = \sqrt{-1}$)
-
-``` python
-z = 1 + 3j
-```
-
-we can then access two attributes and a function, - `z.real` - The 'real part' of the complex number - `z.imag` - The 'imaginary part' of the complex number - `z.conjugate()` - Function returning the 'complex conjugate' of z
-
-Similarly, any floating-point number, `v`, comes with a `v.as_integer_ratio()` function that reports $a$ and $b$ such that $v = a/b$. To see the full list of functions associated with any variable `v`, type `help(v)`. You can also type `v.` and then hit the <kbd>Tab</kbd> key.
-
-You may notice that some variables have a lot of attached functions that are named with double-underscores, such as `x.__add__()`. These are used by Python internally, and are not intended to be called directly in programs. In fact, the `__add__()` function is called whenever you use `+`: internally, `x+y` gets translated to `x.__add__(y)`. We will discuss this in more detail later in the course, when we talk about 'object-oriented programming'.

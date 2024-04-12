@@ -20,8 +20,8 @@ book:
         - Basics/Ex1-IntroWebPython.qmd
         - Basics/Ex2-Variables.qmd
         - Basics/Ex2a-Functions.qmd
-        - Basics/Ex3-LoopsAndConditionals.qmd
-        - Basics/Ex4-GuessingGames.qmd
+        - Basics/Ex3-Conditionals.qmd
+        - Basics/Ex4-Loops.qmd
         - Basics/Ex5-ListsEtc.qmd
         - Basics/Ex6-MoreLoops.qmd
         - Basics/Ex7-Strings.qmd

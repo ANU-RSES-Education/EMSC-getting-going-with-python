@@ -1,8 +1,8 @@
 ---
 title: Lists, tuples and dictionaries
 author:
-    - Louis Moresi
     - Andrew Valentine
+    - Louis Moresi
 jupyter: python3
 format:
   html:
@@ -12,63 +12,80 @@ format:
 #         ref: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
 ---
 
+::: {.callout-note icon="false"}
+# Summary
+
+In this section we introduce `collections` of data that keep related information within a single variable. 
+:::
+
+
 So far, all our variables have been single numbers. However, many types of data may consist of more than one piece of information. For example, an experiment might generate measurements of pressure and temperature, each recorded at a number of different times. While it would be possible to define new variables for each number separately, it quickly becomes difficult to keep track of them all. Ideally, we would like to have a structured way of storing related information. Lists, tuples and dictionaries are some of the tools that Python provides for doing this.
 
 ## Lists
+
 A **list** is defined by using *square* brackets, `[` and `]`, and consists of some set of entries separated by commas, e.g.,
+
 ```python
 a = [3, 4, 5]
 ```
+
 The individual entries do not need to have the same type. Also, we can have lists inside lists, e.g.,
+
 ```python
 a = [3.2, 'hello', [4, 8, 17.1]] 
 ```
+
 although in practice, list elements tend to be more homogenous than the example above. 
 
-We can access individual *entries* in the list by adding an *index* to the variable name. In Python, we have to remember a quirk: when counting objects, we start from 0 rather than from 1; this is because Python is a 0-based programming language. Thus, to access the first entry in the list `a`, we use `a[0]`; the second entry is `a[1]`. We can use these entries in calculations. Thus:
+We can access individual *entries* in the list by adding an *index* to the variable name. In Python, we have to remember a quirk: when counting objects, we start from 0 rather than from 1; this is because Python is a 0-based programming language. Thus, to access the first entry in the list `a`, we use `a[0]`; the second entry is `a[1]`. We can use these entries in calculations. 
+
+Thus:
 ```python
 a = [3.2, 'hello', [4, 8, 17.1]] 
-print(a[0]) # Prints '3.2'
-print(a[1]) # Prints 'hello'
-print(a[2]) # Prints '[4, 8, 17.1]'
-print(2+a[0]) # Prints '5.2'
+print(a[0])                  # Prints '3.2'
+print(a[1])                  # Prints 'hello'
+print(a[2])                  # Prints '[4, 8, 17.1]'
+print(2+a[0])                # Prints '5.2'
 ```
+
 Where an entry in a list is itself a list, we can use a second index to access the elements of this:
+
 ```python
 a = [3.2, 'hello', [4, 8, 17.1]]
-print(a[2]) # Prints '[4, 8, 17.1]'
-print(a[2][0]) # Prints '4'
+print(a[2])                 # Prints '[4, 8, 17.1]'
+print(a[2][0])              # Prints '4'
 print(a[2][1]**2 - a[2][2]) # Prints '46.9'
 ```
+
 Negative indices count from the *last* element in the array, which is accessible as `a[-1]`.
 
 We can also ask for a *range* of entries. To do this, we specify the index of the *first* entry we want, and an index one larger than that of the *last* entry we want, separated by a colon:
+
 ```python
 a = [5, 6, 7, 8, 9]
-print(a[1:3]) # Prints [6, 7]
+print(a[1:3])               # Prints [6, 7]
 ```
+
 Again, this is somewhat quirky. However, it does mean that if we want to extract `n` entries starting at index `i0`, we simply need to ask for `a[i0:i0+n]`. By default, we get every element in the requested range. However, if we only want every $k$-th element, we can specify `k` after a second colon, .e.g,
+
 ```python
 a = [5, 6, 7, 8, 9, 10, 11, 12]
-print(a[1:6:2]) # Prints '[6, 8, 10]'
+print(a[1:6:2])             # Prints '[6, 8, 10]'
 ```
-Finally, we can use shorthands such as `a[:4]` (everything from the start up to element `a[3]`, inclusive), `a[3:]` (everything from `a[3]` to the end) and `a[::2]` (every second element, starting with `a[0]`.
 
-**&#10148; Try it out!**
-
-
-```{python}
-# Try it here! 
-```
+Finally, we can use shorthands such as `a[:4]` (everything from the start up to element `a[3]`, inclusive), `a[3:]` (everything from `a[3]` to the end) and `a[::2]` (every second element, starting with `a[0]`).
 
 We can change the values stored within an element of a list:
+
 ```python
 a = [1, 2, 3]
 print(a[1]) # Prints '2'
 a[1] = 17
 print(a) # Prints '[1, 17, 3]'
 ```
+
 Lists are therefore said to be 'mutable'. However, note that we need to explicitly change the list entry:
+
 ```python
 x = 3
 a = [1, 2, x]
@@ -76,26 +93,63 @@ print(a) # Prints '[1, 2, 3]'
 x = 5
 print(a) # Still prints '[1, 2, 3]'
 ```
-**&#10148; Try it out!**
 
-```{python}
-# Try it here!
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 1 - Do you understand lists
+
+**Check the examples given above**
+
+```{pyodide-python}
+
+
+
+
+
 ```
 
-Unlike most other variables in Python, a list variable  stores a *pointer* to the list, rather than the list itself. This means that two *different* variable names can refer to the same memory address, and is a common (and counter-intuitive) source of errors. For example
+**Write a loop to populate a list with a sequence of numbers. Write a second loop to create another list which has the square of each number but in reverse order from the first one**
+
+Don't forget to validate your results. Write a check to ensure the first and last entries of the list are correct.
+
+:::
+
+Unlike most other variables in Python, a list variable  stores a *reference* to the list, rather than the list itself. This means that two *different* variable names can refer to the same memory address, and is a common (and counter-intuitive) source of errors. For example
+
 ```python
 a = [1, 2, 3]
 b = a # 'a' and 'b' both refer to the same object
-print(a)  # Prints '[1, 2, 3]'
+print(a)     # Prints '[1, 2, 3]'
 b[1] = 17
-print(a) # Prints '[1, 17, 3]'
+print(a)     # Prints '[1, 17, 3]'
 ```
-Notice that the list referred to by `a` has changed, even though we have not explicitly altered it! This behaviour is different from 'normal' variables. If you wish to create a copy of a list, you will need to use the 'copy' function:
+Notice that the list referred to by `a` has changed, even though we have not explicitly altered it! This behaviour is different from 'normal' variables. 
+
+
+::: {.callout-tip collapse="true" icon="false"}
+## Exercise 2 - lists passed to functions
+
+Because lists are stored as references to data, changes to a list made in a function call are global. **Demonstrate that this is true**
+
+```{pyodide-python}
+
+
+
+
+
+```
+Now you know - be careful !
+
+:::
+
+
+
+If you wish to create a copy of a list, you will need to use the 'copy' function:
+
 ```python
 a = [1, 2, 3]
 b = a.copy()
 b[1] = 17
-print(a) # Prints '[1, 2, 3]'
+print(a)     # Prints '[1, 2, 3]'
 ```
 If we 'add' two lists together, we create a new list containing the elements from each:
 ```python
@@ -103,27 +157,42 @@ a = [1, 2, 3]
 b = [4, 5, 6]
 print(a + b) # Prints '[1, 2, 3, 4, 5, 6]'
 ```
-Thus, one can 'grow' a list:
+One can 'grow' a list:
 ```python
 a = [1, 2, 3]
 a += [4]
-print(a) # Prints '[1, 2, 3, 4]'
+print(a)     # Prints '[1, 2, 3, 4]'
 ```
 However, if you need to build a large list, this is a  *very inefficient* way of doing it, and your program will probably end up being very slow. 
 
 Python provides a number of standard functions for working with lists. A few of the more important ones are detailed below, where we suppose `a` is a list:
-- `len(a)` returns the *length* of `a`, i.e. the number of elements it contains,
-- `max(a)` returns the largest element of `a`,
-- `min(a)` returns the smallest element of `a`,
-- `sum(a)` returns the sum of the elements of `a`,
-- `a.sort()` sorts the elements of `a`,
-- `a.append(x)` adds a new element at the end of the listw, containing the contents of `x`,
-- `a.insert(i, x)` adds a new element containing `x` at location `a[i]``, shifting later elements 'backwards' by one,
-- `a.remove(x)` finds the first occurrence of `x` in the list and removes it,
-- `a.count(x)` counts the number of occurrences of `x` in the list,
-- `a.index(x)` returns the index of the first occurrence of `x` in the list,
-- `a.reverse()` flips the order of elements in a list, and
-- `a.pop(i)` removes *and return* the element at index `i` in the list (or if no argument is provided, the last element in the list).
+
+   - `len(a)` returns the *length* of `a`, i.e. the number of elements it contains,
+
+   - `max(a)` returns the largest element of `a`,
+
+   - `min(a)` returns the smallest element of `a`,
+
+   - `sum(a)` returns the sum of the elements of `a`,
+
+   - `a.sort()` sorts the elements of `a`,
+
+   - `a.append(x)` adds a new element at the end of the listw, containing the contents of `x`,
+
+   - `a.insert(i, x)` adds a new element containing `x` at location `a[i]``, shifting later elements 'backwards' by one,
+
+   - `a.remove(x)` finds the first occurrence of `x` in the list and removes it,
+
+   - `a.count(x)` counts the number of occurrences of `x` in the list,
+
+   - `a.index(x)` returns the index of the first occurrence of `x` in the list,
+
+   - `a.reverse()` flips the order of elements in a list, and
+
+   - `a.pop(i)` removes *and return* the element at index `i` in the list (or if no argument is provided, the last element in the list).
+
+
+
 
 **&#10148; Try these out!** Explore how each of the functions works. Remember, you can get information about any function by typing `<function-name>?` and hitting shift-enter, e.g. `a.pop?`.
 

@@ -209,7 +209,7 @@ What if you happened to be a famous musician in 1960s London, where the tax rate
 
 ## Exercise 3 - Taxman
 
-**Calculate your fortnightly pay as a non-musical academic** Remember, break the problem down into individual steps, and create variables for each of the quantities involved! You should find the answer is \$ 4110.06.
+**Calculate your fortnightly pay as a non-musical researcher** Remember, break the problem down into individual steps, and create variables for each of the quantities involved! You should find the answer is \$ 4110.06.
 
 ```{pyodide-python}
 # Accounting 101 here ...
@@ -234,4 +234,46 @@ Now repeat the calculation for the higher-income scenario. Wait, isn't that the 
 |
 |   [Taxman](https://en.wikipedia.org/wiki/Taxman) George Harrison, Revolver 
 
+:::
+
+
+### Variables are more than just variables
+
+As we saw earlier, each variable we create has a type. Most variables come with certain functions and attributes 'attached' to them, to perform various operations that are commonly-required for that data type. These can be accessed using a 'dot':
+
+``` python
+a = <variablename>.<attributename>
+b = <variablename>.<functionname>()
+```
+
+For example, if we create a complex number $z = 1+3i$ (where $i = \sqrt{-1}$)
+
+``` python
+z = 1 + 3j
+```
+
+we can then access two attributes and a function, - `z.real` - The 'real part' of the complex number - `z.imag` - The 'imaginary part' of the complex number - `z.conjugate()` - Function returning the 'complex conjugate' of z
+
+Similarly, any floating-point number, `v`, comes with a `v.as_integer_ratio()` function that reports $a$ and $b$ such that $v = a/b$. To see the full list of functions associated with any variable `v`, type `help(v)`. You can also type `v.` and then hit the <kbd>Tab</kbd> key.
+
+
+<!-- You may notice that some variables have a lot of attached functions that are named with double-underscores, such as `x.__add__()`. These are used by Python internally, and are not intended to be called directly in programs. In fact, the `__add__()` function is called whenever you use `+`: internally, `x+y` gets translated to `x.__add__(y)`. We will discuss this in more detail later in the course, when we talk about 'object-oriented programming'. -->
+
+
+### Sandbox
+
+::: {.callout-warning collapse="true" icon="false"}
+
+## Coding scratch space
+
+
+```{pyodide-python}
+## Free play ...
+
+a = 9.4344
+print(a.as_integer_ratio())
+print("")
+
+
+```
 :::
