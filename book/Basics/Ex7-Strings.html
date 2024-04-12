@@ -225,12 +225,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops and conditionals</span></a>
+  <a href="../Basics/Ex3-Conditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conditional expressions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex4-GuessingGames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 4 - Guessing Games</span></a>
+  <a href="../Basics/Ex4-Loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -370,7 +370,7 @@ window.Quarto = {
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>However, most other ‘mathematical’ operators (such as subtraction and division) have no meaning with strings.</p>
 <p><strong>➤ Try it out!</strong></p>
-<div id="8c4cd768" class="cell">
+<div id="470302e8" class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note that string variables containing numbers are not the same as integer or float variables containing the same numbers:</p>
@@ -382,7 +382,7 @@ window.Quarto = {
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">float</span>(x) <span class="op">+</span> <span class="bu">float</span>(y)) <span class="co"># prints '9.0'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This does not work for strings containing two or more numbers separated by whitespace: <code>int('3 6')</code> is assumed to correspond to two distinct numbers, and so they cannot be converted to a single integer. Similarly, while numbers containing a decimal point can be converted to floating-point form, they cannot be interpreted as an integer.</p>
 <p><strong>➤ Try it out!</strong></p>
-<div id="01a6a74e" class="cell">
+<div id="bcdab884" class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If we want to extract a ‘substring’ - a letter, or sequence of letters, from the middle of the string - we can use syntax similar to that for extracting a subset of a list:</p>
@@ -403,7 +403,7 @@ To be or n...</code></pre>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> quote:</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(letter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>➤ Try it out!</strong></p>
-<div id="2d545fcd" class="cell">
+<div id="5399e7e0" class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A new-line (carriage return) can be represented within a string by entering <code>'\n'</code>, for example:</p>
@@ -411,7 +411,7 @@ To be or n...</code></pre>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(multiline)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Similarly, <code>\t</code> can be used to enter a Tab character. Spaces and tab characters are collectively known as ‘whitespace’.</p>
 <p><strong>➤ Try it out!</strong></p>
-<div id="83c06d45" class="cell">
+<div id="6165e178" class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As with other data types, Python provides a number of functions to work with a string, <code>s</code>. Some of the more important ones are: - <code>len(s)</code> - Return the number of characters in <code>s</code>. - <code>s.count(x)</code> - Count the number of occurrences of string <code>x</code> within string <code>s</code>. Again, this is case-sensitive.</p>
@@ -429,7 +429,7 @@ To be or n...</code></pre>
 <li><p><code>s.strip()</code> - Return a copy of <code>s</code> with all whitespace removed. <code>s.lstrip()</code> and <code>s.rstrip()</code> are variants removing whitespace only at the start or end of the string, respectively. For example, <code>'elephant'.strip('e')</code> returns <code>'lephant'</code>.</p></li>
 </ul>
 <p><strong>➤ Try out all of these functions, and satisfy yourself that you understand how they work.</strong></p>
-<div id="6ca9b861" class="cell">
+<div id="af78be0d" class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>➤Write a function which takes in strings like <code>'apples:3; pears:17; bananas:21'</code> and produces a nicely-formatted table:</strong></p>
@@ -444,7 +444,7 @@ To be or n...</code></pre>
 <pre class="text"><code>cheese:0; BREAD:5; milk:1; Bacon:2
 Ham:15000;     salami:36030;  corned beef:1836;
 triangles:3;squares:4;pentagons:5;hexagons:6;heptagons:7;octagons:8;nonagons:9</code></pre>
-<div id="c681bc4d" class="cell">
+<div id="47feb6f4" class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As you may have noticed, Python’s <code>print</code> function often displays information to a large number of decimal places, and it does not generally produce nicely-formatted output. To achieve this, we must make use of Python’s string-formatting facilities. These provide a mechanism for converting numbers into strings, and controlling the exact form this takes.</p>
@@ -541,7 +541,7 @@ triangles:3;squares:4;pentagons:5;hexagons:6;heptagons:7;octagons:8;nonagons:9</
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(phrase<span class="op">%</span>(<span class="dv">40</span>, <span class="st">'petrol'</span>, <span class="fl">1.53</span>, <span class="dv">40</span><span class="op">*</span><span class="fl">1.53</span>))</span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(phrase<span class="op">%</span>(<span class="fl">7.5</span>, <span class="st">'water'</span>, <span class="fl">0.17</span>, <span class="fl">7.5</span><span class="op">*</span><span class="fl">0.17</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>➤ Try it out!</strong></p>
-<div id="506b4cc3" class="cell">
+<div id="f6548225" class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Sometimes, it may be necessary to use string formatting to write the placeholders, allowing the style of output to be set at runtime:</p>
@@ -569,11 +569,11 @@ triangles:3;squares:4;pentagons:5;hexagons:6;heptagons:7;octagons:8;nonagons:9</
 <div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>phrase <span class="op">=</span> <span class="st">"This sentence has the word </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{0}</span><span class="st"> </span><span class="sc">{0}</span><span class="st"> repeated three times and the word </span><span class="sc">{1}</span><span class="st"> </span><span class="sc">{1}</span><span class="st"> repeated twice."</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(phrase.<span class="bu">format</span>(<span class="st">'cat'</span>, <span class="st">'dog'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>➤ Try it out!</strong></p>
-<div id="7b429952" class="cell">
+<div id="6f623a8b" class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>➤ Repeat the table-formatting example, making use of the string formatting capabilities</strong></p>
-<div id="a26927be" class="cell">
+<div id="b13e90f7" class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We will encounter many more text-formatting examples in later exercises.</p>
@@ -582,7 +582,7 @@ triangles:3;squares:4;pentagons:5;hexagons:6;heptagons:7;octagons:8;nonagons:9</
 <p>As we have already discussed, every piece of information within a computer must be organised and represented in binary form. This implies that the sequence of letters in the alphabet can be mapped onto the set of integers, and this is usually done via the ‘ASCII’ code sequence.</p>
 <p>Python provides the function <code>chr(integer)</code> to convert integers into their ASCII alphanumeric equivalent.</p>
 <p><strong>➤ Write a loop to print the integers from 33 up to 128, and their ASCII equivalents.</strong> (The first 32 ASCII codes are special control characters, and do not have alphanumeric equivalents).</p>
-<div id="3a4d6ea5" class="cell">
+<div id="88b8d295" class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A ‘Caesar cipher’ is a very simple way to hide a message making it difficult for someone to read. To encode a piece of text with a Caesar cipher, we simply shift each letter <span class="math inline">\(N\)</span> places up (or down) the alphabet. For example, choosing <span class="math inline">\(N=1\)</span>, the message</p>
@@ -591,13 +591,13 @@ triangles:3;squares:4;pentagons:5;hexagons:6;heptagons:7;octagons:8;nonagons:9</
 <pre class="text"><code>J mjlf Qzuipm</code></pre>
 <p>because ‘J’ is one letter after ‘I’, ‘m’ is one after ‘l’, and so on.</p>
 <p><strong>➤ Write a function to encode messages using Caesar ciphers (for any choice of <span class="math inline">\(N\)</span>).</strong> Note that the ‘decoder’ is simply the ‘encoder’, but instead using <span class="math inline">\(-N\)</span>.</p>
-<div id="f5ff6a0e" class="cell">
+<div id="8e438d96" class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here is a message encoded using a Caesar cipher:</p>
 <pre class="text"><code>Pfl yrmv wzezjyvu kyzj vovitzjv</code></pre>
 <p><strong>➤ By looping through all possible values of <span class="math inline">\(N\)</span>, find the <span class="math inline">\(N\)</span> used to encode this message and decode it.</strong></p>
-<div id="18474304" class="cell">
+<div id="85073153" class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Try it here!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 

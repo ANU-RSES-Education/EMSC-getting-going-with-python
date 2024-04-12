@@ -269,7 +269,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","options":{"output":"true","comment":"","message":"true","fig-width":7,"context":"interactive","dpi":72,"warning":"true","results":"markup","classes":"","fig-height":5,"fig-cap":"","out-height":"","read-only":"false","label":"","autorun":"","out-width":"700px"}},{"id":2,"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","options":{"output":"true","comment":"","message":"true","fig-width":7,"context":"interactive","dpi":72,"warning":"true","results":"markup","classes":"","fig-height":5,"fig-cap":"","out-height":"","read-only":"false","label":"","autorun":"","out-width":"700px"}},{"id":3,"code":"# Blank\n","options":{"output":"true","comment":"","message":"true","fig-width":7,"context":"interactive","dpi":72,"warning":"true","results":"markup","classes":"","fig-height":5,"fig-cap":"","out-height":"","read-only":"false","label":"","autorun":"","out-width":"700px"}}];
+globalThis.qpyodideCellDetails = [{"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","id":1,"options":{"classes":"","context":"interactive","fig-width":7,"warning":"true","message":"true","out-width":"700px","comment":"","output":"true","read-only":"false","out-height":"","label":"","autorun":"","dpi":72,"fig-cap":"","fig-height":5,"results":"markup"}},{"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","id":2,"options":{"classes":"","context":"interactive","fig-width":7,"warning":"true","message":"true","out-width":"700px","comment":"","output":"true","read-only":"false","out-height":"","label":"","autorun":"","dpi":72,"fig-cap":"","fig-height":5,"results":"markup"}},{"code":"# Blank\n","id":3,"options":{"classes":"","context":"interactive","fig-width":7,"warning":"true","message":"true","out-width":"700px","comment":"","output":"true","read-only":"false","out-height":"","label":"","autorun":"","dpi":72,"fig-cap":"","fig-height":5,"results":"markup"}},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","id":4,"options":{"classes":"","context":"interactive","fig-width":7,"warning":"true","message":"true","out-width":"700px","comment":"","output":"true","read-only":"false","out-height":"","label":"","autorun":"","dpi":72,"fig-cap":"","fig-height":5,"results":"markup"}}];
 
 
 </script>
@@ -580,12 +580,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex3-LoopsAndConditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops and conditionals</span></a>
+  <a href="../Basics/Ex3-Conditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conditional expressions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Basics/Ex4-GuessingGames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Exercise 4 - Guessing Games</span></a>
+  <a href="../Basics/Ex4-Loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -669,6 +669,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#comments" id="toc-comments" class="nav-link active" data-scroll-target="#comments">Comments</a></li>
+  <li><a href="#sandbox" id="toc-sandbox" class="nav-link" data-scroll-target="#sandbox">Sandbox</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
     </div>
@@ -726,7 +727,7 @@ Summary
 </div>
 <p>There are many different ways to run python code. For the simplest tasks, a web browser is all you need to edit and run simple tasks. In this introductory session, we will use a python interpreter embedded in each web page to learn the basic language itself.</p>
 <p>You will find examples of python code such as this one which contains some Python code which you can copy but which you can’t run and you can’t edit. Note that the code is highlighted (coloured) by meaning.</p>
-<div id="c88bd4ee" class="cell">
+<div id="d8bdacc8" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple script (with a descriptive comment)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to python !"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -799,6 +800,27 @@ Exercise 2 - Calculations
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    [...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The first three lines of comments provide information recording some of the assumptions the programmer made when writing this function (don’t worry if it doesn’t make sense yet!). The fourth comment line is a piece of code that has been ‘commented out’: we don’t want to routinely print the file header, but it is useful to be able to reinstate this easily in case we encounter problems and need to check what the function has read.</p>
 <p>In fact, ‘commenting out’ code is so common that most editors provide a straightforward way to do it. If you select a block of code and press <kbd>Ctrl</kbd>+<kbd>/</kbd> (or on a Mac, <kbd>⌘</kbd>+<kbd>/</kbd>), the selected lines will all be changed to begin with <code>#</code> comment characters. Pressing <kbd>Ctrl</kbd>+<kbd>/</kbd> again will restore the original version. Smart editors know how to do this for many different languages.</p>
+<hr>
+</section>
+<section id="sandbox" class="level3">
+<h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Coding scratch space
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="qpyodide-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -1740,7 +1762,7 @@ qpyodideCellDetails.map(
     }
   );
 </script>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
