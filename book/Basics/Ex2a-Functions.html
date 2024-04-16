@@ -266,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# A function to add three numbers\n\n\nprint(\"Results: \", ...)","id":1,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}},{"code":"# What does signAndValue() do ?\n","id":2,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}},{"code":"def sumIntegers(N, n0):\n    result = 0\n    for i in range(n0, N + 1):\n        result += i\n    return result","id":3,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}},{"code":"def printArgs(a, b, c=17, d=4.3):\n    print(\"a is: \"+str(a))\n    print(\"b is: \"+str(b))\n    print(\"c is: \"+str(c))\n    print(\"d is: \"+str(d))","id":4,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}},{"code":"def increment(x):\n    x += 1\n    print(\"Inside increment, x is now \" + str(x))\n    return x\n\n\nx = 0\nincrement(x)  # Notice that we don't do anything with the return value here\nprint(x)\n...\n\nTry this version of the `increment` function\n\ndef increment():\n    global x\n    x += 1\n    print(\"Inside increment, x is now \" + str(x))\n    return x","id":5,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}},{"code":"def increment(x):\n    \"\"\"...\"\"\"\n    ...\n\n\nhelp(increment)","id":6,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}},{"code":"## Free play ...\n\nhelp(increment)","id":7,"options":{"classes":"","label":"","results":"markup","context":"interactive","read-only":"false","autorun":"","fig-cap":"","warning":"true","dpi":72,"out-width":"700px","message":"true","output":"true","fig-width":7,"fig-height":5,"comment":"","out-height":""}}];
+globalThis.qpyodideCellDetails = [{"id":1,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"# A function to add three numbers\n\n\nprint(\"Results: \", ...)"},{"id":2,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"# What does signAndValue() do ?\n"},{"id":3,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"def sumIntegers(N, n0):\n    result = 0\n    for i in range(n0, N + 1):\n        result += i\n    return result"},{"id":4,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"def printArgs(a, b, c=17, d=4.3):\n    print(\"a is: \"+str(a))\n    print(\"b is: \"+str(b))\n    print(\"c is: \"+str(c))\n    print(\"d is: \"+str(d))"},{"id":5,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"def increment(x):\n    x += 1\n    print(\"Inside increment, x is now \" + str(x))\n    return x\n\n\nx = 0\nincrement(x)  # Notice that we don't do anything with the return value here\nprint(x)\n...\n\nTry this version of the `increment` function\n\ndef increment():\n    global x\n    x += 1\n    print(\"Inside increment, x is now \" + str(x))\n    return x"},{"id":6,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"def increment(x):\n    \"\"\"...\"\"\"\n    ...\n\n\nhelp(increment)"},{"id":7,"options":{"warning":"true","fig-width":7,"out-height":"","fig-height":5,"comment":"","read-only":"false","label":"","context":"interactive","output":"true","message":"true","fig-cap":"","results":"markup","dpi":72,"classes":"","autorun":"","out-width":"700px"},"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n"}];
 
 
 </script>
@@ -910,7 +910,7 @@ Exercise 4 - Variables within functions
 </div>
 </div>
 <p>There is a way to access external (<code>global</code>) variables from within functions. They might be used in this situation:</p>
-<div id="e0790d8e" class="cell">
+<div id="645c3e2c" class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>system_is_setup <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -930,7 +930,7 @@ Exercise 4 - Variables within functions
 <section id="function-documentation" class="level3">
 <h3 class="anchored" data-anchor-id="function-documentation">Function documentation</h3>
 <p>To allow anyone to use your function without knowing the details, you need to document it. This appears in the code just after the definition of the function (and other python entities too). This step may seem unimportant at first, but is critical for re-using your code and distributing it to other people ! Another way is to just call <code>help(&lt;functionname&gt;)</code> and it will output the documentation.</p>
-<div id="9671ebb2" class="cell">
+<div id="a73f1d95" class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">print</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="{text}"><code>    Help on built-in function print in module builtins:
@@ -988,8 +988,23 @@ Exercise 4 - Documentation of a function
 </section>
 <section id="sandbox" class="level3">
 <h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Coding scratch space
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 
 
 </section>

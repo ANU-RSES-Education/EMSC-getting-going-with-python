@@ -269,7 +269,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","options":{"warning":"true","fig-width":7,"label":"","out-width":"700px","message":"true","read-only":"false","context":"interactive","comment":"","output":"true","classes":"","dpi":72,"fig-cap":"","results":"markup","fig-height":5,"autorun":"","out-height":""}},{"id":2,"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","options":{"warning":"true","fig-width":7,"label":"","out-width":"700px","message":"true","read-only":"false","context":"interactive","comment":"","output":"true","classes":"","dpi":72,"fig-cap":"","results":"markup","fig-height":5,"autorun":"","out-height":""}},{"id":3,"code":"# Blank\n","options":{"warning":"true","fig-width":7,"label":"","out-width":"700px","message":"true","read-only":"false","context":"interactive","comment":"","output":"true","classes":"","dpi":72,"fig-cap":"","results":"markup","fig-height":5,"autorun":"","out-height":""}},{"id":4,"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","options":{"warning":"true","fig-width":7,"label":"","out-width":"700px","message":"true","read-only":"false","context":"interactive","comment":"","output":"true","classes":"","dpi":72,"fig-cap":"","results":"markup","fig-height":5,"autorun":"","out-height":""}}];
+globalThis.qpyodideCellDetails = [{"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","id":1,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}},{"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","id":2,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}},{"code":"# Blank\n","id":3,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","id":4,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}}];
 
 
 </script>
@@ -742,7 +742,7 @@ Summary
 </div>
 <p>There are many different ways to run python code. For the simplest tasks, a web browser is all you need to edit and run simple tasks. In this introductory session, we will use a python interpreter embedded in each web page to learn the basic language itself.</p>
 <p>You will find examples of python code such as this one which contains some Python code which you can copy but which you can’t run and you can’t edit. Note that the code is highlighted (coloured) by meaning.</p>
-<div id="4e1a94fd" class="cell">
+<div id="ebefc3c9" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple script (with a descriptive comment)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to python !"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -815,7 +815,6 @@ Exercise 2 - Calculations
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    [...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The first three lines of comments provide information recording some of the assumptions the programmer made when writing this function (don’t worry if it doesn’t make sense yet!). The fourth comment line is a piece of code that has been ‘commented out’: we don’t want to routinely print the file header, but it is useful to be able to reinstate this easily in case we encounter problems and need to check what the function has read.</p>
 <p>In fact, ‘commenting out’ code is so common that most editors provide a straightforward way to do it. If you select a block of code and press <kbd>Ctrl</kbd>+<kbd>/</kbd> (or on a Mac, <kbd>⌘</kbd>+<kbd>/</kbd>), the selected lines will all be changed to begin with <code>#</code> comment characters. Pressing <kbd>Ctrl</kbd>+<kbd>/</kbd> again will restore the original version. Smart editors know how to do this for many different languages.</p>
-<hr>
 </section>
 <section id="sandbox" class="level3">
 <h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
@@ -1777,7 +1776,7 @@ qpyodideCellDetails.map(
     }
   );
 </script>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
