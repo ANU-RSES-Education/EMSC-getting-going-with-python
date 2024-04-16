@@ -11,11 +11,13 @@ book:
   date: "06/03/2024"
   bread-crumbs: True
   chapters:
-    - part: "Introduction"
+    - part: "**Introduction**"
       chapters:
         - index.qmd
         - intro.qmd
-    - part: "Basic Language Skills"
+        - TLDR.qmd
+
+    - part: "**Basic Language Skills**"
       chapters:
         - Basics/Ex1-IntroWebPython.qmd
         - Basics/Ex2-Variables.qmd
@@ -27,13 +29,20 @@ book:
         - Basics/Ex7-Strings.qmd
         - Basics/Ex8-ReadWriteFiles.qmd
 
-    - part: "Advanced Language Skills"
+    - part: "**Version Control**"
+      chapters:
+        - Introduction2VersionControl/1-GettingStartedWithGit.qmd
+        - Introduction2VersionControl/2-NextStepsWithGit.qmd
+        - Introduction2VersionControl/3-YourOwnRepositories.qmd
+
+
+    - part: "**Advanced Language Skills**"
       chapters:
         - Advanced/Intro.qmd
 
-    - part: "Next steps: Becoming a Code Developer"
-      chapters:
-        - DevSkills/Intro.qmd
+    # - part: "Next steps: Becoming a Code Developer"
+    #   chapters:
+    #     - DevSkills/Intro.qmd
     
     # - part: "Notebooks"
     #   chapters:
