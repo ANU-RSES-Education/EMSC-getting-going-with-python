@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Louis Moresi">
 
-<title>EMSC - Get Going with Python</title>
+<title>EMSC - Get Going with Python - Version Control (i)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../_WIP/Test_Pyodide.html" rel="next">
-<link href="../Advanced/Intro.html" rel="prev">
+<link href="../Introduction2VersionControl/2-NextStepsWithGit.html" rel="next">
+<link href="../Basics/Ex8-ReadWriteFiles.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -96,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../DevSkills/Intro.html">Next steps: Becoming a Code Developer</a></li><li class="breadcrumb-item"><a href="../DevSkills/Intro.html"><span class="chapter-title">Intro.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><strong>Version Control</strong></a></li><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><span class="chapter-title">Version Control (i)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -116,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text"><strong>Introduction</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -129,7 +164,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What kind of Language is Python ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../TLDR.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TLDR - Python Phrase Book</span></a>
   </div>
 </li>
       </ul>
@@ -137,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Basic Language Skills</span></a>
+ <span class="menu-text"><strong>Basic Language Skills</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -193,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Advanced Language Skills</span></a>
+ <span class="menu-text"><strong>Version Control</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -201,7 +241,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Introduction2VersionControl/1-GettingStartedWithGit.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Version Control (i)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Introduction2VersionControl/2-NextStepsWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (ii)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Introduction2VersionControl/3-YourOwnRepositories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (iii)</span></a>
   </div>
 </li>
       </ul>
@@ -209,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Next steps: Becoming a Code Developer</span></a>
+ <span class="menu-text"><strong>Advanced Language Skills</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -217,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../DevSkills/Intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -244,16 +294,132 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link active" data-scroll-target="#what-is-version-control">What is version control ?</a></li>
+  <li><a href="#what-tools-can-you-use" id="toc-what-tools-can-you-use" class="nav-link" data-scroll-target="#what-tools-can-you-use">What tools can you use ?</a></li>
+  <li><a href="#what-is-git-and-what-is-github" id="toc-what-is-git-and-what-is-github" class="nav-link" data-scroll-target="#what-is-git-and-what-is-github">What is <code>git</code> and what is <code>GitHub</code></a>
+  <ul class="collapse">
+  <li><a href="#reference-links-for-our-class" id="toc-reference-links-for-our-class" class="nav-link" data-scroll-target="#reference-links-for-our-class">Reference links for our class</a></li>
+  <li><a href="#how-to-use-git-for-yourself" id="toc-how-to-use-git-for-yourself" class="nav-link" data-scroll-target="#how-to-use-git-for-yourself">How to use git for yourself</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><strong>Version Control</strong></a></li><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><span class="chapter-title">Version Control (i)</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Version Control (i)</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Louis Moresi </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<blockquote class="blockquote">
+<p>Version control is good for the soul</p>
+</blockquote>
+<section id="what-is-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-version-control">What is version control ?</h2>
+<p>Version control is the practice of keeping a record of all the times you edit a file, all the changes you make and a record of the intent of those changes. This is a form of version control:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> ls</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">my_thesis_v0.0.tex</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">my_thesis_v1.0.tex</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">my_thesis_v1.1.tex</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">my_thesis_v1.0+supervisor_comments.tex</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="ex">my_thesis_v1.0+supervisor_comments_v1.1_merged.tex</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">my_thesis_v1.2.tex</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">%</span> diff my_thesis_v1.tex my_thesis_v1.2.tex</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">...</span> <span class="er">(</span><span class="ex">lots</span> of changes appear<span class="kw">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is great because you have a record of all of your changes but already you can see that there are problems when you make multiple sets of changes at once. Version control <strong>software</strong> packages aim to help with this. They formalise common practices like tagging file names (the example above) and they add a whole suite of extra tools to make collaboration easier.</p>
+<p>The other form of version control that you may already have encountered is <em>track changes</em> in microsoft word or the <em>time machine</em> version system that you can find on the Mac.</p>
+<p>These kinds of backup-based version control ideas are fine but they are very linear in the way changes are managed. As you can see above, there can be genuine issues when two people contribute to a file. While you are waiting for your supervisor to comment on draft version 1.0 of your thesis you almost certainly would like to start work on v1.1. When you have changes in v1.0 suggested by your supervisor you have to go through and figure out what changes you need to make to v1.1 to make a new version before you can get cracking on v1.2.</p>
+<p>Imagine how much more complicated this becomes when many people are working on a single project and may all be editing a single file together.</p>
+</section>
+<section id="what-tools-can-you-use" class="level2">
+<h2 class="anchored" data-anchor-id="what-tools-can-you-use">What tools can you use ?</h2>
+<p>There are a number of different packages that you can use and they all have their advantages and disadvantages. Some examples you might run across are:</p>
+<ul>
+<li>git: (<code>git</code>)</li>
+<li>subversion: (<code>svn</code>)</li>
+<li>mercurial: (<code>hg</code>)</li>
+</ul>
+<p>They are all approximately equivalent and differ slightly in how they distribute out the repository (the database of the entire history of the project). <code>git</code> (by default) puts the entire history of all files on every machine and that does make for extra safety. You can read more about different styles of repository <a href="http://guides.beanstalkapp.com/version-control/intro-to-version-control.html">here</a> (it’s a bit technical though !).</p>
+</section>
+<section id="what-is-git-and-what-is-github" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-git-and-what-is-github">What is <code>git</code> and what is <code>GitHub</code></h2>
+<p>You can use the software <code>git</code> by yourself on your own computer to manage version control of a project. However, the real benefits to using a tool like <code>git</code> come when you use a networked <strong>repository</strong> of your software which you can access from multiple machines and synchronise from machine to machine when you are ready. Not only can <em>you</em> do this, but your collaborators can access and edit files and then, later, you can merge the changes in an organised way.</p>
+<p>We have a shared space on <code>github</code> which is a centralised web site that coordinates various git repositories. We will have a shared repository and I will also show you how to manage your own repositories using <code>git</code> and <code>github</code>. There are other sites quite like github (gitlab and bitbucket spring to mind) but that is for you to investigate and make a choice later. You can stick with git on these other sites.</p>
+<p><code>github</code> also bundles a host of project management tools alongside your files and that is something that can be very helpful for teams of people or a class.</p>
+<section id="reference-links-for-our-class" class="level3">
+<h3 class="anchored" data-anchor-id="reference-links-for-our-class">Reference links for our class</h3>
+<ul>
+<li><p>All of the material for these notes is available at <a href="https://github.com/ANU-RSES-Education/EMSC-4033">https://github.com/ANU-RSES-Education/EMSC-4033</a></p></li>
+<li><p>When you ask for one of the live pages to be executed, you are directed to a server which does this;</p>
+<ul>
+<li>authenticates you (or uses saved credentials)</li>
+<li>synchronises the changes you have made with any changes that have been made in the original repository
+<ul>
+<li>If we add an exercise or some new material, it will be copied into your account</li>
+<li>If we find a bug and change an existing notebook, the changes will be merged</li>
+<li>If our changes clash with yours, yours are kept</li>
+</ul></li>
+<li>The page is then displayed and the code is available for you to try.</li>
+</ul></li>
+<li><p>To be able to do this complicated merge, the revision control is made to work overtime. The package doing this is called <a href="https://jupyterhub.github.io/nbgitpuller/"><code>nbgitpuller</code></a>.</p></li>
+<li><p>Because <code>nbgitpuller</code> is active and synchronising with the EMSC4033 repository, we won’t be using version control ourselves. However, using an online repository is a very sensible habit to get into if you aren’t already hooked.</p></li>
+</ul>
+</section>
+<section id="how-to-use-git-for-yourself" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-use-git-for-yourself">How to use git for yourself</h3>
+<p>We recommend this tutorial: <a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud</a>. It focuses on the bitbucket online repository rather than GitHub but the principles are similar.</p>
+<p>Even in a single-user project, writing “issues” and using automatic testing is a really good idea.</p>
+<p>Most online repositories have some sort of built-in computation. You can do things like run a test suite every time an important file changes. You can also use it to build web pages when you update your content.</p>
+<p>That’s what we are doing to make the online book for this course - the repository rebuilds the web pages if any of the content changes because of some scripts we built in to the repository (see it in action <a href="https://github.com/ANU-RSES-Education/EMSC-4033/actions/workflows/deploy_to_gh_pages.yml">here</a> ). This takes the concept of literate programming one step further - the programs are self-documenting as well as self executing.</p>
+<p>You can read about another example <a href="https://www.underworldcode.org/articles/self-updating-repositories/">here</a> which shows how to regularly run a notebook that processes some data and uploads an image that is linked within a web page. One of the repositories doing the work is <a href="https://github.com/ANU-RSES-Education/SeismicNoise_AuSIS_UHS">https://github.com/ANU-RSES-Education/SeismicNoise_AuSIS_UHS</a> and this is the latest image:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>```xmvhlyjo https://github.com/ANU-RSES-Education/SeismicNoise_AuSIS_UHS/raw/master/results/latest.png</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>width: 80%</td>
+</tr>
+<tr class="even">
+<td>name: ulladulla</td>
+</tr>
+</tbody>
+</table>
+<p>In Australia, the change in human behaviour due to COVID lockdowns was most dramatically observed in the data recorded by the Australian Seismometers in Schools (AuSiS) network. These instruments are research-quality seismometers that are maintained by school students — our next generation of geophysicists. The usual hum of the children (and teachers) during the school day, observed in the movement between classrooms, and during lunchtimes or Saturday morning sports, abruptly stopped at locations such as Ulladulla High School on the south coast of New South Wales (above). ```</p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -645,13 +811,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Advanced/Intro.html" class="pagination-link" aria-label="Intro.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Intro.html</span></span>
+      <a href="../Basics/Ex8-ReadWriteFiles.html" class="pagination-link" aria-label="Reading and writing files">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Reading and writing files</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../_WIP/Test_Pyodide.html" class="pagination-link" aria-label="Test Pyodide plugin">
-        <span class="nav-page-text"><span class="chapter-title">Test Pyodide plugin</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Introduction2VersionControl/2-NextStepsWithGit.html" class="pagination-link" aria-label="Version Control (ii)">
+        <span class="nav-page-text"><span class="chapter-title">Version Control (ii)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

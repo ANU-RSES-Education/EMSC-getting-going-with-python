@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Advanced/Intro.html" rel="next">
+<link href="../Introduction2VersionControl/1-GettingStartedWithGit.html" rel="next">
 <link href="../Basics/Ex7-Strings.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -266,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"options":{"warning":"true","context":"interactive","output":"true","out-width":"700px","message":"true","autorun":"","label":"","read-only":"true","results":"markup","fig-cap":"","dpi":72,"classes":"","fig-width":7,"comment":"","out-height":"","fig-height":5},"code":"\n# This downloads the sample.dat file we need for the examples\n# Please run this cell first\n\nimport os, requests\n\nfile_url = \"https://raw.githubusercontent.com/ANU-RSES-Education/EMSC-getting-going-with-python/main/WebBook/Basics/Resources/sample.dat\"\n\nresponse = requests.get(file_url)\nif response.status_code == 200:\n    with open(\"sample.dat\", \"wb\") as file:\n        file.write(response.content)"},{"id":2,"options":{"warning":"true","context":"interactive","output":"true","out-width":"700px","message":"true","autorun":"","label":"","read-only":"false","results":"markup","fig-cap":"","dpi":72,"classes":"","fig-width":7,"comment":"","out-height":"","fig-height":5},"code":"import os\n\nif os.path.exists(\"sample.dat\"):\n    print(\"File 'sample.dat' downloaded correctly\")"},{"id":3,"options":{"warning":"true","context":"interactive","output":"true","out-width":"700px","message":"true","autorun":"","label":"","read-only":"false","results":"markup","fig-cap":"","dpi":72,"classes":"","fig-width":7,"comment":"","out-height":"","fig-height":5},"code":"\n\n\n"},{"id":4,"options":{"warning":"true","context":"interactive","output":"true","out-width":"700px","message":"true","autorun":"","label":"","read-only":"false","results":"markup","fig-cap":"","dpi":72,"classes":"","fig-width":7,"comment":"","out-height":"","fig-height":5},"code":"# Did the fp get closed / deleted ?\n"},{"id":5,"options":{"warning":"true","context":"interactive","output":"true","out-width":"700px","message":"true","autorun":"","label":"","read-only":"false","results":"markup","fig-cap":"","dpi":72,"classes":"","fig-width":7,"comment":"","out-height":"","fig-height":5},"code":"\n\n\n"},{"id":6,"options":{"warning":"true","context":"interactive","output":"true","out-width":"700px","message":"true","autorun":"","label":"","read-only":"false","results":"markup","fig-cap":"","dpi":72,"classes":"","fig-width":7,"comment":"","out-height":"","fig-height":5},"code":"# Code to write data to a file and verify\n\n"}];
+globalThis.qpyodideCellDetails = [{"code":"\n# This downloads the sample.dat file we need for the examples\n# Please run this cell first\n\nimport os, requests\n\nfile_url = \"https://raw.githubusercontent.com/ANU-RSES-Education/EMSC-getting-going-with-python/main/WebBook/Basics/Resources/sample.dat\"\n\nresponse = requests.get(file_url)\nif response.status_code == 200:\n    with open(\"sample.dat\", \"wb\") as file:\n        file.write(response.content)","id":1,"options":{"fig-width":7,"output":"true","classes":"","warning":"true","autorun":"","dpi":72,"message":"true","fig-cap":"","results":"markup","context":"interactive","comment":"","read-only":"true","out-width":"700px","label":"","fig-height":5,"out-height":""}},{"code":"import os\n\nif os.path.exists(\"sample.dat\"):\n    print(\"File 'sample.dat' downloaded correctly\")","id":2,"options":{"fig-width":7,"output":"true","classes":"","warning":"true","autorun":"","dpi":72,"message":"true","fig-cap":"","results":"markup","context":"interactive","comment":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"out-height":""}},{"code":"\n\n\n","id":3,"options":{"fig-width":7,"output":"true","classes":"","warning":"true","autorun":"","dpi":72,"message":"true","fig-cap":"","results":"markup","context":"interactive","comment":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"out-height":""}},{"code":"# Did the fp get closed / deleted ?\n","id":4,"options":{"fig-width":7,"output":"true","classes":"","warning":"true","autorun":"","dpi":72,"message":"true","fig-cap":"","results":"markup","context":"interactive","comment":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"out-height":""}},{"code":"\n\n\n","id":5,"options":{"fig-width":7,"output":"true","classes":"","warning":"true","autorun":"","dpi":72,"message":"true","fig-cap":"","results":"markup","context":"interactive","comment":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"out-height":""}},{"code":"# Code to write data to a file and verify\n\n","id":6,"options":{"fig-width":7,"output":"true","classes":"","warning":"true","autorun":"","dpi":72,"message":"true","fig-cap":"","results":"markup","context":"interactive","comment":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"out-height":""}}];
 
 
 </script>
@@ -484,7 +484,7 @@ globalThis._qpyodideGetInstance = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex8-ReadWriteFiles.html"><span class="chapter-title">Reading and writing files</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html"><strong>Basic Language Skills</strong></a></li><li class="breadcrumb-item"><a href="../Basics/Ex8-ReadWriteFiles.html"><span class="chapter-title">Reading and writing files</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -504,7 +504,7 @@ globalThis._qpyodideGetInstance = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text"><strong>Introduction</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -517,7 +517,12 @@ globalThis._qpyodideGetInstance = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What kind of Language is Python ?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../TLDR.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TLDR - Python Phrase Book</span></a>
   </div>
 </li>
       </ul>
@@ -525,7 +530,7 @@ globalThis._qpyodideGetInstance = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text">Basic Language Skills</span></a>
+ <span class="menu-text"><strong>Basic Language Skills</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -581,7 +586,7 @@ globalThis._qpyodideGetInstance = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Advanced Language Skills</span></a>
+ <span class="menu-text"><strong>Version Control</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -589,7 +594,17 @@ globalThis._qpyodideGetInstance = function() {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Introduction2VersionControl/1-GettingStartedWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (i)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Introduction2VersionControl/2-NextStepsWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (ii)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Introduction2VersionControl/3-YourOwnRepositories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (iii)</span></a>
   </div>
 </li>
       </ul>
@@ -597,7 +612,7 @@ globalThis._qpyodideGetInstance = function() {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
- <span class="menu-text">Next steps: Becoming a Code Developer</span></a>
+ <span class="menu-text"><strong>Advanced Language Skills</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -605,7 +620,7 @@ globalThis._qpyodideGetInstance = function() {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../DevSkills/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Intro.html</span></a>
+  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -655,7 +670,7 @@ globalThis._qpyodideGetInstance = function() {
   });
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html">Basic Language Skills</a></li><li class="breadcrumb-item"><a href="../Basics/Ex8-ReadWriteFiles.html"><span class="chapter-title">Reading and writing files</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Basics/Ex1-IntroWebPython.html"><strong>Basic Language Skills</strong></a></li><li class="breadcrumb-item"><a href="../Basics/Ex8-ReadWriteFiles.html"><span class="chapter-title">Reading and writing files</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">Reading and writing files</span></h1>
 </div>
@@ -745,7 +760,7 @@ Exercise 1 - Read the <code>sample.dat</code> file
 <div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Here is a hint that you might see in python code elsewhere. If you precede a structure like a tuple or list with a ’ * ’ then it is <em>unpacked</em> before being used. This might be helpful if you want to make the list of lines look more like the original file when printed. Another way would be to write a loop over all the lines and print them individually.</p>
-<div id="b19c4e25" class="cell">
+<div id="2414dbe6" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(t)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="op">*</span>t)</span>
@@ -754,7 +769,7 @@ Exercise 1 - Read the <code>sample.dat</code> file
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># (1, 2, 3, 4)</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1 2 3 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ef9f1c8e" class="cell">
+<div id="9767ee0c" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'...'</span>, <span class="st">'z'</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(l)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="op">*</span>l)</span>
@@ -1253,8 +1268,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Advanced/Intro.html" class="pagination-link" aria-label="Intro.html">
-        <span class="nav-page-text"><span class="chapter-title">Intro.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Introduction2VersionControl/1-GettingStartedWithGit.html" class="pagination-link" aria-label="Version Control (i)">
+        <span class="nav-page-text"><span class="chapter-title">Version Control (i)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

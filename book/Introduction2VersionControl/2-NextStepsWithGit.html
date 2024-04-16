@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Prof Louis Moresi">
-<meta name="dcterms.date" content="2024-03-17">
+<meta name="author" content="Louis Moresi">
 
-<title>EMSC - Get Going with Python</title>
+<title>EMSC - Get Going with Python - Version Control (ii)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Introduction2VersionControl/3-YourOwnRepositories.html" rel="next">
+<link href="../Introduction2VersionControl/1-GettingStartedWithGit.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/ANU-logo.jpg" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/ANU-logo.jpg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">EMSC - Get Going with Python</span>
     </a>
   </div>
@@ -97,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>Introduction</strong></a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">EMSC e-Course template</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><strong>Version Control</strong></a></li><li class="breadcrumb-item"><a href="../Introduction2VersionControl/2-NextStepsWithGit.html"><span class="chapter-title">Version Control (ii)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -108,8 +142,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -125,17 +159,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">EMSC e-Course template</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">EMSC e-Course template</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What kind of Language is Python ?</span></a>
+  <a href="../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What kind of Language is Python ?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TLDR.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TLDR - Python Phrase Book</span></a>
+  <a href="../TLDR.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TLDR - Python Phrase Book</span></a>
   </div>
 </li>
       </ul>
@@ -151,47 +185,47 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
+  <a href="../Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Variables</span></a>
+  <a href="../Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
+  <a href="../Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex3-Conditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conditional expressions</span></a>
+  <a href="../Basics/Ex3-Conditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conditional expressions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex4-Loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops</span></a>
+  <a href="../Basics/Ex4-Loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
+  <a href="../Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
+  <a href="../Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
+  <a href="../Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex8-ReadWriteFiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading and writing files</span></a>
+  <a href="../Basics/Ex8-ReadWriteFiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading and writing files</span></a>
   </div>
 </li>
       </ul>
@@ -207,17 +241,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction2VersionControl/1-GettingStartedWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (i)</span></a>
+  <a href="../Introduction2VersionControl/1-GettingStartedWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (i)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction2VersionControl/2-NextStepsWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (ii)</span></a>
+  <a href="../Introduction2VersionControl/2-NextStepsWithGit.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Version Control (ii)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction2VersionControl/3-YourOwnRepositories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (iii)</span></a>
+  <a href="../Introduction2VersionControl/3-YourOwnRepositories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (iii)</span></a>
   </div>
 </li>
       </ul>
@@ -233,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -249,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./_WIP/Test_Pyodide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Test Pyodide plugin</span></a>
+  <a href="../_WIP/Test_Pyodide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Test Pyodide plugin</span></a>
   </div>
 </li>
       </ul>
@@ -260,14 +294,30 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#an-introduction-to-version-control-pt-2" id="toc-an-introduction-to-version-control-pt-2" class="nav-link active" data-scroll-target="#an-introduction-to-version-control-pt-2">An introduction to Version Control pt 2</a>
+  <ul class="collapse">
+  <li><a href="#some-setup-is-required" id="toc-some-setup-is-required" class="nav-link" data-scroll-target="#some-setup-is-required">Some setup is required</a></li>
+  <li><a href="#how-do-we-get-a-copy-of-the-information-on-github" id="toc-how-do-we-get-a-copy-of-the-information-on-github" class="nav-link" data-scroll-target="#how-do-we-get-a-copy-of-the-information-on-github">How do we get a copy of the information on github ?</a></li>
+  </ul></li>
+  <li><a href="#type-your-code-in-this-cell" id="toc-type-your-code-in-this-cell" class="nav-link" data-scroll-target="#type-your-code-in-this-cell">Type your code in this cell</a></li>
+  <li><a href="#type-your-code-here" id="toc-type-your-code-here" class="nav-link" data-scroll-target="#type-your-code-here">Type your code here</a>
+  <ul class="collapse">
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  </ul></li>
+  <li><a href="#git-status-etc-etc" id="toc-git-status-etc-etc" class="nav-link" data-scroll-target="#git-status-etc-etc">git status etc etc</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>Introduction</strong></a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">EMSC e-Course template</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><strong>Version Control</strong></a></li><li class="breadcrumb-item"><a href="../Introduction2VersionControl/2-NextStepsWithGit.html"><span class="chapter-title">Version Control (ii)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">EMSC - Get Going with Python</h1>
+<h1 class="title"><span class="chapter-title">Version Control (ii)</span></h1>
 </div>
 
 
@@ -277,16 +327,10 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Prof Louis Moresi </p>
+             <p>Louis Moresi </p>
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -296,10 +340,109 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Under Construction</strong></p>
-<p>Resources for learning to use the python language in EMSC program.</p>
+<section id="an-introduction-to-version-control-pt-2" class="level1">
+<h1>An introduction to Version Control pt 2</h1>
+<blockquote class="blockquote">
+<p>Version control is good for the soul</p>
+</blockquote>
+<section id="some-setup-is-required" class="level2">
+<h2 class="anchored" data-anchor-id="some-setup-is-required">Some setup is required</h2>
+<p>We need to run the following in a terminal</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper store</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"profdiablo@underworldcode.org"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name  <span class="st">"profdiablo"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We also need to do one operation (in the terminal) that needs a password. The obvious thing is to try to obtain a copy of a private repository from our shared space …</p>
+</section>
+<section id="how-do-we-get-a-copy-of-the-information-on-github" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-get-a-copy-of-the-information-on-github">How do we get a copy of the information on github ?</h2>
+<p>We can ‘download’ the sandbox repository to a local directory using the following command. (Change to the relevant directory as needed)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="op">&lt;</span>my_local_directory<span class="op">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use the <strong>GIT &gt; Open Terminal</strong> menu option above to make this work.</p>
+<p>```lpzljrfobpk ipython3 %%sh</p>
+</section>
+</section>
+<section id="type-your-code-in-this-cell" class="level1">
+<h1>Type your code in this cell</h1>
+<pre><code>
+Take a look to see if this worked. What files are in the `shared-sandbox` directory. 
+
+```bash
+# check if it worked
+ls -a shared-sandbox</code></pre>
+<p>There should be a (hidden) directory <code>.git</code> that actually contains the database of changes, the original files and all manner of logs that allow you to replay changes and check them.</p>
+<p>```lpzljrfobpk ipython3 %%sh</p>
+</section>
+<section id="type-your-code-here" class="level1">
+<h1>Type your code here</h1>
+<pre><code>
+## Example 
+
+Here is a typical run through of what we do with git. First we can ask what has been changed / added etc
+
+```bash
+git status </code></pre>
+<pre class="text"><code>bash-3.2$ git status
 
 
+    On branch master
+    Your branch is up to date with 'origin/master'.
+
+    Changes not staged for commit:
+      (use "git add &lt;file&gt;..." to update what will be committed)
+      (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+            modified:   README.md
+
+    Untracked files:
+      (use "git add &lt;file&gt;..." to include in what will be committed)
+
+            .ipynb_checkpoints/
+            People.txt
+
+    no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
+<p>We can ask git to start taking notice of a file that has been added:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add People.txt <span class="at">--verbose</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="text"><code>   bash-3.2$ git add People.txt --verbose 
+   # but it is very quiet anyway</code></pre>
+<p>We can issue lots of git commands such as:</p>
+<ul>
+<li><code>git rm</code></li>
+<li><code>git mv</code></li>
+<li><code>git add</code></li>
+<li><code>git help</code></li>
+</ul>
+<p>but when we are done telling git all about the changes we already made when we edited the files, we now tell it to take a snapshot of the state of our project and <strong>commit</strong> these changes. We must add a message when we make this commit and this tell us what changes we made.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"I have added my name to the People.txt list"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="text"><code>    bash-3.2$ git commit -m "I have added my name to the People.txt list"
+    [master fdc97b1] I have added my name to the People.txt list
+     1 file changed, 7 insertions(+)
+     create mode 100644 People.txt</code></pre>
+<p>We can repeat this cycle of edit / commit as much as we like but we have not yet uploaded these changes for anyone else to see. This is done by <strong>pushing</strong> the changes back to the repository. This requires a network connection of course. Even if you are offline, though, it can be helpful to commit changes in little chunks with helpful messages because you can ALWAYS go back and recover <strong>all the files in the state they were in when you made the commit</strong>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="text"><code>    bash-3.2$ git push
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 447 bytes | 447.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    To https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python.git
+       242d062..fdc97b1  master -&gt; master</code></pre>
+<p><code>lpzljrfobpk ipython3 !git help</code></p>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>You can browse the directory in the file browser and you can add your name to the <code>People.txt</code> file. Now you should be able to commit your changes by following the pattern above:</p>
+<p>```lpzljrfobpk ipython3 %%sh</p>
+</section>
+</section>
+<section id="git-status-etc-etc" class="level1">
+<h1>git status etc etc</h1>
+<p>```</p>
+<p>Discuss this as a class - does it work ? Do you expect it to work ?</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -691,10 +834,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../Introduction2VersionControl/1-GettingStartedWithGit.html" class="pagination-link" aria-label="Version Control (i)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Version Control (i)</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="What kind of Language is Python ?">
-        <span class="nav-page-text"><span class="chapter-title">What kind of Language is Python ?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Introduction2VersionControl/3-YourOwnRepositories.html" class="pagination-link" aria-label="Version Control (iii)">
+        <span class="nav-page-text"><span class="chapter-title">Version Control (iii)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Prof Louis Moresi">
-<meta name="dcterms.date" content="2024-03-17">
+<meta name="author" content="Louis Moresi">
 
-<title>EMSC - Get Going with Python</title>
+<title>EMSC - Get Going with Python - Version Control (iii)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,23 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Advanced/Intro.html" rel="next">
+<link href="../Introduction2VersionControl/2-NextStepsWithGit.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,10 +80,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/ANU-logo.jpg" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/ANU-logo.jpg" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">EMSC - Get Going with Python</span>
     </a>
   </div>
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>Introduction</strong></a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">EMSC e-Course template</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><strong>Version Control</strong></a></li><li class="breadcrumb-item"><a href="../Introduction2VersionControl/3-YourOwnRepositories.html"><span class="chapter-title">Version Control (iii)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -108,8 +108,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/AuWorldEQ.jpg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -125,17 +125,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">EMSC e-Course template</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">EMSC e-Course template</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What kind of Language is Python ?</span></a>
+  <a href="../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">What kind of Language is Python ?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TLDR.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TLDR - Python Phrase Book</span></a>
+  <a href="../TLDR.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TLDR - Python Phrase Book</span></a>
   </div>
 </li>
       </ul>
@@ -151,47 +151,47 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
+  <a href="../Basics/Ex1-IntroWebPython.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python on the web</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Variables</span></a>
+  <a href="../Basics/Ex2-Variables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Variables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
+  <a href="../Basics/Ex2a-Functions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Functions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex3-Conditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conditional expressions</span></a>
+  <a href="../Basics/Ex3-Conditionals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conditional expressions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex4-Loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops</span></a>
+  <a href="../Basics/Ex4-Loops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
+  <a href="../Basics/Ex5-ListsEtc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lists, tuples and dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
+  <a href="../Basics/Ex6-MoreLoops.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">More about loops</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
+  <a href="../Basics/Ex7-Strings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Strings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Basics/Ex8-ReadWriteFiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading and writing files</span></a>
+  <a href="../Basics/Ex8-ReadWriteFiles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reading and writing files</span></a>
   </div>
 </li>
       </ul>
@@ -207,17 +207,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction2VersionControl/1-GettingStartedWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (i)</span></a>
+  <a href="../Introduction2VersionControl/1-GettingStartedWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (i)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction2VersionControl/2-NextStepsWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (ii)</span></a>
+  <a href="../Introduction2VersionControl/2-NextStepsWithGit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (ii)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Introduction2VersionControl/3-YourOwnRepositories.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Version Control (iii)</span></a>
+  <a href="../Introduction2VersionControl/3-YourOwnRepositories.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Version Control (iii)</span></a>
   </div>
 </li>
       </ul>
@@ -233,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
+  <a href="../Advanced/Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./_WIP/Test_Pyodide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Test Pyodide plugin</span></a>
+  <a href="../_WIP/Test_Pyodide.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Test Pyodide plugin</span></a>
   </div>
 </li>
       </ul>
@@ -260,14 +260,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#how-to-use-git-for-yourself" id="toc-how-to-use-git-for-yourself" class="nav-link active" data-scroll-target="#how-to-use-git-for-yourself">How to use git for yourself</a>
+  <ul class="collapse">
+  <li><a href="#different-file-types-and-text-editing" id="toc-different-file-types-and-text-editing" class="nav-link" data-scroll-target="#different-file-types-and-text-editing">Different file types and text editing</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><strong>Introduction</strong></a></li><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">EMSC e-Course template</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Introduction2VersionControl/1-GettingStartedWithGit.html"><strong>Version Control</strong></a></li><li class="breadcrumb-item"><a href="../Introduction2VersionControl/3-YourOwnRepositories.html"><span class="chapter-title">Version Control (iii)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">EMSC - Get Going with Python</h1>
+<h1 class="title"><span class="chapter-title">Version Control (iii)</span></h1>
 </div>
 
 
@@ -277,16 +286,10 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Prof Louis Moresi </p>
+             <p>Louis Moresi </p>
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -296,10 +299,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Under Construction</strong></p>
-<p>Resources for learning to use the python language in EMSC program.</p>
+<section id="how-to-use-git-for-yourself" class="level1">
+<h1>How to use git for yourself</h1>
+<blockquote class="blockquote">
+<p><em>I recommend this tutorial: <a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud</a> even though it focuses on bitbucket rather than github.</em></p>
+</blockquote>
+<p>We saw how git works in collaboration and also how that will cause some interesting things to happen when people work together on a set of files. The rest of this tutorial is a discussion using the team’s github site to add files to our shared repository and create individual repositories.</p>
+<!-- > [https://github.com/vieps-pye-class-2019](https://github.com/vieps-pye-class-2019) -->
+<p>Here are some of the approaches we will look at to manage shared files for our course:</p>
+<ul>
+<li>We can each have our own directory in the sandbox and keep ourselves to ourselves
+<ul>
+<li>What issues might this cause with commit logs</li>
+<li>Can each person commit when they like ?</li>
+</ul></li>
+<li>We can all make a repository of our own in the VIEPS-PYE team area
+<ul>
+<li>How does this work in terms of collaboration on a project ?</li>
+<li>Would it be better to do more repositories and use them for a specific task ?</li>
+</ul></li>
+<li>Because you all signed up for github, you also have personal repositories
+<ul>
+<li>At the moment these are all public unless you registered as a student user</li>
+<li>Even if they are public, other people can only read them … not change things</li>
+<li>Which is fine unless you want to collaborate. Can you see how to do that ?</li>
+</ul></li>
+</ul>
+<p>Think about how these approaches might be useful for you in the following cases:</p>
+<ul>
+<li>Writing a paper or report with coauthors</li>
+<li>Writing drafts of a thesis with comments from a supervisor</li>
+<li>Working on some python code in your own project</li>
+<li>Working on some python code with other people</li>
+</ul>
+<p>What are the problems that are likely to come up and how do you think you might approach dealing with them ?</p>
+<section id="different-file-types-and-text-editing" class="level2">
+<h2 class="anchored" data-anchor-id="different-file-types-and-text-editing">Different file types and text editing</h2>
+<p>Our previous exercise in combining files showed how git tries to merge information from different version of files when it can parse the file and understand what it actually is. The tools that it uses are reasonable in the case of text files but largely meaningless in the case of binary files (like images, .docx files, etc). Git can only work out that there is a new version of the file and complain, it cannot try to merge. You can tell git to ignore specific types of files (using a <code>.gitignore</code> file in the project) and if you are planning a project with a lot of image files you might want to read about it <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">here</a>.</p>
+<p>Line-by-line comparison is also not ideal for writing code where <strong>code-blocks</strong> span multiple lines. Git’s merging strategy may have problems if edits are made in the middle of a code block that might, in principle mess up the syntax. For example, imagine if you change a line which has a closing parenthesis for a multi-line function definition.</p>
+<p>These are issues that are avoided by</p>
+<ul>
+<li>Not trying to version inappropriate file types</li>
+<li>Making regular commits of small changes</li>
+<li>Anticipating trouble and working around it</li>
+<li>Using the other tools available in github to communicate with your collaborators and plan changes carefully.</li>
+<li>Branches (see <a href="https://www.atlassian.com/git/tutorials/using-branches">this page in the tutorial</a></li>
+</ul>
+<p>```gvfkivjofzf ipython3</p>
+<p>```</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -691,10 +742,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../Introduction2VersionControl/2-NextStepsWithGit.html" class="pagination-link" aria-label="Version Control (ii)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Version Control (ii)</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="What kind of Language is Python ?">
-        <span class="nav-page-text"><span class="chapter-title">What kind of Language is Python ?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Advanced/Intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text"><span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
