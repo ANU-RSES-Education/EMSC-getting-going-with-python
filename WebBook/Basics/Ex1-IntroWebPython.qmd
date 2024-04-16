@@ -114,7 +114,6 @@ The first three lines of comments provide information recording some of the assu
 In fact, 'commenting out' code is so common that most editors provide a straightforward way to do it. If you select a block of code and press <kbd>Ctrl</kbd>+<kbd>/</kbd> (or on a Mac, <kbd>⌘</kbd>+<kbd>/</kbd>), the selected lines will all be changed to begin with `#` comment characters. Pressing <kbd>Ctrl</kbd>+<kbd>/</kbd> again will restore the original version. Smart editors know how to do this for many different languages. 
 
 
----
 
 ### Sandbox
 

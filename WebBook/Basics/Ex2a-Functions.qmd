@@ -347,11 +347,20 @@ help(increment)
 
 ---
 
+
+
 ### Sandbox
 
-```{pyodide-python}
-## Free play ...
+::: {.callout-warning collapse="true" icon="false"}
 
-help(increment)
+## Coding scratch space
+
+
+```{pyodide-python}
+## Scratch space / notepad
+
+print("Comment out this code with the keyboard shortcut !")
+
 
 ```
+:::

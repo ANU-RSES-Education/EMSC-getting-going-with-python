@@ -481,3 +481,25 @@ print(phrase.format('cat', 'dog'))
 ```
 
 :::
+
+
+
+
+
+
+
+### Sandbox
+
+::: {.callout-warning collapse="true" icon="false"}
+
+## Coding scratch space
+
+
+```{pyodide-python}
+## Scratch space / notepad
+
+print("Comment out this code with the keyboard shortcut !")
+
+
+```
+:::

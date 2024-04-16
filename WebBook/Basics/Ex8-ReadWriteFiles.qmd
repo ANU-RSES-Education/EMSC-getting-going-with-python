@@ -219,3 +219,22 @@ Create a new file, based on the data you read earlier. It should contain three c
 :::
 
 From the examples above, we just saw how to read and write data using Python built-in methods. These are good for simple files, but not for more complex information such as an Excel spreadsheet. Later in the course, we will encounter a number of more sophisticated tools that can help us with these kinds of files.
+
+
+
+
+### Sandbox
+
+::: {.callout-warning collapse="true" icon="false"}
+
+## Coding scratch space
+
+
+```{pyodide-python}
+## Scratch space / notepad
+
+print("Comment out this code with the keyboard shortcut !")
+
+
+```
+:::
