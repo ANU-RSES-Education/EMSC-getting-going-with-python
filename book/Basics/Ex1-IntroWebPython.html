@@ -269,7 +269,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","id":1,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}},{"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","id":2,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}},{"code":"# Blank\n","id":3,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","id":4,"options":{"message":"true","classes":"","results":"markup","context":"interactive","out-width":"700px","fig-cap":"","read-only":"false","comment":"","label":"","autorun":"","fig-height":5,"fig-width":7,"out-height":"","warning":"true","dpi":72,"output":"true"}}];
+globalThis.qpyodideCellDetails = [{"id":1,"options":{"output":"true","label":"","warning":"true","fig-height":5,"dpi":72,"autorun":"","classes":"","message":"true","comment":"","results":"markup","fig-width":7,"context":"interactive","out-height":"","read-only":"false","fig-cap":"","out-width":"700px"},"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")"},{"id":2,"options":{"output":"true","label":"","warning":"true","fig-height":5,"dpi":72,"autorun":"","classes":"","message":"true","comment":"","results":"markup","fig-width":7,"context":"interactive","out-height":"","read-only":"false","fig-cap":"","out-width":"700px"},"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")"},{"id":3,"options":{"output":"true","label":"","warning":"true","fig-height":5,"dpi":72,"autorun":"","classes":"","message":"true","comment":"","results":"markup","fig-width":7,"context":"interactive","out-height":"","read-only":"false","fig-cap":"","out-width":"700px"},"code":"# Blank\n"},{"id":4,"options":{"output":"true","label":"","warning":"true","fig-height":5,"dpi":72,"autorun":"","classes":"","message":"true","comment":"","results":"markup","fig-width":7,"context":"interactive","out-height":"","read-only":"false","fig-cap":"","out-width":"700px"},"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n"}];
 
 
 </script>
@@ -686,7 +686,7 @@ window.Quarto = {
   <li><a href="#comments" id="toc-comments" class="nav-link active" data-scroll-target="#comments">Comments</a></li>
   <li><a href="#sandbox" id="toc-sandbox" class="nav-link" data-scroll-target="#sandbox">Sandbox</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/BinderLandingPage.qmd"><i class="bi bi-rocket-takeoff"></i>Open in Binder</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -742,7 +742,7 @@ Summary
 </div>
 <p>There are many different ways to run python code. For the simplest tasks, a web browser is all you need to edit and run simple tasks. In this introductory session, we will use a python interpreter embedded in each web page to learn the basic language itself.</p>
 <p>You will find examples of python code such as this one which contains some Python code which you can copy but which you can’t run and you can’t edit. Note that the code is highlighted (coloured) by meaning.</p>
-<div id="ebefc3c9" class="cell">
+<div id="97415dd6" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple script (with a descriptive comment)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to python !"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1776,7 +1776,7 @@ qpyodideCellDetails.map(
     }
   );
 </script>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
