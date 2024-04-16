@@ -92,10 +92,10 @@ format:
     filters:
       - pyodide
 
-    # code-links:
-    #   - text: Open in Binder
-    #     icon: rocket-takeoff
-    #     href: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
+    code-links:
+      - text: Open in Binder
+        icon: rocket-takeoff
+        href: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/BinderLandingPage.qmd
     other-links:
       - text: Github Repository
         icon: github

@@ -24,21 +24,8 @@ Some simple introductary notebooks to help you learn both notebooks and python a
 We ran through some of this in our [meet-and-greet](../FirstSteps/Introduction2Python/0-CharacteristicsOfPython) with python programming 
 
 
- - [Exercise 1 - Getting started](Ex01/Ex1-GettingStartedWithJupyter)
- - [Exercise 2 - Variables and functions](Ex02/Ex2-VariablesAndFunctions)
- - [Exercise 3 - Loops and conditionals](Ex03/Ex3-LoopsAndConditionals)
  - [Exercise 4 - Guessing Games](Ex04/Ex4-GuessingGames)
 
-## Arrays of data and loops
-
-Moving on to data types that bundle multiple items together, thinking about how address individual 
-items in those structures and how to access all of them in turn. This builds upon our [quick introduction to python 
-data types](../FirstSteps/Introduction2Python/5-PythonDataTypes)
-
- - [Exercise 5 - Lists, tuples and dictionaries](Ex05/Ex5-ListsEtc)
- - [Exercise 6 - More loops](Ex06/Ex6-MoreLoops)
- - [Exercise 7 - Strings](Ex07/Ex7-Strings)
- - [Exercise 8 - Reading and writing files](Ex08/Ex8-ReadWriteFiles)
 
 ## Python idiosyncrasies 
 
