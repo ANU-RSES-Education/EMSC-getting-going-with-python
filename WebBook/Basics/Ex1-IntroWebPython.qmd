@@ -39,20 +39,23 @@ Generally, we'll use the live code blocks as part of an exercise for you to try 
 
  The code box in this exercise **is** editable. If you click in this box, and then press <kbd>Shift</kbd>+<kbd>⏎</kbd> (i.e. hold down the <kbd>Shift</kbd> key on your keyboard and then hit the return key) the code will be run, and any output is displayed underneath. You can also use the run button if you prefer. 
 
-```{pyodide-python}
-# Blank code cell (this line is a comment)
-print("Welcome to python !")
-```
-
 Note there is a clipboard button to copy your answer and this is quite important because it is not saved anywhere. If you want to keep answers to your exercises, have a separate notebook / editor handy.
 
 When you have finished, you can collapse this exercise:
 
 ![](Images/CollapseThisExercise.png){.lightbox width=50% fig-align=center}
+
 :::
 
-Usually we will collapse the exercises by default and you'll need to open them to access the instructions and the code. 
-We can start right now ... 
+Usually we will collapse the exercises by default and you'll need to open them to access the instructions. 
+
+```{pyodide-python}
+# Exercise 1
+
+# Blank code cell (this line is a comment)
+print("Welcome to python !")
+```
+
 
 ::: {.callout-tip collapse=true icon="false"}
 
@@ -66,12 +69,6 @@ Try typing simple arithmetic into the code cell below and see what happens. For 
 3+17
 ```
 
-```{pyodide-python}
-# Blank
-
-
-```
-
 You can also use the operators `*`, `-`, `/` (for division), and the parentheses `()`. Finally, `**` is used to raise a number to some power, so that $3^2$ is entered as `3**2`. Keep trying new calculations !
 
 **What happens if you enter two lines of calculations and run ?** For example:
@@ -83,6 +80,13 @@ You can also use the operators `*`, `-`, `/` (for division), and the parentheses
 Can you think how to get both of the answers to (hint) print out ?
 
 :::
+
+```{pyodide-python}
+# Exercise 2
+
+
+```
+
 
 
 ### Comments
@@ -112,18 +116,15 @@ In fact, 'commenting out' code is so common that most editors provide a straight
 
 
 
-### Sandbox
-
-::: {.callout-warning collapse="true" icon="false"}
+::: {.callout-warning icon="false"}
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Scratch space / notepad
 
 print("Comment out this code with the keyboard shortcut !")
 
-
 ```
-:::

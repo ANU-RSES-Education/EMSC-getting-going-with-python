@@ -1,7 +1,5 @@
 project:
   type: book
-  # pre-render: ./pyodide-to-jupyter.sh
-
   output-dir: ../_build/book
 
 

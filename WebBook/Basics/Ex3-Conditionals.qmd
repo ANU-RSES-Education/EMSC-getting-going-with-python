@@ -125,14 +125,11 @@ def printHello(name=None):
 ```
 
 
----
-
-### Sandbox
-
-::: {.callout-warning collapse="true" icon="false"}
+::: {.callout-warning icon="false"}
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Scratch space / notepad

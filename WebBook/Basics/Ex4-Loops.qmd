@@ -152,12 +152,12 @@ Note: there are other loops that we can use in python (e.g. the `for` loop) and 
 
 ---
 
-### Sandbox
 
-::: {.callout-warning collapse="true" icon="false"}
+::: {.callout-warning icon="false"}
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Scratch space / notepad

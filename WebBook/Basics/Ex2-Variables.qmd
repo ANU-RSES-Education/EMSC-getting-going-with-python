@@ -99,14 +99,6 @@ Notice that `x` appears on both sides of the equals sign here. This should be re
 Try creating some variables, and using them in simple calculations. Start with the examples above.
 Be sure to check that the results match what you expect.
 
-```{pyodide-python}
-# All yours ...
-
-
-
-
-```
-
 Constructs such as `x = x + y` are so common that Python has a special shorthand notation for this. 
 We can express the same equation by entering `x += y`. There are similar versions for other operators: `-=`, `*=` and `/=`.
 
@@ -114,7 +106,17 @@ Try out these shorthand operators. Is `x += 3` the same as `3 += x`?
 Why / why not ?
 
 There is no particular advantage to using these short forms, except convenience and readibility.
+
 :::
+
+
+```{pyodide-python}
+# Exercise 1
+
+
+
+
+```
 
 
 ## Naming Conventions
@@ -173,16 +175,7 @@ will print `float` (i.e., floating-point). We will encounter other types in due 
 
 ## Exercise 2 - Variables and their types
 
-Try creating some variables, and using them in simple calculations. Start with the examples above.
-Be sure to check that the results match what you expect.
-
-```{pyodide-python}
-# Try it out ...
-
-
-
-
-```
+Try creating some variables, and using them in simple calculations. Start with the examples above. Be sure to check that the results match what you expect.
 
 What happens if you mix different types,  ? 
 
@@ -198,6 +191,15 @@ print(i / 3)
 
 :::
 
+```{pyodide-python}
+# Exercise 2
+
+
+
+
+```
+
+
 
 ## Application: Salary calculations
 
@@ -211,13 +213,6 @@ What if you happened to be a famous musician in 1960s London, where the tax rate
 
 **Calculate your fortnightly pay as a non-musical researcher** Remember, break the problem down into individual steps, and create variables for each of the quantities involved! You should find the answer is \$ 4110.06.
 
-```{pyodide-python}
-# Accounting 101 here ...
-
-
-
-
-```
 
 Now repeat the calculation for the higher-income scenario. Wait, isn't that the same ? 
 
@@ -235,6 +230,15 @@ Now repeat the calculation for the higher-income scenario. Wait, isn't that the 
 |   [Taxman](https://en.wikipedia.org/wiki/Taxman) George Harrison, Revolver 
 
 :::
+
+```{pyodide-python}
+# Exercise 3
+
+
+
+
+```
+
 
 
 ### Variables are more than just variables
@@ -260,12 +264,11 @@ Similarly, any floating-point number, `v`, comes with a `v.as_integer_ratio()` f
 <!-- You may notice that some variables have a lot of attached functions that are named with double-underscores, such as `x.__add__()`. These are used by Python internally, and are not intended to be called directly in programs. In fact, the `__add__()` function is called whenever you use `+`: internally, `x+y` gets translated to `x.__add__(y)`. We will discuss this in more detail later in the course, when we talk about 'object-oriented programming'. -->
 
 
-### Sandbox
-
-::: {.callout-warning collapse="true" icon="false"}
+::: {.callout-warning icon="false"}
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Free play ...
@@ -276,4 +279,3 @@ print("")
 
 
 ```
-:::

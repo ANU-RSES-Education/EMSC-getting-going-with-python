@@ -186,6 +186,8 @@ As with other data types, Python provides a number of functions to work with a s
 
 **Check the examples given above**. Not everything is obvious so try the examples until you are confident you understand how strings work.
 
+:::
+
 ```{pyodide-python}
 
 
@@ -202,9 +204,6 @@ help(string.capitalize)
 
 ```
 
-:::
-
-
 
 
 ---
@@ -212,7 +211,7 @@ help(string.capitalize)
 ::: {.callout-tip collapse="true" icon="false"}
 ## Exercise 4 - Application: tables
 
-**&#10148;Write a function which takes in strings like `'apples:3; pears:17; bananas:21'` and produces a nicely-formatted table like this**:
+**Write a function which takes in strings like `'apples:3; pears:17; bananas:21'` and produces a nicely-formatted table like this**:
 
 ```text
 +-----------+-----+
@@ -234,12 +233,13 @@ Here are some additional input strings it should be able to cope with:
 
 Pay attention to producing uniform formatting of the text !
 
+:::
+
 ```{pyodide-python}
 
 
 
 ```
-:::
 
 ### String formatting
 
@@ -324,18 +324,15 @@ $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
 
 **Repeat the table-formatting example, making use of the string formatting capabilities**. Pay particular attention to using the string formatting to size the columns and align the contents. Can you fill  the empty space with dashes instead of space ?
 
+:::
+
 ```{pyodide-python}
 
-# Here !
-
-
+# Exercise 5
 
 ```
 
-:::
-
 We will encounter many more text-formatting examples in later exercises and certainly when we review other people's code. Learn to read all three types, but prefer 'f-strings' when you write code.
-
 
 ## Worked Example: 'Caesar' cipher
 
@@ -343,19 +340,18 @@ As we have already discussed, every piece of information within a computer must 
 
 Python provides the function `chr(integer)` to convert integers into their ASCII alphanumeric equivalent.
 
-
-
-
 ::: {.callout-tip collapse="true" icon="false"}
 ## Exercise 6 - Character manipulation 
 
 **Write a loop to print the integers from 33 up to 128, and their ASCII equivalents.** (The first 32 ASCII codes are special control characters, and do not have alphanumeric equivalents).
 
+:::
+
+
 ```{pyodide-python}
-# Try it here!
+# Exercise 6
 ```
 
-:::
 
 
 A 'Caesar cipher' is a very simple way to hide a message making it difficult for someone to read. To encode a piece of text with a Caesar cipher, we simply shift each letter $N$ places up (or down) the alphabet. For example, choosing $N=1$, the message
@@ -374,15 +370,17 @@ because 'J' is one letter after 'I', 'm' is one after 'l', and so on.
 
 **Write a function to encode messages using Caesar ciphers (for any choice of $N$).** Note that the 'decoder' is simply the 'encoder', but instead using $-N$.
 
-```{pyodide-python}
-# Try it here!
-```
-
 Here is a message encoded using a Caesar cipher:
 ```text
 Pfl yrmv wzezjyvu kyzj vovitzjv
 ```
 **By looping through all possible values of $N$, find the $N$ used to encode this message and decode it.**
+
+:::
+
+```{pyodide-python}
+# Exercise 7
+```
 
 
 ### Older approaches to string formatting {#sec-older-strings} 
@@ -473,6 +471,9 @@ phrase = "This sentence has the word {0} {0} {0} repeated three times and the wo
 print(phrase.format('cat', 'dog'))
 ```
 
+:::
+
+
 ```{pyodide-python}
 # Try the {} format for string formatting
 
@@ -480,20 +481,12 @@ print(phrase.format('cat', 'dog'))
 
 ```
 
-:::
 
-
-
-
-
-
-
-### Sandbox
-
-::: {.callout-warning collapse="true" icon="false"}
+::: {.callout-warning icon="false"}
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Scratch space / notepad
@@ -502,4 +495,3 @@ print("Comment out this code with the keyboard shortcut !")
 
 
 ```
-:::
