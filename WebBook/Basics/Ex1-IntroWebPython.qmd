@@ -13,6 +13,7 @@ format:
 # Summary
 
 In this section we'll discover how to run a basic python script (in the web browser) and what to expect in terms of editing, reloading, printing output and saving our work. 
+
 :::
 
 There are many different ways to run python code. For the simplest tasks, a web browser is all you need to edit and run simple tasks. In this introductory session, we will use a python interpreter embedded in each web page to learn the basic language itself. 

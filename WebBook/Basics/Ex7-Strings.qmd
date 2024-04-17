@@ -15,7 +15,8 @@ format:
 ::: {.callout-note icon="false"}
 # Summary
 
-In this section we ~~introduce loops that allow repeated execution of an algorithm with a defined series of input values~~. 
+In this section we look at the way we can manipulatre character strings so that we can produce well-formatted output of our data.
+
 :::
 
 Until now, we have mainly been dealing with numeric data (numbers). However, it is often necessary to process text sequences, referred to as 'character strings'. In this section, we will see some of the mechanisms Python provides for text processing. Even when we are not processing lots of text, we do need to be able to read and write the results of our work and the starting point for that is text manipulation.
@@ -79,6 +80,7 @@ quote = "To be or not to be: that is the question."
 
 ...
 ```
+
 :::
 
 ### String conversion
@@ -149,6 +151,7 @@ quote = "To be or not to be: that is the question."
 print(quote[2:35:3])
 ...
 ```
+
 :::
 
 ### Special characters

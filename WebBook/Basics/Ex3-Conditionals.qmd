@@ -16,6 +16,7 @@ format:
 # Summary
 
 In this section we introduce conditional execution which allows us to write algorithms that change their behaviour depending on the nature of the inputs provided. 
+
 :::
 
 Conditional expressions allow us to alter the behaviour of our program depending on the circumstances. To do this, we employ an `if...elif...else` construct, which takes the form:

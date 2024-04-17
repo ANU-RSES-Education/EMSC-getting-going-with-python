@@ -16,6 +16,7 @@ format:
 # Summary
 
 In this section we introduce `collections` of data that keep related information within a single variable. 
+
 :::
 
 

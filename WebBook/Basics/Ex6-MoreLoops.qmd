@@ -16,6 +16,7 @@ format:
 # Summary
 
 In this section we go deeper into the concept of loops with the concept of a `for` loop and discuss the concept of an *iterable* object (a python object that returns a sequence of values one after the other when asked).
+
 :::
 
 We have already encountered one way of repeating calculations - the `while` loop. Python also provides a second kind of loop, the `for` loop. This allows us to do a calculation for each of the entries in a list, tuple or dictionary (or, more generally, any object that can `yield` a well-defined return value each time it is called).
@@ -284,10 +285,10 @@ If we continue this procedure, we will find that we do not cross out any more nu
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Scratch space / notepad
 
 
 ```
-:::

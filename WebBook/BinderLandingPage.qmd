@@ -13,8 +13,19 @@ jupyter:
     name: python3
 ---
 
+## Jupyter Notebook version of Basic Exercises
 
-  - [Ex1 (qmd)](Basics4Binder/Ex2-Variables.qmd)
+  - [Ex1-IntroWebPython](Basics4Binder/Ex1-IntroWebPython.qmd)
+  - [Ex2-Variables](Basics4Binder/Ex2-Variables.qmd)
+  - [Ex2a-Functions](Basics4Binder/Ex2a-Functions.qmd)
+  - [Ex3-Conditionals](Basics4Binder/Ex3-Conditionals.qmd)
+  - [Ex4-Loops](Basics4Binder/Ex4-Loops.qmd)
+  - [Ex5-ListsEtc](Basics4Binder/Ex5-ListsEtc.qmd)
+  - [Ex6-MoreLoops](Basics4Binder/Ex6-MoreLoops.qmd)
+  - [Ex7-String](Basics4Binder/Ex7-Strings.qmd)
+  - [Ex8-ReadWriteFiles](Basics4Binder/Ex8-ReadWriteFiles.qmd)
+
+## Jupyter Notebooks for Advanced Topics
 
   - [Ex4 (qmd)](Advanced/Ex4-GuessingGames.qmd)
 

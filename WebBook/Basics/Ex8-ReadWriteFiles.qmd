@@ -17,6 +17,7 @@ format:
 # Summary
 
 In this section we learn about data-file handling (reading / writing information) which is a pre-cursor to doing useful computing at scale. We will use some very low-level tools to read and write to storage. In practice, we would probably use packages that can read common data formats, download data from the web, or work with datasets that are too large to read all at once.
+
 :::
 
 Up to this point, we have typed all the data for our programs in 'by hand'. However, as you have no doubt noticed, this quickly gets tedious. It is useful to be able to read and write data files, allowing information to be stored and shared with other people.
