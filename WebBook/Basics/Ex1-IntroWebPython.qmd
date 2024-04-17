@@ -7,9 +7,6 @@ jupyter: python3
 format:
   html:
     code-links: false
-#       - text: Run it here !
-#         icon: rocket-takeoff
-#         ref: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/Notebooks%2FBinderLandingPage.qmd
 ---
 
 ::: {.callout-note icon=false}
