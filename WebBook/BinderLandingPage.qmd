@@ -13,7 +13,11 @@ jupyter:
     name: python3
 ---
 
+
+  - [Ex1 (qmd)](Basics4Binder/Ex2-Variables.qmd)
+
   - [Ex4 (qmd)](Advanced/Ex4-GuessingGames.qmd)
+
 
 
 
