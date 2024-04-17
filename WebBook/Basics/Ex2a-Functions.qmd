@@ -64,13 +64,15 @@ The variable `result` should now contain the value `7` (= 3 + 5 - 1).
 
 Create the `addThreeNumbers` function and try it out
 
+
+:::
+
 ```{pyodide-python}
-# A function to add three numbers
+# Exercise 1 - A function to add three numbers
 
 
 print("Results: ", ...)
 ```
-:::
 
 A few things to notice from this example: - When we 'call' (use) a function, we can give it both named variables (`a` and `b`), and values (`-1`). - The variable names we pass to the function don't need to match the variable names used when 'declaring' (defining) the function - so we can use `a` and `b` instead of `first` and `second`. - The `return` keyword specifies what the function result will be.
 
@@ -95,11 +97,7 @@ def signAndValue(x):
 
 What form does the function result have? What is its type? What about if `x` has the value 0 ? - What is the role of `if/elif/else`? (We'll deal with that question in the next section, but it should be clear enough)
 
-```{pyodide-python}
-# What does signAndValue() do ?
 
-
-```
 
 You can call this function in two slightly different ways. The first is to write (for example)
 
@@ -115,6 +113,12 @@ sgn, val = signAndValue(x)
 
 **Try both forms.** What type does each result have? What happens if `x` is 0 ? Look again at the function declaration: can you explain this behaviour?
 :::
+
+```{pyodide-python}
+# Exercise 2 - What does signAndValue() do ?
+
+
+```
 
 ### Function arguments
 
@@ -175,14 +179,6 @@ def printArgs(a, b, c=17, d=4.3):
 
 Here is the original form of `sumIntegers` which you can now **validate to see if it works** as you expected.
 
-```{pyodide-python}
-def sumIntegers(N, n0):
-    result = 0
-    for i in range(n0, N + 1):
-        result += i
-    return result
-
-```
 
 Now **modify the function to have n0 be an optional argument with a default value**. Does this work as you expected ? When would this behaviour be useful ?
 
@@ -192,7 +188,7 @@ Now **modify the function to have n0 be an optional argument with a default valu
 -   `printArgs(1, 2, 'a', (1,2,3) )`
 -   `printArgs(2, 1, d=4, c=3 )`
 
-```{pyodide-python}
+```{python}
 def printArgs(a, b, c=17, d=4.3):
     print("a is: "+str(a))
     print("b is: "+str(b))
@@ -200,8 +196,21 @@ def printArgs(a, b, c=17, d=4.3):
     print("d is: "+str(d))
 ```
 
-\*\*Modify the `printArgs` function to return the `type` as well as the value of each argument. Does the default definition set the `type` ?
+
+**Modify the `printArgs` function to return the `type` as well as the value of each argument.** Does the default definition set the `type` ?
+
 :::
+
+```{pyodide-python}
+# Exercise 4
+def sumIntegers(N, n0):
+    result = 0
+    for i in range(n0, N + 1):
+        result += i
+    return result
+
+```
+
 
 Note that the `printArgs()` function above does not contain an explicit `return` statement. It is an example of a function that has 'side-effects': it does something that isn't apparent from knowledge of its outputs. Sometimes, it is necessary to write code with side-effects, especially for data input or output. However, they are a common source of problems, and they should be avoided where possible.
 
