@@ -266,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"options":{"comment":"","output":"true","read-only":"false","message":"true","results":"markup","warning":"true","autorun":"","fig-height":5,"classes":"","label":"","out-width":"700px","context":"interactive","dpi":72,"fig-cap":"","out-height":"","fig-width":7},"code":"nameForThisQuantity = 3 + 5\nnameForThisQuantity"},{"id":2,"options":{"comment":"","output":"true","read-only":"false","message":"true","results":"markup","warning":"true","autorun":"","fig-height":5,"classes":"","label":"","out-width":"700px","context":"interactive","dpi":72,"fig-cap":"","out-height":"","fig-width":7},"code":"# All yours ...\n\n\n"},{"id":3,"options":{"comment":"","output":"true","read-only":"false","message":"true","results":"markup","warning":"true","autorun":"","fig-height":5,"classes":"","label":"","out-width":"700px","context":"interactive","dpi":72,"fig-cap":"","out-height":"","fig-width":7},"code":"# Try it out ...\n\n\n"},{"id":4,"options":{"comment":"","output":"true","read-only":"false","message":"true","results":"markup","warning":"true","autorun":"","fig-height":5,"classes":"","label":"","out-width":"700px","context":"interactive","dpi":72,"fig-cap":"","out-height":"","fig-width":7},"code":"# Accounting 101 here ...\n\n\n"},{"id":5,"options":{"comment":"","output":"true","read-only":"false","message":"true","results":"markup","warning":"true","autorun":"","fig-height":5,"classes":"","label":"","out-width":"700px","context":"interactive","dpi":72,"fig-cap":"","out-height":"","fig-width":7},"code":"## Free play ...\n\na = 9.4344\nprint(a.as_integer_ratio())\nprint(\"\")\n"}];
+globalThis.qpyodideCellDetails = [{"id":1,"options":{"context":"interactive","read-only":"false","dpi":72,"fig-width":7,"fig-height":5,"autorun":"","message":"true","results":"markup","comment":"","label":"","out-height":"","fig-cap":"","out-width":"700px","classes":"","output":"true","warning":"true"},"code":"nameForThisQuantity = 3 + 5\nnameForThisQuantity"},{"id":2,"options":{"context":"interactive","read-only":"false","dpi":72,"fig-width":7,"fig-height":5,"autorun":"","message":"true","results":"markup","comment":"","label":"","out-height":"","fig-cap":"","out-width":"700px","classes":"","output":"true","warning":"true"},"code":"# Exercise 1\n\n\n"},{"id":3,"options":{"context":"interactive","read-only":"false","dpi":72,"fig-width":7,"fig-height":5,"autorun":"","message":"true","results":"markup","comment":"","label":"","out-height":"","fig-cap":"","out-width":"700px","classes":"","output":"true","warning":"true"},"code":"# Exercise 2\n\n\n"},{"id":4,"options":{"context":"interactive","read-only":"false","dpi":72,"fig-width":7,"fig-height":5,"autorun":"","message":"true","results":"markup","comment":"","label":"","out-height":"","fig-cap":"","out-width":"700px","classes":"","output":"true","warning":"true"},"code":"# Exercise 3\n\n\n"},{"id":5,"options":{"context":"interactive","read-only":"false","dpi":72,"fig-width":7,"fig-height":5,"autorun":"","message":"true","results":"markup","comment":"","label":"","out-height":"","fig-cap":"","out-width":"700px","classes":"","output":"true","warning":"true"},"code":"## Free play ...\n\na = 9.4344\nprint(a.as_integer_ratio())\nprint(\"\")\n"}];
 
 
 </script>
@@ -688,7 +688,6 @@ window.Quarto = {
   <li><a href="#application-salary-calculations" id="toc-application-salary-calculations" class="nav-link" data-scroll-target="#application-salary-calculations">Application: Salary calculations</a>
   <ul class="collapse">
   <li><a href="#variables-are-more-than-just-variables" id="toc-variables-are-more-than-just-variables" class="nav-link" data-scroll-target="#variables-are-more-than-just-variables">Variables are more than just variables</a></li>
-  <li><a href="#sandbox" id="toc-sandbox" class="nav-link" data-scroll-target="#sandbox">Sandbox</a></li>
   </ul></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/BinderLandingPage.qmd"><i class="bi bi-rocket-takeoff"></i>Open in Binder</a></li></ul></div></nav>
@@ -746,7 +745,7 @@ Summary
 </div>
 </div>
 <p>We saw in the last exercise that Python can do simple calculations, such as</p>
-<div id="027deed7" class="cell">
+<div id="82bdcedc" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">+</span> <span class="dv">5</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="op">*</span> <span class="fl">2.1</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span> <span class="op">/</span> <span class="dv">3</span></span>
@@ -799,14 +798,14 @@ Exercise 1 - Setting, resetting and viewing variables
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Try creating some variables, and using them in simple calculations. Start with the examples above. Be sure to check that the results match what you expect.</p>
-<div id="qpyodide-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Constructs such as <code>x = x + y</code> are so common that Python has a special shorthand notation for this. We can express the same equation by entering <code>x += y</code>. There are similar versions for other operators: <code>-=</code>, <code>*=</code> and <code>/=</code>.</p>
 <p>Try out these shorthand operators. Is <code>x += 3</code> the same as <code>3 += x</code>? Why / why not ?</p>
 <p>There is no particular advantage to using these short forms, except convenience and readibility.</p>
 </div>
 </div>
 </div>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="naming-conventions" class="level2">
 <h2 class="anchored" data-anchor-id="naming-conventions">Naming Conventions</h2>
@@ -855,8 +854,6 @@ Exercise 2 - Variables and their types
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Try creating some variables, and using them in simple calculations. Start with the examples above. Be sure to check that the results match what you expect.</p>
-<div id="qpyodide-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>What happens if you mix different types, ?</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">3.0</span> <span class="op">*</span> i</span>
@@ -868,6 +865,8 @@ Exercise 2 - Variables and their types
 </div>
 </div>
 </div>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 </section>
 <section id="application-salary-calculations" class="level2">
@@ -887,8 +886,6 @@ Exercise 3 - Taxman
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Calculate your fortnightly pay as a non-musical researcher</strong> Remember, break the problem down into individual steps, and create variables for each of the quantities involved! You should find the answer is $ 4110.06.</p>
-<div id="qpyodide-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Now repeat the calculation for the higher-income scenario. Wait, isn’t that the same ?</p>
 <hr>
 <div class="line-block">&nbsp;&nbsp;Let me tell you how it will be<br>
@@ -904,6 +901,8 @@ Exercise 3 - Taxman
 </div>
 </div>
 </div>
+<div id="qpyodide-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <section id="variables-are-more-than-just-variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables-are-more-than-just-variables">Variables are more than just variables</h3>
 <p>As we saw earlier, each variable we create has a type. Most variables come with certain functions and attributes ‘attached’ to them, to perform various operations that are commonly-required for that data type. These can be accessed using a ‘dot’:</p>
@@ -914,26 +913,21 @@ Exercise 3 - Taxman
 <p>we can then access two attributes and a function, - <code>z.real</code> - The ‘real part’ of the complex number - <code>z.imag</code> - The ‘imaginary part’ of the complex number - <code>z.conjugate()</code> - Function returning the ‘complex conjugate’ of z</p>
 <p>Similarly, any floating-point number, <code>v</code>, comes with a <code>v.as_integer_ratio()</code> function that reports <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(v = a/b\)</span>. To see the full list of functions associated with any variable <code>v</code>, type <code>help(v)</code>. You can also type <code>v.</code> and then hit the <kbd>Tab</kbd> key.</p>
 <!-- You may notice that some variables have a lot of attached functions that are named with double-underscores, such as `x.__add__()`. These are used by Python internally, and are not intended to be called directly in programs. In fact, the `__add__()` function is called whenever you use `+`: internally, `x+y` gets translated to `x.__add__(y)`. We will discuss this in more detail later in the course, when we talk about 'object-oriented programming'. -->
-</section>
-<section id="sandbox" class="level3">
-<h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Coding scratch space
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+
+</div>
+</div>
 <div id="qpyodide-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 
 
 </section>

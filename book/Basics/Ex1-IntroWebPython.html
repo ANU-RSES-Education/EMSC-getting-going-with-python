@@ -269,7 +269,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"options":{"context":"interactive","autorun":"","output":"true","fig-height":5,"warning":"true","classes":"","read-only":"false","comment":"","out-width":"700px","message":"true","label":"","dpi":72,"results":"markup","fig-cap":"","fig-width":7,"out-height":""},"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")"},{"id":2,"options":{"context":"interactive","autorun":"","output":"true","fig-height":5,"warning":"true","classes":"","read-only":"false","comment":"","out-width":"700px","message":"true","label":"","dpi":72,"results":"markup","fig-cap":"","fig-width":7,"out-height":""},"code":"# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")"},{"id":3,"options":{"context":"interactive","autorun":"","output":"true","fig-height":5,"warning":"true","classes":"","read-only":"false","comment":"","out-width":"700px","message":"true","label":"","dpi":72,"results":"markup","fig-cap":"","fig-width":7,"out-height":""},"code":"# Blank\n"},{"id":4,"options":{"context":"interactive","autorun":"","output":"true","fig-height":5,"warning":"true","classes":"","read-only":"false","comment":"","out-width":"700px","message":"true","label":"","dpi":72,"results":"markup","fig-cap":"","fig-width":7,"out-height":""},"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n"}];
+globalThis.qpyodideCellDetails = [{"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","id":1,"options":{"out-height":"","message":"true","autorun":"","fig-cap":"","comment":"","out-width":"700px","dpi":72,"classes":"","label":"","context":"interactive","read-only":"false","output":"true","warning":"true","fig-height":5,"fig-width":7,"results":"markup"}},{"code":"# Exercise 1\n\n# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","id":2,"options":{"out-height":"","message":"true","autorun":"","fig-cap":"","comment":"","out-width":"700px","dpi":72,"classes":"","label":"","context":"interactive","read-only":"false","output":"true","warning":"true","fig-height":5,"fig-width":7,"results":"markup"}},{"code":"# Exercise 2\n","id":3,"options":{"out-height":"","message":"true","autorun":"","fig-cap":"","comment":"","out-width":"700px","dpi":72,"classes":"","label":"","context":"interactive","read-only":"false","output":"true","warning":"true","fig-height":5,"fig-width":7,"results":"markup"}},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")","id":4,"options":{"out-height":"","message":"true","autorun":"","fig-cap":"","comment":"","out-width":"700px","dpi":72,"classes":"","label":"","context":"interactive","read-only":"false","output":"true","warning":"true","fig-height":5,"fig-width":7,"results":"markup"}}];
 
 
 </script>
@@ -684,7 +684,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#comments" id="toc-comments" class="nav-link active" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#sandbox" id="toc-sandbox" class="nav-link" data-scroll-target="#sandbox">Sandbox</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/ANU-RSES-Education/EMSC-getting-going-with-python"><i class="bi bi-github"></i>Github Repository</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/BinderLandingPage.qmd"><i class="bi bi-rocket-takeoff"></i>Open in Binder</a></li></ul></div></nav>
     </div>
@@ -742,7 +741,7 @@ Summary
 </div>
 <p>There are many different ways to run python code. For the simplest tasks, a web browser is all you need to edit and run simple tasks. In this introductory session, we will use a python interpreter embedded in each web page to learn the basic language itself.</p>
 <p>You will find examples of python code such as this one which contains some Python code which you can copy but which you can’t run and you can’t edit. Note that the code is highlighted (coloured) by meaning.</p>
-<div id="e3fcf55b" class="cell">
+<div id="f5195c13" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple script (with a descriptive comment)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to python !"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -763,8 +762,6 @@ Exercise 1 - Run a script / edit a script
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>The code box in this exercise <strong>is</strong> editable. If you click in this box, and then press <kbd>Shift</kbd>+<kbd>⏎</kbd> (i.e.&nbsp;hold down the <kbd>Shift</kbd> key on your keyboard and then hit the return key) the code will be run, and any output is displayed underneath. You can also use the run button if you prefer.</p>
-<div id="qpyodide-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Note there is a clipboard button to copy your answer and this is quite important because it is not saved anywhere. If you want to keep answers to your exercises, have a separate notebook / editor handy.</p>
 <p>When you have finished, you can collapse this exercise:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -775,7 +772,9 @@ Exercise 1 - Run a script / edit a script
 </div>
 </div>
 </div>
-<p>Usually we will collapse the exercises by default and you’ll need to open them to access the instructions and the code. We can start right now …</p>
+<p>Usually we will collapse the exercises by default and you’ll need to open them to access the instructions.</p>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -791,8 +790,6 @@ Exercise 2 - Calculations
 <p>We’ve already seen a couple of examples of Python code. Now let’s try making something from scratch. One thing we can do is simply use Python like a calculator!</p>
 <p>Try typing simple arithmetic into the code cell below and see what happens. For example, try entering</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">17</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="qpyodide-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>You can also use the operators <code>*</code>, <code>-</code>, <code>/</code> (for division), and the parentheses <code>()</code>. Finally, <code>**</code> is used to raise a number to some power, so that <span class="math inline">\(3^2\)</span> is entered as <code>3**2</code>. Keep trying new calculations !</p>
 <p><strong>What happens if you enter two lines of calculations and run ?</strong> For example:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">+</span><span class="dv">17</span></span>
@@ -801,6 +798,8 @@ Exercise 2 - Calculations
 </div>
 </div>
 </div>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <section id="comments" class="level3">
 <h3 class="anchored" data-anchor-id="comments">Comments</h3>
 <p>In the examples above, you may have noticed the line</p>
@@ -815,26 +814,21 @@ Exercise 2 - Calculations
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    [...]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The first three lines of comments provide information recording some of the assumptions the programmer made when writing this function (don’t worry if it doesn’t make sense yet!). The fourth comment line is a piece of code that has been ‘commented out’: we don’t want to routinely print the file header, but it is useful to be able to reinstate this easily in case we encounter problems and need to check what the function has read.</p>
 <p>In fact, ‘commenting out’ code is so common that most editors provide a straightforward way to do it. If you select a block of code and press <kbd>Ctrl</kbd>+<kbd>/</kbd> (or on a Mac, <kbd>⌘</kbd>+<kbd>/</kbd>), the selected lines will all be changed to begin with <code>#</code> comment characters. Pressing <kbd>Ctrl</kbd>+<kbd>/</kbd> again will restore the original version. Smart editors know how to do this for many different languages.</p>
-</section>
-<section id="sandbox" class="level3">
-<h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Coding scratch space
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+
+</div>
+</div>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 
 
 </section>
@@ -1776,7 +1770,7 @@ qpyodideCellDetails.map(
     }
   );
 </script>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
