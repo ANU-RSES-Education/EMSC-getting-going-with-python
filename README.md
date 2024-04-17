@@ -15,3 +15,9 @@ jupyter:
 ```python
 Notes ... 
 ```
+
+## Binder: 
+
+ - ARDC: https://binderhub.rc.nectar.org.au/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/main
+ - mybinder: https://mybinder.org/v2/gh/ANU-RSES-Education/EMSC-getting-going-with-python/HEAD?labpath=WebBook/BinderLandingPage.qmd
+
