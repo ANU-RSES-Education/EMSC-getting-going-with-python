@@ -266,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"# A function to add three numbers\n\n\nprint(\"Results: \", ...)","id":1},{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"# What does signAndValue() do ?\n","id":2},{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"def sumIntegers(N, n0):\n    result = 0\n    for i in range(n0, N + 1):\n        result += i\n    return result","id":3},{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"def printArgs(a, b, c=17, d=4.3):\n    print(\"a is: \"+str(a))\n    print(\"b is: \"+str(b))\n    print(\"c is: \"+str(c))\n    print(\"d is: \"+str(d))","id":4},{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"def increment(x):\n    x += 1\n    print(\"Inside increment, x is now \" + str(x))\n    return x\n\n\nx = 0\nincrement(x)  # Notice that we don't do anything with the return value here\nprint(x)\n...\n\nTry this version of the `increment` function\n\ndef increment():\n    global x\n    x += 1\n    print(\"Inside increment, x is now \" + str(x))\n    return x","id":5},{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"def increment(x):\n    \"\"\"...\"\"\"\n    ...\n\n\nhelp(increment)","id":6},{"options":{"warning":"true","read-only":"false","out-height":"","output":"true","autorun":"","dpi":72,"label":"","message":"true","classes":"","comment":"","fig-height":5,"fig-cap":"","results":"markup","context":"interactive","fig-width":7,"out-width":"700px"},"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","id":7}];
+globalThis.qpyodideCellDetails = [{"id":1,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"# A function to add three numbers\n\n\nprint(\"Results: \", ...)"},{"id":2,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"# What does signAndValue() do ?\n"},{"id":3,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"def sumIntegers(N, n0):\n    result = 0\n    for i in range(n0, N + 1):\n        result += i\n    return result"},{"id":4,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"def printArgs(a, b, c=17, d=4.3):\n    print(\"a is: \"+str(a))\n    print(\"b is: \"+str(b))\n    print(\"c is: \"+str(c))\n    print(\"d is: \"+str(d))"},{"id":5,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"# Exercise 4 "},{"id":6,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"# Exercise 4\n\n\ndef increment(x):\n    \"\"\"...\"\"\"\n    ...\n\n\nhelp(increment)"},{"id":7,"options":{"output":"true","fig-cap":"","fig-height":5,"autorun":"","read-only":"false","label":"","warning":"true","message":"true","results":"markup","comment":"","fig-width":7,"out-width":"700px","classes":"","context":"interactive","out-height":"","dpi":72},"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n"}];
 
 
 </script>
@@ -903,35 +903,55 @@ Exercise 4 - Variables within functions
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Try this out, and check you understand what’s going on.</strong></p>
-<div id="qpyodide-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="9f36f04e" class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span> <span class="op">+</span> <span class="bu">str</span>(x))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>increment(x)  <span class="co"># Notice that we don't do anything with the return value here</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>Try this version of the `increment` function</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment():</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> x</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span> <span class="op">+</span> <span class="bu">str</span>(x))</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>If you leave out the <code>global x</code> then <code>x</code> will be undefined in the function as it does not have access to outside variables.</p>
 </div>
 </div>
 </div>
+<div id="qpyodide-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>There is a way to access external (<code>global</code>) variables from within functions. They might be used in this situation:</p>
-<div id="73d2f823" class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>system_is_setup <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> setup():</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> system_is_setup</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> system_is_setup <span class="op">==</span> <span class="va">False</span>:</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Do system setup tasks</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        ...</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># check system is ok    </span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        ...</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="249917b7" class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>system_is_setup <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> setup():</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">global</span> system_is_setup</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> system_is_setup <span class="op">==</span> <span class="va">False</span>:</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Do system setup tasks</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        ...</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># check system is ok    </span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        ...</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Generally speaking, functions using <code>global</code> variables in this way is a poor choice of implementation because some hidden code is modifying the global state without us, as users, being in control or even aware. We do often define variables of this nature when we use python objects that have a special internal (private) state. We will learn about this later.</p>
 </section>
 <section id="function-documentation" class="level3">
 <h3 class="anchored" data-anchor-id="function-documentation">Function documentation</h3>
 <p>To allow anyone to use your function without knowing the details, you need to document it. This appears in the code just after the definition of the function (and other python entities too). This step may seem unimportant at first, but is critical for re-using your code and distributing it to other people ! Another way is to just call <code>help(&lt;functionname&gt;)</code> and it will output the documentation.</p>
-<div id="a2a1bd63" class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">print</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0cdb86d6" class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">print</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="{text}"><code>    Help on built-in function print in module builtins:
 
@@ -947,24 +967,24 @@ Exercise 4 - Variables within functions
     flush
         whether to forcibly flush the stream.</code></pre>
 <p>Documentation is provided by writing ‘docstrings’ at the start of any function you create. These consist of blocks of text enclosed in triple inverted commas:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""[Documentation goes here...]"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""[Documentation goes here...]"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In scientific Python, docstrings usually follow a certain style, e.g.:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""increment x.</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">    x : integer</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">        the number you want to increament</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co">    x : integer</span></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">        incremented x</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span><span class="op">+</span><span class="bu">str</span>(x))</span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""increment x.</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">    x : integer</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">        the number you want to increament</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co">    x : integer</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co">        incremented x</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span><span class="op">+</span><span class="bu">str</span>(x))</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -978,13 +998,12 @@ Exercise 4 - Documentation of a function
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Check how the documentation string for the increment function works:</strong> try changing the documentation to see what happens. Do spaces matter ? Does it matter if the docstring is positioned exactly by the <code>def increment(x):</code> line ?</p>
-<div id="qpyodide-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><strong>Now do the same for the <code>sumIntegers</code> function</strong> taking care to indicate default values and what they mean.</p>
 </div>
 </div>
 </div>
-<hr>
+<div id="qpyodide-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="sandbox" class="level3">
 <h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
@@ -1000,11 +1019,12 @@ Coding scratch space
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 
 
 </section>

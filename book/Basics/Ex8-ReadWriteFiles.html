@@ -266,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"\n# This downloads the sample.dat file we need for the examples\n# Please run this cell first\n\nimport os, requests\n\nfile_url = \"https://raw.githubusercontent.com/ANU-RSES-Education/EMSC-getting-going-with-python/main/WebBook/Basics/Resources/sample.dat\"\n\nresponse = requests.get(file_url)\nif response.status_code == 200:\n    with open(\"sample.dat\", \"wb\") as file:\n        file.write(response.content)","id":1,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"true","out-width":"700px","label":"","fig-height":5,"results":"markup"}},{"code":"import os\n\nif os.path.exists(\"sample.dat\"):\n    print(\"File 'sample.dat' downloaded correctly\")","id":2,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"results":"markup"}},{"code":"\n\n\n","id":3,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"results":"markup"}},{"code":"# Did the fp get closed / deleted ?\n","id":4,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"results":"markup"}},{"code":"\n\n\n","id":5,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"results":"markup"}},{"code":"# Code to write data to a file and verify\n\n","id":6,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"results":"markup"}},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","id":7,"options":{"fig-width":7,"message":"true","comment":"","dpi":72,"classes":"","output":"true","autorun":"","context":"interactive","warning":"true","out-height":"","fig-cap":"","read-only":"false","out-width":"700px","label":"","fig-height":5,"results":"markup"}}];
+globalThis.qpyodideCellDetails = [{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"true","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":1,"code":"\n# This downloads the sample.dat file we need for the examples\n# Please run this cell first\n\nimport os, requests\n\nfile_url = \"https://raw.githubusercontent.com/ANU-RSES-Education/EMSC-getting-going-with-python/main/WebBook/Basics/Resources/sample.dat\"\n\nresponse = requests.get(file_url)\nif response.status_code == 200:\n    with open(\"sample.dat\", \"wb\") as file:\n        file.write(response.content)"},{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"false","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":2,"code":"import os\n\nif os.path.exists(\"sample.dat\"):\n    print(\"File 'sample.dat' downloaded correctly\")"},{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"false","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":3,"code":"\n\n\n"},{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"false","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":4,"code":"# Exercise 2\n# Did the fp get closed / deleted ?\n"},{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"false","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":5,"code":"\n\n\n"},{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"false","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":6,"code":"# Exercise 4\n\n"},{"options":{"warning":"true","fig-height":5,"results":"markup","autorun":"","read-only":"false","dpi":72,"context":"interactive","out-height":"","fig-width":7,"fig-cap":"","message":"true","comment":"","label":"","out-width":"700px","classes":"","output":"true"},"id":7,"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n"}];
 
 
 </script>
@@ -653,6 +653,7 @@ globalThis._qpyodideGetInstance = function() {
   <ul>
   <li><a href="#reading-data-from-a-file" id="toc-reading-data-from-a-file" class="nav-link active" data-scroll-target="#reading-data-from-a-file">Reading data from a file</a></li>
   <li><a href="#python-with-statement" id="toc-python-with-statement" class="nav-link" data-scroll-target="#python-with-statement">python <code>with</code> statement</a></li>
+  <li><a href="#exercise-3---work-with-the-data" id="toc-exercise-3---work-with-the-data" class="nav-link" data-scroll-target="#exercise-3---work-with-the-data">Exercise 3 - work with the data</a></li>
   <li><a href="#writing-data-to-a-file" id="toc-writing-data-to-a-file" class="nav-link" data-scroll-target="#writing-data-to-a-file">Writing data to a file</a></li>
   <li><a href="#sandbox" id="toc-sandbox" class="nav-link" data-scroll-target="#sandbox">Sandbox</a></li>
   </ul>
@@ -758,10 +759,8 @@ Exercise 1 - Read the <code>sample.dat</code> file
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Open the file and print out the individual lines to see what it contains.</p>
-<div id="qpyodide-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Here is a hint that you might see in python code elsewhere. If you precede a structure like a tuple or list with a ’ * ’ then it is <em>unpacked</em> before being used. This might be helpful if you want to make the list of lines look more like the original file when printed. Another way would be to write a loop over all the lines and print them individually.</p>
-<div id="84fdbb9b" class="cell">
+<div id="29bffb5d" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(t)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="op">*</span>t)</span>
@@ -770,7 +769,7 @@ Exercise 1 - Read the <code>sample.dat</code> file
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># (1, 2, 3, 4)</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1 2 3 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="3d83eeb4" class="cell">
+<div id="8d672faf" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'...'</span>, <span class="st">'z'</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(l)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="op">*</span>l)</span>
@@ -782,6 +781,8 @@ Exercise 1 - Read the <code>sample.dat</code> file
 </div>
 </div>
 </div>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="python-with-statement" class="level3">
 <h3 class="anchored" data-anchor-id="python-with-statement">python <code>with</code> statement</h3>
@@ -810,34 +811,24 @@ Exercise 2 - context manager
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Can you test to see if the <code>fp</code> was closed / deleted after the statement completed ? What about the contents of the file, are they available once the <code>with</code> statement is done ?</p>
+</div>
+</div>
+</div>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 <p>Once you have a list of strings, you can use the list- and string-parsing tools we have already encountered to extract the necessary data and store it in appropriate data structures. The file <code>sample.dat</code> contains records of the mass and volume of twenty samples of a given material.</p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Exercise 3 - work with the data
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<p>::: {.callout-tip collapse=true icon=“false”}</p>
+</section>
+<section id="exercise-3---work-with-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3---work-with-the-data">Exercise 3 - work with the data</h3>
 <p>Read the data from this file, compute the density of each sample and hence the average density of the material.</p>
 <ul>
 <li><p><em>You will need to parse the individual strings and store the information for your calculations.</em></p></li>
 <li><p>Output the information to the screen with print statements so that you can validate your results.</p></li>
 </ul>
+<p>:::</p>
 <div id="qpyodide-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 </section>
 <section id="writing-data-to-a-file" class="level3">
 <h3 class="anchored" data-anchor-id="writing-data-to-a-file">Writing data to a file</h3>
@@ -851,7 +842,7 @@ Exercise 3 - work with the data
 <p>Once everything is written to the file, call <code>close()</code> to close it.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fp.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -860,21 +851,21 @@ Exercise 4 - write data to a new file
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Create a new file, based on the data you read earlier. It should contain three columns: mass, sample volume and sample density. All quantities should be in SI units.</p>
 <p>*Remember, you can use the string-formatting tools we encountered in the last exercise to control how your numbers are written out. Verify that the file has been correctly written (e.g.&nbsp;Exercise 1)</p>
+</div>
+</div>
+</div>
 <div id="qpyodide-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 <p>From the examples above, we just saw how to read and write data using Python built-in methods. These are good for simple files, but not for more complex information such as an Excel spreadsheet. Later in the course, we will encounter a number of more sophisticated tools that can help us with these kinds of files.</p>
 </section>
 <section id="sandbox" class="level3">
 <h3 class="anchored" data-anchor-id="sandbox">Sandbox</h3>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -883,13 +874,14 @@ Coding scratch space
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-</div>
 
 
 </section>
