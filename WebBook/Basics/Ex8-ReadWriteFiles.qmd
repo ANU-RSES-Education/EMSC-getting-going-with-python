@@ -90,13 +90,6 @@ fp.close()
 
 Open the file and print out the individual lines to see what it contains.
 
-```{pyodide-python}
-
-
-
-
-
-```
 
 Here is a hint that you might see in python code elsewhere. If you precede a structure like a tuple or list with a  ' * ' then it is *unpacked* before being used. This might be helpful if you want to make the list of lines look more like the original file when printed. Another way would be to write a loop over all the lines and print them individually.
 
@@ -119,7 +112,17 @@ Here is a hint that you might see in python code elsewhere. If you precede a str
     # ['a', 'b', 'c', '...', 'z']
     # a b c ... z
 ```
+
 :::
+
+```{pyodide-python}
+
+
+
+
+
+```
+
 
 ### python `with` statement
 
@@ -149,12 +152,15 @@ The `with` statement tells python that the file you're giving it is only used in
 
 Can you test to see if the `fp` was closed / deleted after the statement completed ? What about the contents of the file, are they available once the `with` statement is done ?
 
+:::
+
+
 ```{pyodide-python}
+# Exercise 2
 # Did the fp get closed / deleted ?
 
 
 ```
-:::
 
 
 Once you have a list of strings, you can use the list- and string-parsing tools we have already encountered to extract the necessary data and store it in appropriate data structures. The file `sample.dat` contains records of the mass and volume of twenty samples of a given material.
@@ -169,6 +175,9 @@ Read the data from this file, compute the density of each sample and hence the a
 
  - Output the information to the screen with print statements so that you can validate your results. 
 
+ :::
+
+
 ```{pyodide-python}
 
 
@@ -177,7 +186,6 @@ Read the data from this file, compute the density of each sample and hence the a
 
 ```
 
-:::
 
 
 ### Writing data to a file
@@ -210,13 +218,15 @@ Create a new file, based on the data you read earlier. It should contain three c
 
 *Remember, you can use the string-formatting tools we encountered in the last exercise to control how your numbers are written out. Verify that the file has been correctly written (e.g. Exercise 1)
 
+:::
+
+
 ```{pyodide-python}
-# Code to write data to a file and verify
+# Exercise 4
 
 
 
 ```
-:::
 
 From the examples above, we just saw how to read and write data using Python built-in methods. These are good for simple files, but not for more complex information such as an Excel spreadsheet. Later in the course, we will encounter a number of more sophisticated tools that can help us with these kinds of files.
 
@@ -229,7 +239,8 @@ From the examples above, we just saw how to read and write data using Python bui
 
 ## Coding scratch space
 
-
+:::
+ 
 ```{pyodide-python}
 ## Scratch space / notepad
 
@@ -237,4 +248,3 @@ print("Comment out this code with the keyboard shortcut !")
 
 
 ```
-:::

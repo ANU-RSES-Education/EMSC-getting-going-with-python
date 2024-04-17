@@ -228,7 +228,7 @@ print(x)      # x will be one.
 
 **Try this out, and check you understand what's going on.**
 
-```{pyodide-python}
+```{python}
 def increment(x):
     x += 1
     print("Inside increment, x is now " + str(x))
@@ -251,6 +251,11 @@ def increment():
 
 If you leave out the `global x` then `x` will be undefined in the function as it does not have access to outside variables.
 :::
+
+```{pyodide-python}
+# Exercise 4 
+
+```
 
 There is a way to access external (`global`) variables from within functions. They might be used in this situation:
 
@@ -331,7 +336,16 @@ def increment(x):
 
 **Check how the documentation string for the increment function works:** try changing the documentation to see what happens. Do spaces matter ? Does it matter if the docstring is positioned exactly by the `def increment(x):` line ?
 
+
+
+**Now do the same for the `sumIntegers` function** taking care to indicate default values and what they mean.
+
+:::
+
 ```{pyodide-python}
+# Exercise 4
+
+
 def increment(x):
     """..."""
     ...
@@ -341,13 +355,6 @@ help(increment)
 
 ```
 
-**Now do the same for the `sumIntegers` function** taking care to indicate default values and what they mean.
-
-:::
-
----
-
-
 
 ### Sandbox
 
@@ -355,6 +362,7 @@ help(increment)
 
 ## Coding scratch space
 
+:::
 
 ```{pyodide-python}
 ## Scratch space / notepad
@@ -363,4 +371,3 @@ print("Comment out this code with the keyboard shortcut !")
 
 
 ```
-:::

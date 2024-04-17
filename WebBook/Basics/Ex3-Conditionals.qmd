@@ -46,13 +46,15 @@ def condExample(x):
 
 **Try this function.** Does everything behave as you would expect? Try deleting the `elif` and/or `else` clauses; how does this affect the output ?
 
+:::
+
+
 ```{pyodide-python}
-# test the conditional example function
+# Exercise 1 - test the conditional example function
 ...
 
 
 ```
-:::
 
 ### Logical expressions
 
@@ -90,16 +92,16 @@ N.B. In some other languages, the symbols `&` and `|` are used for `and` and `or
 
 **Test each of the operators** to see if they work as expected. Be careful with the `==` in real programs `x==3` returns `True` or `False` but, if you make a typo, `x=3` will change x quietly (but `3==x` is a valid test, `3=x` is a `SyntaxError`)
 
-```{pyodide-python}
-# test the conditional example function
-...
-
-
-```
-
 **Try using the `and`, `or` and `not` operators.**
 
 :::
+
+```{pyodide-python}
+# Exercise 2 - and, or, not
+...
+
+```
+
 
 ### Testing for `None`
 
@@ -136,4 +138,3 @@ def printHello(name=None):
 
 
 ```
-:::
