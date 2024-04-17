@@ -205,7 +205,7 @@ print(i / 3)
 
 Let's try doing a real-world calculation. Suppose your annual salary is \$ 164,402, and the annual tax rate is 35%. How much money should be paid into your bank account every two weeks?
 
-What if you happened to be a famous musician in 1960s London, where the tax rates were more progressive. Suppose you earn \$1,987,232 and the tax rate is just 20% on the first \$50,000 that you earn, and 95% on the remainder.
+What if you happened to be a famous musician in 1960s London, where the tax rates were more progressive. Suppose you earn \$950,813 and the tax rate is just 20% on the first \$50,000 that you earn, and 95% on the remainder.
 
 ::: {.callout-tip collapse=true icon="false"}
 
