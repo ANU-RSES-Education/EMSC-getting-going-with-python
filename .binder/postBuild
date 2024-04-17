@@ -87,6 +87,9 @@ python3 -m pip install "jupyterlab-quarto>=0.3.3"
 python3 -m pip install "jupytext>=1.16.1"
 python3 -m pip install "trame_jupyter_extension"
 
+cd WebBook
+source pyodide-to-jupyter.sh
+
 echo
 echo Completed
 echo
