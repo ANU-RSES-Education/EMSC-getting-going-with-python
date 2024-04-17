@@ -266,7 +266,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# Exercise 1 - A function to add three numbers\n\n\nprint(\"Results: \", ...)","id":1,"options":{"out-width":"700px","output":"true","comment":"","read-only":"false","context":"interactive","autorun":"","classes":"","results":"markup","warning":"true","fig-width":7,"label":"","out-height":"","dpi":72,"fig-cap":"","message":"true","fig-height":5}},{"code":"# Exercise 2 - What does signAndValue() do ?\n","id":2,"options":{"out-width":"700px","output":"true","comment":"","read-only":"false","context":"interactive","autorun":"","classes":"","results":"markup","warning":"true","fig-width":7,"label":"","out-height":"","dpi":72,"fig-cap":"","message":"true","fig-height":5}},{"code":"# Exercise 4\ndef sumIntegers(N, n0):\n    result = 0\n    for i in range(n0, N + 1):\n        result += i\n    return result","id":3,"options":{"out-width":"700px","output":"true","comment":"","read-only":"false","context":"interactive","autorun":"","classes":"","results":"markup","warning":"true","fig-width":7,"label":"","out-height":"","dpi":72,"fig-cap":"","message":"true","fig-height":5}},{"code":"# Exercise 4 ","id":4,"options":{"out-width":"700px","output":"true","comment":"","read-only":"false","context":"interactive","autorun":"","classes":"","results":"markup","warning":"true","fig-width":7,"label":"","out-height":"","dpi":72,"fig-cap":"","message":"true","fig-height":5}},{"code":"# Exercise 4\n\n\ndef increment(x):\n    \"\"\"...\"\"\"\n    ...\n\n\nhelp(increment)","id":5,"options":{"out-width":"700px","output":"true","comment":"","read-only":"false","context":"interactive","autorun":"","classes":"","results":"markup","warning":"true","fig-width":7,"label":"","out-height":"","dpi":72,"fig-cap":"","message":"true","fig-height":5}},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","id":6,"options":{"out-width":"700px","output":"true","comment":"","read-only":"false","context":"interactive","autorun":"","classes":"","results":"markup","warning":"true","fig-width":7,"label":"","out-height":"","dpi":72,"fig-cap":"","message":"true","fig-height":5}}];
+globalThis.qpyodideCellDetails = [{"id":1,"code":"# Exercise 1 - A function to add three numbers\n\n\nprint(\"Results: \", ...)","options":{"autorun":"","warning":"true","context":"interactive","classes":"","comment":"","results":"markup","out-height":"","read-only":"false","message":"true","dpi":72,"output":"true","fig-width":7,"label":"","fig-cap":"","out-width":"700px","fig-height":5}},{"id":2,"code":"# Exercise 2 - What does signAndValue() do ?\n","options":{"autorun":"","warning":"true","context":"interactive","classes":"","comment":"","results":"markup","out-height":"","read-only":"false","message":"true","dpi":72,"output":"true","fig-width":7,"label":"","fig-cap":"","out-width":"700px","fig-height":5}},{"id":3,"code":"# Exercise 4\ndef sumIntegers(N, n0):\n    result = 0\n    for i in range(n0, N + 1):\n        result += i\n    return result","options":{"autorun":"","warning":"true","context":"interactive","classes":"","comment":"","results":"markup","out-height":"","read-only":"false","message":"true","dpi":72,"output":"true","fig-width":7,"label":"","fig-cap":"","out-width":"700px","fig-height":5}},{"id":4,"code":"# Exercise 4 ","options":{"autorun":"","warning":"true","context":"interactive","classes":"","comment":"","results":"markup","out-height":"","read-only":"false","message":"true","dpi":72,"output":"true","fig-width":7,"label":"","fig-cap":"","out-width":"700px","fig-height":5}},{"id":5,"code":"# Exercise 4\n\n\ndef increment(x):\n    \"\"\"...\"\"\"\n    ...\n\n\nhelp(increment)","options":{"autorun":"","warning":"true","context":"interactive","classes":"","comment":"","results":"markup","out-height":"","read-only":"false","message":"true","dpi":72,"output":"true","fig-width":7,"label":"","fig-cap":"","out-width":"700px","fig-height":5}},{"id":6,"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")\n","options":{"autorun":"","warning":"true","context":"interactive","classes":"","comment":"","results":"markup","out-height":"","read-only":"false","message":"true","dpi":72,"output":"true","fig-width":7,"label":"","fig-cap":"","out-width":"700px","fig-height":5}}];
 
 
 </script>
@@ -866,7 +866,7 @@ Exercise 3 - Optional Arguments / defaults
 <li><code>printArgs(1, 2, 'a', (1,2,3) )</code></li>
 <li><code>printArgs(2, 1, d=4, c=3 )</code></li>
 </ul>
-<div id="d65c4040" class="cell">
+<div id="91a45c8a" class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> printArgs(a, b, c<span class="op">=</span><span class="dv">17</span>, d<span class="op">=</span><span class="fl">4.3</span>):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"a is: "</span><span class="op">+</span><span class="bu">str</span>(a))</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"b is: "</span><span class="op">+</span><span class="bu">str</span>(b))</span>
@@ -908,7 +908,7 @@ Exercise 4 - Variables within functions
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Try this out, and check you understand what’s going on.</strong></p>
-<div id="8071fbb6" class="cell">
+<div id="8d18c552" class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> increment(x):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inside increment, x is now "</span> <span class="op">+</span> <span class="bu">str</span>(x))</span>
@@ -935,7 +935,7 @@ Exercise 4 - Variables within functions
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>There is a way to access external (<code>global</code>) variables from within functions. They might be used in this situation:</p>
-<div id="0e7e8885" class="cell">
+<div id="d402ee4b" class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>system_is_setup <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -955,7 +955,7 @@ Exercise 4 - Variables within functions
 <section id="function-documentation" class="level3">
 <h3 class="anchored" data-anchor-id="function-documentation">Function documentation</h3>
 <p>To allow anyone to use your function without knowing the details, you need to document it. This appears in the code just after the definition of the function (and other python entities too). This step may seem unimportant at first, but is critical for re-using your code and distributing it to other people ! Another way is to just call <code>help(&lt;functionname&gt;)</code> and it will output the documentation.</p>
-<div id="3e3c24f4" class="cell">
+<div id="1e926cce" class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">print</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre class="{text}"><code>    Help on built-in function print in module builtins:

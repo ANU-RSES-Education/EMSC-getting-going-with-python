@@ -269,7 +269,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","options":{"context":"interactive","read-only":"false","fig-width":7,"results":"markup","out-height":"","label":"","out-width":"700px","output":"true","autorun":"","warning":"true","fig-height":5,"fig-cap":"","comment":"","dpi":72,"classes":"","message":"true"},"id":1},{"code":"# Exercise 1\n\n# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","options":{"context":"interactive","read-only":"false","fig-width":7,"results":"markup","out-height":"","label":"","out-width":"700px","output":"true","autorun":"","warning":"true","fig-height":5,"fig-cap":"","comment":"","dpi":72,"classes":"","message":"true"},"id":2},{"code":"# Exercise 2\n","options":{"context":"interactive","read-only":"false","fig-width":7,"results":"markup","out-height":"","label":"","out-width":"700px","output":"true","autorun":"","warning":"true","fig-height":5,"fig-cap":"","comment":"","dpi":72,"classes":"","message":"true"},"id":3},{"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")","options":{"context":"interactive","read-only":"false","fig-width":7,"results":"markup","out-height":"","label":"","out-width":"700px","output":"true","autorun":"","warning":"true","fig-height":5,"fig-cap":"","comment":"","dpi":72,"classes":"","message":"true"},"id":4}];
+globalThis.qpyodideCellDetails = [{"id":1,"code":"# A simple script (with a descriptive comment)\nprint(\"Welcome to python !\")","options":{"fig-width":7,"fig-cap":"","results":"markup","output":"true","context":"interactive","out-width":"700px","warning":"true","message":"true","label":"","read-only":"false","out-height":"","classes":"","autorun":"","dpi":72,"comment":"","fig-height":5}},{"id":2,"code":"# Exercise 1\n\n# Blank code cell (this line is a comment)\nprint(\"Welcome to python !\")","options":{"fig-width":7,"fig-cap":"","results":"markup","output":"true","context":"interactive","out-width":"700px","warning":"true","message":"true","label":"","read-only":"false","out-height":"","classes":"","autorun":"","dpi":72,"comment":"","fig-height":5}},{"id":3,"code":"# Exercise 2\n","options":{"fig-width":7,"fig-cap":"","results":"markup","output":"true","context":"interactive","out-width":"700px","warning":"true","message":"true","label":"","read-only":"false","out-height":"","classes":"","autorun":"","dpi":72,"comment":"","fig-height":5}},{"id":4,"code":"## Scratch space / notepad\n\nprint(\"Comment out this code with the keyboard shortcut !\")","options":{"fig-width":7,"fig-cap":"","results":"markup","output":"true","context":"interactive","out-width":"700px","warning":"true","message":"true","label":"","read-only":"false","out-height":"","classes":"","autorun":"","dpi":72,"comment":"","fig-height":5}}];
 
 
 </script>
@@ -741,7 +741,7 @@ Summary
 </div>
 <p>There are many different ways to run python code. For the simplest tasks, a web browser is all you need to edit and run simple tasks. In this introductory session, we will use a python interpreter embedded in each web page to learn the basic language itself.</p>
 <p>You will find examples of python code such as this one which contains some Python code which you can copy but which you can’t run and you can’t edit. Note that the code is highlighted (coloured) by meaning.</p>
-<div id="f8d3f797" class="cell">
+<div id="94254200" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple script (with a descriptive comment)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to python !"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1770,7 +1770,7 @@ qpyodideCellDetails.map(
     }
   );
 </script>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
